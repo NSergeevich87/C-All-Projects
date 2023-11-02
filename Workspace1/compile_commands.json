@@ -1,4 +1,20 @@
 [{
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PointerArithmetic\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PointerArithmetic",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PointerArithmetic\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PointerArithmetic\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\ArraysAndPointers\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\ArraysAndPointers",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\ArraysAndPointers\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\ArraysAndPointers\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\DynamicMemory\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\DynamicMemory",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\DynamicMemory\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\DynamicMemory\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\SimplePointers\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\SimplePointers",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\SimplePointers\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\SimplePointers\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Challenge7\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Challenge7",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Challenge7\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Challenge7\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
@@ -6,6 +22,10 @@
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Factorial\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Factorial",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Factorial\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Factorial\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Dereference\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Dereference",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Dereference\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\Dereference\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
  }, {
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PiNumber\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\Workspace1\\PiNumber",

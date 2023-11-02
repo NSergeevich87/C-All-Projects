@@ -4,22 +4,11 @@
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Workspace1\Workspace1.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Workspace1\Challenge7\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="31" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Workspace1\PointerArithmetic\main.cpp" Name="FileName"/>
+      <int Value="30" Name="FirstVisibleLine"/>
+      <int Value="53" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds">
-        <IntVectorItem Value="31"/>
-        <IntVectorItem Value="54"/>
-        <IntVectorItem Value="91"/>
-        <IntVectorItem Value="101"/>
-        <IntVectorItem Value="108"/>
-        <IntVectorItem Value="119"/>
-        <IntVectorItem Value="128"/>
-        <IntVectorItem Value="136"/>
-        <IntVectorItem Value="144"/>
-        <IntVectorItem Value="156"/>
-      </IntVector>
+      <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
