@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Workspace1" Database="" Version="10000">
+  <Project Name="FirstProgram" Path="FirstProgram/FirstProgram.project" Active="No"/>
+  <Project Name="CompilerWarnings" Path="CompilerWarnings/CompilerWarnings.project" Active="No"/>
+  <Project Name="LinkerError" Path="LinkerError/LinkerError.project" Active="No"/>
+  <Project Name="Challenge1" Path="Challenge1/Challenge1.project" Active="No"/>
+  <Project Name="BasicIO" Path="BasicIO/BasicIO.project" Active="No"/>
+  <Project Name="InitializingVariables" Path="InitializingVariables/InitializingVariables.project" Active="No"/>
+  <Project Name="GlobalVariables" Path="GlobalVariables/GlobalVariables.project" Active="No"/>
+  <Project Name="PrimitiveTypes" Path="PrimitiveTypes/PrimitiveTypes.project" Active="No"/>
+  <Project Name="SizeOfOperator" Path="SizeOfOperator/SizeOfOperator.project" Active="No"/>
+  <Project Name="PiNumber" Path="PiNumber/PiNumber.project" Active="No"/>
+  <Project Name="Constants" Path="Constants/Constants.project" Active="No"/>
+  <Project Name="Challenge2" Path="Challenge2/Challenge2.project" Active="No"/>
+  <Project Name="Arrays" Path="Arrays/Arrays.project" Active="No"/>
+  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="No"/>
+  <Project Name="Challenge3" Path="Challenge3/Challenge3.project" Active="No"/>
+  <Project Name="ArithmeticOperators" Path="ArithmeticOperators/ArithmeticOperators.project" Active="No"/>
+  <Project Name="IncrementDecrementOperators" Path="IncrementDecrementOperators/IncrementDecrementOperators.project" Active="No"/>
+  <Project Name="MixedExpressions" Path="MixedExpressions/MixedExpressions.project" Active="No"/>
+  <Project Name="EqualityOperators" Path="EqualityOperators/EqualityOperators.project" Active="No"/>
+  <Project Name="RelationalOperators" Path="RelationalOperators/RelationalOperators.project" Active="No"/>
+  <Project Name="LogicalOperators" Path="LogicalOperators/LogicalOperators.project" Active="No"/>
+  <Project Name="VirtualOverride(UE5_example)" Path="VirtualOverride(UE5_example)/VirtualOverride(UE5_example).project" Active="No"/>
+  <Project Name="Challenge4" Path="Challenge4/Challenge4.project" Active="No"/>
+  <Project Name="Grades" Path="Grades/Grades.project" Active="No"/>
+  <Project Name="SwitchEnum" Path="SwitchEnum/SwitchEnum.project" Active="No"/>
+  <Project Name="ConditionalOperator" Path="ConditionalOperator/ConditionalOperator.project" Active="No"/>
+  <Project Name="ForLoop" Path="ForLoop/ForLoop.project" Active="No"/>
+  <Project Name="RangeBasedForLoop" Path="RangeBasedForLoop/RangeBasedForLoop.project" Active="No"/>
+  <Project Name="WhileLoop" Path="WhileLoop/WhileLoop.project" Active="No"/>
+  <Project Name="DoWhileLoop" Path="DoWhileLoop/DoWhileLoop.project" Active="No"/>
+  <Project Name="MultiplicationTable" Path="MultiplicationTable/MultiplicationTable.project" Active="No"/>
+  <Project Name="Histogram" Path="Histogram/Histogram.project" Active="No"/>
+  <Project Name="Challenge5" Path="Challenge5/Challenge5.project" Active="No"/>
+  <Project Name="CodeTest" Path="CodeTest/CodeTest.project" Active="No"/>
+  <Project Name="CStyleStrings" Path="CStyleStrings/CStyleStrings.project" Active="No"/>
+  <Project Name="CPPStrings" Path="CPPStrings/CPPStrings.project" Active="No"/>
+  <Project Name="Challenge6" Path="Challenge6/Challenge6.project" Active="No"/>
+  <Project Name="ChallengeLetterPyramid" Path="ChallengeLetterPyramid/ChallengeLetterPyramid.project" Active="No"/>
+  <Project Name="Math" Path="MathAndRandom/MathAndRandom.project" Active="No"/>
+  <Project Name="Random" Path="Random/Random.project" Active="No"/>
+  <Project Name="FunctionDefinitions" Path="FunctionDefinitions/FunctionDefinitions.project" Active="No"/>
+  <Project Name="FunctionPrototypes" Path="FunctionPrototypes/FunctionPrototypes.project" Active="No"/>
+  <Project Name="DefaultArguments" Path="DefaultArguments/DefaultArguments.project" Active="No"/>
+  <Project Name="FunctionOverloading" Path="FunctionOverloading/FunctionOverloading.project" Active="No"/>
+  <Project Name="ArraysAndFunctions" Path="ArraysAndFunctions/ArraysAndFunctions.project" Active="No"/>
+  <Project Name="PassByReference" Path="PassByReference/PassByReference.project" Active="No"/>
+  <Project Name="ScopeExample" Path="ScopeExample/ScopeExample.project" Active="No"/>
+  <Project Name="Fibonacci" Path="Fibonacci/Fibonacci.project" Active="No"/>
+  <Project Name="Factorial" Path="Factorial/Factorial.project" Active="No"/>
+  <Project Name="Challenge7" Path="Challenge7/Challenge7.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="FirstProgram" ConfigName="Debug"/>
+      <Project Name="CompilerWarnings" ConfigName="Debug"/>
+      <Project Name="LinkerError" ConfigName="Debug"/>
+      <Project Name="Challenge1" ConfigName="Debug"/>
+      <Project Name="BasicIO" ConfigName="Debug"/>
+      <Project Name="InitializingVariables" ConfigName="Debug"/>
+      <Project Name="GlobalVariables" ConfigName="Debug"/>
+      <Project Name="PrimitiveTypes" ConfigName="Debug"/>
+      <Project Name="SizeOfOperator" ConfigName="Debug"/>
+      <Project Name="PiNumber" ConfigName="Debug"/>
+      <Project Name="Constants" ConfigName="Debug"/>
+      <Project Name="Challenge2" ConfigName="Debug"/>
+      <Project Name="Arrays" ConfigName="Debug"/>
+      <Project Name="Vectors" ConfigName="Debug"/>
+      <Project Name="Challenge3" ConfigName="Debug"/>
+      <Project Name="ArithmeticOperators" ConfigName="Debug"/>
+      <Project Name="IncrementDecrementOperators" ConfigName="Debug"/>
+      <Project Name="MixedExpressions" ConfigName="Debug"/>
+      <Project Name="EqualityOperators" ConfigName="Debug"/>
+      <Project Name="RelationalOperators" ConfigName="Debug"/>
+      <Project Name="LogicalOperators" ConfigName="Debug"/>
+      <Project Name="VirtualOverride(UE5_example)" ConfigName="Debug"/>
+      <Project Name="Challenge4" ConfigName="Debug"/>
+      <Project Name="Grades" ConfigName="Debug"/>
+      <Project Name="SwitchEnum" ConfigName="Debug"/>
+      <Project Name="ConditionalOperator" ConfigName="Debug"/>
+      <Project Name="ForLoop" ConfigName="Debug"/>
+      <Project Name="RangeBasedForLoop" ConfigName="Debug"/>
+      <Project Name="WhileLoop" ConfigName="Debug"/>
+      <Project Name="DoWhileLoop" ConfigName="Debug"/>
+      <Project Name="MultiplicationTable" ConfigName="Debug"/>
+      <Project Name="Histogram" ConfigName="Debug"/>
+      <Project Name="Challenge5" ConfigName="Debug"/>
+      <Project Name="CodeTest" ConfigName="Debug"/>
+      <Project Name="CStyleStrings" ConfigName="Debug"/>
+      <Project Name="CPPStrings" ConfigName="Debug"/>
+      <Project Name="Challenge6" ConfigName="Debug"/>
+      <Project Name="ChallengeLetterPyramid" ConfigName="Debug"/>
+      <Project Name="Math" ConfigName="Debug"/>
+      <Project Name="Random" ConfigName="Debug"/>
+      <Project Name="FunctionDefinitions" ConfigName="Debug"/>
+      <Project Name="FunctionPrototypes" ConfigName="Debug"/>
+      <Project Name="DefaultArguments" ConfigName="Debug"/>
+      <Project Name="FunctionOverloading" ConfigName="Debug"/>
+      <Project Name="ArraysAndFunctions" ConfigName="Debug"/>
+      <Project Name="PassByReference" ConfigName="Debug"/>
+      <Project Name="ScopeExample" ConfigName="Debug"/>
+      <Project Name="Fibonacci" ConfigName="Debug"/>
+      <Project Name="Factorial" ConfigName="Debug"/>
+      <Project Name="Challenge7" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="FirstProgram" ConfigName="Release"/>
+      <Project Name="CompilerWarnings" ConfigName="Release"/>
+      <Project Name="LinkerError" ConfigName="Release"/>
+      <Project Name="Challenge1" ConfigName="Release"/>
+      <Project Name="BasicIO" ConfigName="Release"/>
+      <Project Name="InitializingVariables" ConfigName="Release"/>
+      <Project Name="GlobalVariables" ConfigName="Release"/>
+      <Project Name="PrimitiveTypes" ConfigName="Release"/>
+      <Project Name="SizeOfOperator" ConfigName="Release"/>
+      <Project Name="PiNumber" ConfigName="Release"/>
+      <Project Name="Constants" ConfigName="Release"/>
+      <Project Name="Challenge2" ConfigName="Release"/>
+      <Project Name="Arrays" ConfigName="Release"/>
+      <Project Name="Vectors" ConfigName="Release"/>
+      <Project Name="Challenge3" ConfigName="Release"/>
+      <Project Name="ArithmeticOperators" ConfigName="Release"/>
+      <Project Name="IncrementDecrementOperators" ConfigName="Release"/>
+      <Project Name="MixedExpressions" ConfigName="Release"/>
+      <Project Name="EqualityOperators" ConfigName="Release"/>
+      <Project Name="RelationalOperators" ConfigName="Release"/>
+      <Project Name="LogicalOperators" ConfigName="Release"/>
+      <Project Name="VirtualOverride(UE5_example)" ConfigName="Release"/>
+      <Project Name="Challenge4" ConfigName="Release"/>
+      <Project Name="Grades" ConfigName="Release"/>
+      <Project Name="SwitchEnum" ConfigName="Release"/>
+      <Project Name="ConditionalOperator" ConfigName="Release"/>
+      <Project Name="ForLoop" ConfigName="Release"/>
+      <Project Name="RangeBasedForLoop" ConfigName="Release"/>
+      <Project Name="WhileLoop" ConfigName="Release"/>
+      <Project Name="DoWhileLoop" ConfigName="Release"/>
+      <Project Name="MultiplicationTable" ConfigName="Release"/>
+      <Project Name="Histogram" ConfigName="Release"/>
+      <Project Name="Challenge5" ConfigName="Release"/>
+      <Project Name="CodeTest" ConfigName="Release"/>
+      <Project Name="CStyleStrings" ConfigName="Release"/>
+      <Project Name="CPPStrings" ConfigName="Release"/>
+      <Project Name="Challenge6" ConfigName="Release"/>
+      <Project Name="ChallengeLetterPyramid" ConfigName="Release"/>
+      <Project Name="Math" ConfigName="Release"/>
+      <Project Name="Random" ConfigName="Release"/>
+      <Project Name="FunctionDefinitions" ConfigName="Release"/>
+      <Project Name="FunctionPrototypes" ConfigName="Release"/>
+      <Project Name="DefaultArguments" ConfigName="Release"/>
+      <Project Name="FunctionOverloading" ConfigName="Release"/>
+      <Project Name="ArraysAndFunctions" ConfigName="Release"/>
+      <Project Name="PassByReference" ConfigName="Release"/>
+      <Project Name="ScopeExample" ConfigName="Release"/>
+      <Project Name="Fibonacci" ConfigName="Release"/>
+      <Project Name="Factorial" ConfigName="Release"/>
+      <Project Name="Challenge7" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
