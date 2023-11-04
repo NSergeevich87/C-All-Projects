@@ -3,26 +3,27 @@
 
 using namespace std;
 
-unsigned long long sum_digit(unsigned long long);
-unsigned long long sum_digit(unsigned long long n)
+string reverse_string(const string &str)
 {
-    if (n < 10) return n % 10;
-    return (n % 10) + sum_digit(n / 10);
+    string reversed{};
+    
+    const char *start = &str[0];
+    const char *stop = &str[str.size() - 1];
+    while(stop >= start)
+    {
+        reversed.push_back(*stop);
+        stop--;
+    }
+    
+    return reversed;
 }
 
 int main()
 {   
-    int num {5678};
-    cout << num % 10 << endl;
-    cout << sum_digit(num) << endl;
+    string name {"Nikita"};
+    name = reverse_string(name);
+    cout << name << endl;
     
     cout << endl;
     return 0;
-}
-
-string try_to_change(string name)
-{
-    
-    //cout << "Into method try_to_change name is: " << name << endl;
-    return name = "Kseniia";;
 }

@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=PointerArithmetic
+ProjectName            :=Debugger
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :="C:/Users/Professional/Documents/C++ All Projects/Workspace1"
-ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/Workspace1/PointerArithmetic"
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/PointerArithmetic
+ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/Workspace1/Debugger"
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Debugger
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -96,7 +96,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/Workspace1/PointerArithmetic/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/Workspace1/Debugger/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
