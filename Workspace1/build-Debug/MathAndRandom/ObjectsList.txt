@@ -1,1 +1,0 @@
-../build-Debug/MathAndRandom/main.cpp.o   
