@@ -5,10 +5,11 @@
   <Project Name="AccessModifiers" Path="AccessModifiers/AccessModifiers.project" Active="No"/>
   <Project Name="ImplementingMethods1" Path="ImplementingMethods1/ImplementingMethods1.project" Active="No"/>
   <Project Name="ImplementingMethods2" Path="ImplementingMethods2/ImplementingMethods2.project" Active="No"/>
-  <Project Name="TestCoding" Path="TestCoding/TestCoding.project" Active="No"/>
+  <Project Name="FirstTestHeader" Path="TestCoding/TestCoding.project" Active="No"/>
   <Project Name="ConstructorsAndDestructors" Path="ConstructorsAndDestructors/ConstructorsAndDestructors.project" Active="No"/>
   <Project Name="DefaultConstructor" Path="DefaultConstructor/DefaultConstructor.project" Active="No"/>
-  <Project Name="ConstructorInitializationLists" Path="ConstructorInitializationLists/ConstructorInitializationLists.project" Active="Yes"/>
+  <Project Name="ConstructorInitializationLists" Path="ConstructorInitializationLists/ConstructorInitializationLists.project" Active="No"/>
+  <Project Name="SecondTestHeader" Path="SecondTestHeader/SecondTestHeader.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -17,10 +18,11 @@
       <Project Name="AccessModifiers" ConfigName="Debug"/>
       <Project Name="ImplementingMethods1" ConfigName="Debug"/>
       <Project Name="ImplementingMethods2" ConfigName="Debug"/>
-      <Project Name="TestCoding" ConfigName="Debug"/>
+      <Project Name="FirstTestHeader" ConfigName="Debug"/>
       <Project Name="ConstructorsAndDestructors" ConfigName="Debug"/>
       <Project Name="DefaultConstructor" ConfigName="Debug"/>
       <Project Name="ConstructorInitializationLists" ConfigName="Debug"/>
+      <Project Name="SecondTestHeader" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -29,10 +31,11 @@
       <Project Name="AccessModifiers" ConfigName="Release"/>
       <Project Name="ImplementingMethods1" ConfigName="Release"/>
       <Project Name="ImplementingMethods2" ConfigName="Release"/>
-      <Project Name="TestCoding" ConfigName="Release"/>
+      <Project Name="FirstTestHeader" ConfigName="Release"/>
       <Project Name="ConstructorsAndDestructors" ConfigName="Release"/>
       <Project Name="DefaultConstructor" ConfigName="Release"/>
       <Project Name="ConstructorInitializationLists" ConfigName="Release"/>
+      <Project Name="SecondTestHeader" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

@@ -3,6 +3,18 @@
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorInitializationLists",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorInitializationLists\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorInitializationLists\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
  }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.h",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.h\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.h\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\SecondTestHeader\\Account.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DefaultConstructor\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DefaultConstructor",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DefaultConstructor\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DefaultConstructor\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
@@ -10,6 +22,18 @@
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorsAndDestructors\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorsAndDestructors",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorsAndDestructors\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ConstructorsAndDestructors\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
+ }, {
+  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp",
+  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
+  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
  }, {
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods1\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods1",
@@ -34,18 +58,6 @@
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods2\\Account.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods2",
   "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods2\\Account.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\ImplementingMethods2\\Account.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
- }, {
-  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp",
-  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
-  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\main.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
- }, {
-  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h",
-  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
-  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.h\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
- }, {
-  "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp",
-  "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding",
-  "command": "C:/mingw64/bin/g++.exe -c \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp\" -o \"C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\TestCoding\\Player.cpp\".o -target x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0 -IC:\\mingw64\\include\\c++\\13.2.0\\x86_64-w64-mingw32 -IC:\\mingw64\\include\\c++\\13.2.0\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include -IC:\\mingw64\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -O0  -gdwarf-2  -std=c++17  -Wall"
  }, {
   "file": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DeclareClassAndObjects\\main.cpp",
   "directory": "C:\\Users\\Professional\\Documents\\C++ All Projects\\C++ OOP\\DeclareClassAndObjects",
