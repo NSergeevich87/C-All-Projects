@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ SecondTestHeader - Debug ]----------"
-	@cd "SecondTestHeader" && "$(MAKE)" -f  "SecondTestHeader.mk"
+	@echo "----------Building project:[ DefaultConstructorParameters - Debug ]----------"
+	@cd "DefaultConstructorParameters" && "$(MAKE)" -f  "DefaultConstructorParameters.mk"
 clean:
-	@echo "----------Cleaning project:[ SecondTestHeader - Debug ]----------"
-	@cd "SecondTestHeader" && "$(MAKE)" -f  "SecondTestHeader.mk" clean
+	@echo "----------Cleaning project:[ DefaultConstructorParameters - Debug ]----------"
+	@cd "DefaultConstructorParameters" && "$(MAKE)" -f  "DefaultConstructorParameters.mk" clean

@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=ImplementingMethods1
+ProjectName            :=DefaultConstructorParameters
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP"
-ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ImplementingMethods1"
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/ImplementingMethods1
+ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DefaultConstructorParameters"
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/DefaultConstructorParameters
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -96,7 +96,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ImplementingMethods1/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DefaultConstructorParameters/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
