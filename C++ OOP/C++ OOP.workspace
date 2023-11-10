@@ -11,7 +11,9 @@
   <Project Name="ConstructorInitializationLists" Path="ConstructorInitializationLists/ConstructorInitializationLists.project" Active="No"/>
   <Project Name="SecondTestHeader" Path="SecondTestHeader/SecondTestHeader.project" Active="No"/>
   <Project Name="DelegatingConstructors" Path="DelegatingConstructors/DelegatingConstructors.project" Active="No"/>
-  <Project Name="DefaultConstructorParameters" Path="DefaultConstructorParameters/DefaultConstructorParameters.project" Active="Yes"/>
+  <Project Name="DefaultConstructorParameters" Path="DefaultConstructorParameters/DefaultConstructorParameters.project" Active="No"/>
+  <Project Name="CopyConstructor" Path="CopyConstructor/CopyConstructor.project" Active="No"/>
+  <Project Name="PracticeWithCopyconstructor" Path="PracticeWithCopyconstructor/PracticeWithCopyconstructor.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -27,6 +29,8 @@
       <Project Name="SecondTestHeader" ConfigName="Debug"/>
       <Project Name="DelegatingConstructors" ConfigName="Debug"/>
       <Project Name="DefaultConstructorParameters" ConfigName="Debug"/>
+      <Project Name="CopyConstructor" ConfigName="Debug"/>
+      <Project Name="PracticeWithCopyconstructor" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -42,6 +46,8 @@
       <Project Name="SecondTestHeader" ConfigName="Release"/>
       <Project Name="DelegatingConstructors" ConfigName="Release"/>
       <Project Name="DefaultConstructorParameters" ConfigName="Release"/>
+      <Project Name="CopyConstructor" ConfigName="Release"/>
+      <Project Name="PracticeWithCopyconstructor" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
