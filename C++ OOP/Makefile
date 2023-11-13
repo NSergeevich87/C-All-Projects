@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ DeclareClassAndObjects - Debug ]----------"
-	@cd "DeclareClassAndObjects" && "$(MAKE)" -f  "DeclareClassAndObjects.mk"
+	@echo "----------Building project:[ DeepCopy - Debug ]----------"
+	@cd "DeepCopy" && "$(MAKE)" -f  "DeepCopy.mk"
 clean:
-	@echo "----------Cleaning project:[ DeclareClassAndObjects - Debug ]----------"
-	@cd "DeclareClassAndObjects" && "$(MAKE)" -f  "DeclareClassAndObjects.mk" clean
+	@echo "----------Cleaning project:[ DeepCopy - Debug ]----------"
+	@cd "DeepCopy" && "$(MAKE)" -f  "DeepCopy.mk" clean

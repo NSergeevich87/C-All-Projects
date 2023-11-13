@@ -13,7 +13,9 @@
   <Project Name="DelegatingConstructors" Path="DelegatingConstructors/DelegatingConstructors.project" Active="No"/>
   <Project Name="DefaultConstructorParameters" Path="DefaultConstructorParameters/DefaultConstructorParameters.project" Active="No"/>
   <Project Name="CopyConstructor" Path="CopyConstructor/CopyConstructor.project" Active="No"/>
-  <Project Name="PracticeWithCopyconstructor" Path="PracticeWithCopyconstructor/PracticeWithCopyconstructor.project" Active="Yes"/>
+  <Project Name="PracticeWithCopyconstructor" Path="PracticeWithCopyconstructor/PracticeWithCopyconstructor.project" Active="No"/>
+  <Project Name="ShallowCopy" Path="ShallowCopy/ShallowCopy.project" Active="No"/>
+  <Project Name="DeepCopy" Path="DeepCopy/DeepCopy.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -31,6 +33,8 @@
       <Project Name="DefaultConstructorParameters" ConfigName="Debug"/>
       <Project Name="CopyConstructor" ConfigName="Debug"/>
       <Project Name="PracticeWithCopyconstructor" ConfigName="Debug"/>
+      <Project Name="ShallowCopy" ConfigName="Debug"/>
+      <Project Name="DeepCopy" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -48,6 +52,8 @@
       <Project Name="DefaultConstructorParameters" ConfigName="Release"/>
       <Project Name="CopyConstructor" ConfigName="Release"/>
       <Project Name="PracticeWithCopyconstructor" ConfigName="Release"/>
+      <Project Name="ShallowCopy" ConfigName="Release"/>
+      <Project Name="DeepCopy" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
