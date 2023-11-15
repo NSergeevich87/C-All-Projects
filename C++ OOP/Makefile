@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ DeepCopy - Debug ]----------"
-	@cd "DeepCopy" && "$(MAKE)" -f  "DeepCopy.mk"
+	@echo "----------Building project:[ ConstInClasses - Debug ]----------"
+	@cd "ConstInClasses" && "$(MAKE)" -f  "ConstInClasses.mk"
 clean:
-	@echo "----------Cleaning project:[ DeepCopy - Debug ]----------"
-	@cd "DeepCopy" && "$(MAKE)" -f  "DeepCopy.mk" clean
+	@echo "----------Cleaning project:[ ConstInClasses - Debug ]----------"
+	@cd "ConstInClasses" && "$(MAKE)" -f  "ConstInClasses.mk" clean
