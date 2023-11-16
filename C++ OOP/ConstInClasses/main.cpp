@@ -11,7 +11,7 @@ private:
     int xp{};
 
 public:
-    std::string get_name() { return name; }
+    std::string get_name() const { return name; }
     void set_name(std::string n) { name = n; }
     // overload constructions
     Player();
@@ -33,12 +33,12 @@ Player::Player(std::string n, int h, int x)
     : name{n}, health{h}, xp{x} {
          
     }
-/*
+
 void display_player_name(const Player &p)
 {
     cout << p.get_name() << endl;
 }    
-*/
+
 int main()
 {
     const Player villian {"Villian", 100, 55};
@@ -51,7 +51,7 @@ int main()
     cout << hero.get_name() << endl;
     
     //display_player_name(villian);
-    //display_player_name(hero);
+    display_player_name(hero);
     
     cout << endl;
     return 0;

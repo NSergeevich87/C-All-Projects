@@ -1,0 +1,1 @@
+../build-Debug/StaticClassMembers/Player.cpp.o ../build-Debug/StaticClassMembers/main.cpp.o   

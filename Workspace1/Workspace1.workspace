@@ -13,7 +13,7 @@
   <Project Name="Constants" Path="Constants/Constants.project" Active="No"/>
   <Project Name="Challenge2" Path="Challenge2/Challenge2.project" Active="No"/>
   <Project Name="Arrays" Path="Arrays/Arrays.project" Active="No"/>
-  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="No"/>
+  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="Yes"/>
   <Project Name="Challenge3" Path="Challenge3/Challenge3.project" Active="No"/>
   <Project Name="ArithmeticOperators" Path="ArithmeticOperators/ArithmeticOperators.project" Active="No"/>
   <Project Name="IncrementDecrementOperators" Path="IncrementDecrementOperators/IncrementDecrementOperators.project" Active="No"/>
@@ -61,7 +61,7 @@
   <Project Name="ReturnPointer" Path="ReturnPointer/ReturnPointer.project" Active="No"/>
   <Project Name="References" Path="References/References.project" Active="No"/>
   <Project Name="Debugger" Path="Debugger/Debugger.project" Active="No"/>
-  <Project Name="Challenge8" Path="Challenge8/Challenge8.project" Active="Yes"/>
+  <Project Name="Challenge8" Path="Challenge8/Challenge8.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
