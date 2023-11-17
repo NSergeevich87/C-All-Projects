@@ -7,10 +7,12 @@
 class Movies
 {
 private:
-    std::vector<Movie> all_movies;
+    std::vector<Movie> movies;
     
 public:
-    void add_movie();
+    void add_movie(std::string name, std::string genre, float rating, int watched);
+    void display();
+    void increment_watched(std::string name);
     
     Movies();
     ~Movies();

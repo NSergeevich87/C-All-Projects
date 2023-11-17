@@ -20,9 +20,15 @@ public:
     ~Movie();
 
     std::string get_name() const { return name; }
+    void set_name(std::string name) { this->name = name; }
     std::string get_genre() const { return genre; }
+    void set_genre(std::string genre) { this->genre = genre; }
     float get_rating() const { return rating; }
+    void set_rating(float rating) { this->rating = rating; }
     int get_watched() const { return watched; }
+    void set_watched(int watched) { this->watched = watched; }
+    
+    void increase_watched() { ++watched; }
 };
 
 #endif // _MOVIE_H_
