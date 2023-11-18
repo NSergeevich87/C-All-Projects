@@ -97,4 +97,6 @@
     <File Name="Player.h"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

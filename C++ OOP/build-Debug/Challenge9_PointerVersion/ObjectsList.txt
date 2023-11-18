@@ -1,0 +1,1 @@
+../build-Debug/Challenge9_PointerVersion/main.cpp.o ../build-Debug/Challenge9_PointerVersion/Peliculas.cpp.o ../build-Debug/Challenge9_PointerVersion/Pelicula.cpp.o   

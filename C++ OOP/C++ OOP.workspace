@@ -19,7 +19,8 @@
   <Project Name="MoveConstructor" Path="MoveConstructor/MoveConstructor.project" Active="No"/>
   <Project Name="ConstInClasses" Path="ConstInClasses/ConstInClasses.project" Active="No"/>
   <Project Name="StaticClassMembers" Path="StaticClassMembers/StaticClassMembers.project" Active="No"/>
-  <Project Name="Challenge9" Path="Challenge9/Challenge9.project" Active="Yes"/>
+  <Project Name="Challenge9" Path="Challenge9/Challenge9.project" Active="No"/>
+  <Project Name="Challenge9_PointerVersion" Path="Challenge9_PointerVersion/Challenge9_PointerVersion.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -43,6 +44,7 @@
       <Project Name="ConstInClasses" ConfigName="Debug"/>
       <Project Name="StaticClassMembers" ConfigName="Debug"/>
       <Project Name="Challenge9" ConfigName="Debug"/>
+      <Project Name="Challenge9_PointerVersion" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -66,6 +68,7 @@
       <Project Name="ConstInClasses" ConfigName="Release"/>
       <Project Name="StaticClassMembers" ConfigName="Release"/>
       <Project Name="Challenge9" ConfigName="Release"/>
+      <Project Name="Challenge9_PointerVersion" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
