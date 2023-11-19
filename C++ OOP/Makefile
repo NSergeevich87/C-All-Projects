@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Challenge9_PointerVersion - Debug ]----------"
-	@cd "Challenge9_PointerVersion" && "$(MAKE)" -f  "Challenge9_PointerVersion.mk"
+	@echo "----------Building project:[ Mystring-start_practice - Debug ]----------"
+	@cd "Mystring-start_practice" && "$(MAKE)" -f  "Mystring-start_practice.mk"
 clean:
-	@echo "----------Cleaning project:[ Challenge9_PointerVersion - Debug ]----------"
-	@cd "Challenge9_PointerVersion" && "$(MAKE)" -f  "Challenge9_PointerVersion.mk" clean
+	@echo "----------Cleaning project:[ Mystring-start_practice - Debug ]----------"
+	@cd "Mystring-start_practice" && "$(MAKE)" -f  "Mystring-start_practice.mk" clean

@@ -20,7 +20,9 @@
   <Project Name="ConstInClasses" Path="ConstInClasses/ConstInClasses.project" Active="No"/>
   <Project Name="StaticClassMembers" Path="StaticClassMembers/StaticClassMembers.project" Active="No"/>
   <Project Name="Challenge9" Path="Challenge9/Challenge9.project" Active="No"/>
-  <Project Name="Challenge9_PointerVersion" Path="Challenge9_PointerVersion/Challenge9_PointerVersion.project" Active="Yes"/>
+  <Project Name="Challenge9_PointerVersion" Path="Challenge9_PointerVersion/Challenge9_PointerVersion.project" Active="No"/>
+  <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="No"/>
+  <Project Name="Mystring-start_practice" Path="Mystring-start_practice/Mystring-start_practice.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -45,6 +47,8 @@
       <Project Name="StaticClassMembers" ConfigName="Debug"/>
       <Project Name="Challenge9" ConfigName="Debug"/>
       <Project Name="Challenge9_PointerVersion" ConfigName="Debug"/>
+      <Project Name="Mystring-start" ConfigName="Debug"/>
+      <Project Name="Mystring-start_practice" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -69,6 +73,8 @@
       <Project Name="StaticClassMembers" ConfigName="Release"/>
       <Project Name="Challenge9" ConfigName="Release"/>
       <Project Name="Challenge9_PointerVersion" ConfigName="Release"/>
+      <Project Name="Mystring-start" ConfigName="Release"/>
+      <Project Name="Mystring-start_practice" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

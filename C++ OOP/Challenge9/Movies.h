@@ -16,6 +16,11 @@ public:
     
     Movies();
     ~Movies();
+    
+    /*Movies(std::vector<Movie> vec);
+    Movies(const Movies &source);
+    Movies(Movies &&source) noexcept;
+    ~Movies();*/
 
 };
 

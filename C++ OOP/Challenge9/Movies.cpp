@@ -9,6 +9,27 @@ Movies::~Movies()
 {
 }
 
+/*Movies::Movies(std::vector<Movie> vec)
+{
+    movies = new std::vector<Movie>;
+    *movies = vec;
+}
+
+Movies::Movies(const Movies &source)
+    : Movies{*source.movies} {
+        
+    }
+    
+Movies::Movies(Movies &&source) noexcept
+    : movies{source.movies} {
+        source.movies = nullptr;
+    }
+
+Movies::~Movies()
+{
+    delete movies;
+}*/
+
 void Movies::add_movie(std::string name, std::string genre, float rating, int watched)
 {
     for (const Movie &peli : movies)
