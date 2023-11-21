@@ -1,0 +1,1 @@
+../build-Debug/Mystring-move-assignment/Mystring.cpp.o ../build-Debug/Mystring-move-assignment/main.cpp.o   

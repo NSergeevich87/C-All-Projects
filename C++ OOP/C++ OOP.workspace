@@ -23,7 +23,8 @@
   <Project Name="Challenge9_PointerVersion" Path="Challenge9_PointerVersion/Challenge9_PointerVersion.project" Active="No"/>
   <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="No"/>
   <Project Name="Mystring-start_practice" Path="Mystring-start_practice/Mystring-start_practice.project" Active="No"/>
-  <Project Name="Mystring-copy-assignment" Path="Mystring-copy-assignment/Mystring-copy-assignment.project" Active="Yes"/>
+  <Project Name="Mystring-copy-assignment" Path="Mystring-copy-assignment/Mystring-copy-assignment.project" Active="No"/>
+  <Project Name="Mystring-move-assignment" Path="Mystring-move-assignment/Mystring-move-assignment.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -51,6 +52,7 @@
       <Project Name="Mystring-start" ConfigName="Debug"/>
       <Project Name="Mystring-start_practice" ConfigName="Debug"/>
       <Project Name="Mystring-copy-assignment" ConfigName="Debug"/>
+      <Project Name="Mystring-move-assignment" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -78,6 +80,7 @@
       <Project Name="Mystring-start" ConfigName="Release"/>
       <Project Name="Mystring-start_practice" ConfigName="Release"/>
       <Project Name="Mystring-copy-assignment" ConfigName="Release"/>
+      <Project Name="Mystring-move-assignment" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
