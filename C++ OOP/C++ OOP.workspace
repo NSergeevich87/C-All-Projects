@@ -24,7 +24,8 @@
   <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="No"/>
   <Project Name="Mystring-start_practice" Path="Mystring-start_practice/Mystring-start_practice.project" Active="No"/>
   <Project Name="Mystring-copy-assignment" Path="Mystring-copy-assignment/Mystring-copy-assignment.project" Active="No"/>
-  <Project Name="Mystring-move-assignment" Path="Mystring-move-assignment/Mystring-move-assignment.project" Active="Yes"/>
+  <Project Name="Mystring-move-assignment" Path="Mystring-move-assignment/Mystring-move-assignment.project" Active="No"/>
+  <Project Name="Mystring-overloading_operators-equal-plus-menos" Path="Mystring-overloading_operators-equal-plus-menos/Mystring-overloading_operators-equal-plus-menos.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -53,6 +54,8 @@
       <Project Name="Mystring-start_practice" ConfigName="Debug"/>
       <Project Name="Mystring-copy-assignment" ConfigName="Debug"/>
       <Project Name="Mystring-move-assignment" ConfigName="Debug"/>
+      <Project Name="Mystring-overloading_operators-equal-plus-menos" ConfigName="Debug"/>
+      <Project Name="Mystring-overloading_operators-equal-plus-menos" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -81,6 +84,8 @@
       <Project Name="Mystring-start_practice" ConfigName="Release"/>
       <Project Name="Mystring-copy-assignment" ConfigName="Release"/>
       <Project Name="Mystring-move-assignment" ConfigName="Release"/>
+      <Project Name="Mystring-overloading_operators-equal-plus-menos" ConfigName="Release"/>
+      <Project Name="Mystring-overloading_operators-equal-plus-menos" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

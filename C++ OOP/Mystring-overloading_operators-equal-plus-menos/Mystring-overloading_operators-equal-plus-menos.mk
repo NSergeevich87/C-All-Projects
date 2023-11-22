@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=Challenge9_PointerVersion
+ProjectName            :=Mystring-overloading_operators-equal-plus-menos
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP"
-ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Challenge9_PointerVersion"
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Challenge9_PointerVersion
+ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-overloading_operators-equal-plus-menos"
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Mystring-overloading_operators-equal-plus-menos
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pelicula.cpp$(ObjectSuffix) $(IntermediateDirectory)/Peliculas.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Mystring.cpp$(ObjectSuffix) 
 
 
 
@@ -96,19 +96,14 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Challenge9_PointerVersion/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-overloading_operators-equal-plus-menos/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
-$(IntermediateDirectory)/Pelicula.cpp$(ObjectSuffix): Pelicula.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Challenge9_PointerVersion/Pelicula.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pelicula.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Pelicula.cpp$(PreprocessSuffix): Pelicula.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pelicula.cpp$(PreprocessSuffix) Pelicula.cpp
-
-$(IntermediateDirectory)/Peliculas.cpp$(ObjectSuffix): Peliculas.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Challenge9_PointerVersion/Peliculas.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Peliculas.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Peliculas.cpp$(PreprocessSuffix): Peliculas.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Peliculas.cpp$(PreprocessSuffix) Peliculas.cpp
+$(IntermediateDirectory)/Mystring.cpp$(ObjectSuffix): Mystring.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-overloading_operators-equal-plus-menos/Mystring.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Mystring.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Mystring.cpp$(PreprocessSuffix): Mystring.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Mystring.cpp$(PreprocessSuffix) Mystring.cpp
 
 ##
 ## Clean

@@ -1,1 +1,0 @@
-../build-Debug/Mystring-copy-assignment/NewString.cpp.o ../build-Debug/Mystring-copy-assignment/main.cpp.o   
