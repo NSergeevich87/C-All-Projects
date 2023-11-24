@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\C++ OOP.workspace">
-  <int Value="0" Name="m_selectedTab"/>
+  <int Value="2" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\C++ OOP.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-operator-functions\main.cpp" Name="FileName"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-insertion-extraction\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="24" Name="CurrentLine"/>
+      <int Value="13" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-operator-functions\Mystring.h" Name="FileName"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-insertion-extraction\Mystring.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="10" Name="CurrentLine"/>
+      <int Value="9" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-operator-functions\Mystring.cpp" Name="FileName"/>
-      <int Value="63" Name="FirstVisibleLine"/>
-      <int Value="74" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\Mystring-insertion-extraction\Mystring.cpp" Name="FileName"/>
+      <int Value="59" Name="FirstVisibleLine"/>
+      <int Value="76" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
