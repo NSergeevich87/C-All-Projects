@@ -24,11 +24,19 @@ public:
     Mystring &operator=(Mystring &&rhs);      //Overload operator assignment, constructor MOVE
     
     //Other overload operators
-    Mystring operator-() const;                 //tolower
-    bool operator==(const Mystring &rhs) const; //equals
-    bool operator!=(const Mystring &rhs) const; //No equals
-    bool operator<(const Mystring &rhs) const;  //less than
-    bool operator>(const Mystring &rhs) const;  //returns true if the lhs string is lexically greater than the rhs string
+    Mystring operator-() const;                    //tolower
+	Mystring operator+(const Mystring &rhs) const; //concatenate
+    bool operator==(const Mystring &rhs) const;    //equals
+    bool operator!=(const Mystring &rhs) const;    //No equals
+    bool operator<(const Mystring &rhs) const;     //less than
+    bool operator>(const Mystring &rhs) const;     //returns true if the lhs string is lexically greater than the rhs string
+	Mystring &operator+=(const Mystring &rhs);     //concatenate the rhs string to the lhs string and store the result in lhs object
+	Mystring operator*(int rhs) const;      //repeat -  results in a string that is copied n times
+	Mystring &operator*=(int rhs);          //repeat the string on the lhs n times and store the result back in the lhs object
+	Mystring &operator++();
+	Mystring operator++(int);
+	Mystring &operator--();
+	Mystring operator--(int);
 };
 
 #endif // _MYSTRING_H_

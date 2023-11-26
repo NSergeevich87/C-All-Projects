@@ -57,8 +57,62 @@ int main()
     text1.display();
     text4.display();
     cout << (text4 > text1) << endl;
+	
+	cout << "=================================================================" << endl;
+	//test overload operator + (concatenation)
+	Mystring text5;
+	text5 = text1 + " " + text4;// + textVector[1];
+	text5.display();
+	
+	cout << "=================================================================" << endl;
+	//test overload operator += (concatenation)
+	text1 += " + ";
+	text1 += textVector[1];
+	text1 += " = LOVE";
+	text1.display();
+	
+	cout << "=================================================================" << endl;
+	//test overload operator * (repeat -  results in a string that is copied n times)
+	text5 = text1 * 3;
+	//text5 = text1 * 0;
+	text5.display();
     
-    
+	cout << "=================================================================" << endl;
+	//test overload operator *= (repeat the string on the lhs n times and store the result back in the lhs object)
+	Mystring text6 {"Strong "};
+	text6 *= 3;
+	text6.display();
+	text6 *= 0;
+	text6.display();
+	
+	cout << "=================================================================" << endl;
+	//test pre-increment ++ operator
+	Mystring text7 {"Some_text"};
+	++text7;
+	text7.display();
+	
+	cout << "=================================================================" << endl;
+	//test post-increment ++ operator 
+	//НЕ РАБОТАЕТ
+	--text7;
+	text7.display();
+	text7++;
+	text7.display();
+	
+	cout << "=================================================================" << endl;
+	//test pre-decrement -- operator
+	--text7;
+	text7.display();
+	
+	cout << "=================================================================" << endl;
+	//test post-decrement -- operator
+	//НЕ РАБОТАЕТ
+	++text7;
+	text7.display();
+    text7--;
+	text7.display();
+	
+	
     cout << endl;
     return 0;
 }

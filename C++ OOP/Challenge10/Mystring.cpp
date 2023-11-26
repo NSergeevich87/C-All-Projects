@@ -126,3 +126,114 @@ bool Mystring::operator>(const Mystring &rhs) const
     //std::cout << num1 << " : " << num2 << std::endl;
     return (str[0] > rhs.str[0]) == 0;
 }
+
+//Overload operator + (concatenation)
+Mystring Mystring::operator+(const Mystring &rhs) const
+{
+	char *text = new char[strlen(str) + strlen(rhs.str) + 1];
+	strcpy(text, str);
+	strcat(text, rhs.str);
+	Mystring temp{text};
+	delete [] text;
+	return temp;
+}
+
+//Overload operator += (concatenation)
+Mystring &Mystring::operator+=(const Mystring &rhs)
+{
+	*this = *this + rhs;
+	
+	return *this;
+}
+
+//Overload operator * (repeat -  results in a string that is copied n times)
+Mystring Mystring::operator*(int rhs) const
+{
+	Mystring temp;
+	
+	for (int i=1; i<=rhs; i++)
+	{
+		temp = temp + *this;
+	}
+	
+	return temp;
+	
+	/*if (rhs == 0)
+	{
+		Mystring temp;
+		return temp;
+	}
+	
+	size_t size = strlen(str) * rhs + 1;
+	char *text = new char[size];
+	
+	strcpy(text, str);
+	
+	for (int i=1; i<rhs; i++) strcat(text, str);
+	
+	Mystring temp{text};
+	delete [] text;
+	return temp;*/
+}
+
+//Overload operator *= (repeat the string on the lhs n times and store the result back in the lhs object)
+Mystring &Mystring::operator*=(int rhs)
+{
+	*this = *this * rhs;
+	return *this;
+	/*if (rhs == 0)
+	{
+		delete [] str;
+		strcpy(str, "");
+		return *this;
+	}
+	
+	char *text = new char[strlen(str) * rhs + 1];
+	
+	strcpy(text, str);
+	for (int i = 1; i < rhs; i++) strcat(text, str);
+	
+	strcpy(str, text);
+	delete [] text;
+	return *this;*/
+}
+
+Mystring &Mystring::operator++()
+{
+	std::cout << "pre_increment was called" << std::endl;
+	
+	if (str == nullptr) return *this;
+	
+	for (size_t i=0; i<strlen(str); i++) str[i] = toupper(str[i]);
+	
+	return *this;
+}
+
+Mystring Mystring::operator++(int)
+{
+	std::cout << "post_increment was called" << std::endl;
+	
+	Mystring temp{*this};
+	
+	operator++();
+	
+	return temp;
+}
+
+Mystring &Mystring::operator--()
+{
+	if (str == nullptr) return *this;
+	
+	for (size_t i=0; i<strlen(str); i++) str[i] = tolower(str[i]);
+	
+	return *this;
+}
+
+Mystring Mystring::operator--(int)
+{
+	Mystring temp{*this};
+	
+	operator--();
+	
+	return temp;
+}
