@@ -28,7 +28,8 @@
   <Project Name="Mystring-overloading_operators-equal-plus-menos" Path="Mystring-overloading_operators-equal-plus-menos/Mystring-overloading_operators-equal-plus-menos.project" Active="No"/>
   <Project Name="Mystring-operator-functions" Path="Mystring-operator-functions/Mystring-operator-functions.project" Active="No"/>
   <Project Name="Mystring-insertion-extraction" Path="Mystring-insertion-extraction/Mystring-insertion-extraction.project" Active="No"/>
-  <Project Name="Challenge10" Path="Challenge10/Challenge10.project" Active="Yes"/>
+  <Project Name="Challenge10" Path="Challenge10/Challenge10.project" Active="No"/>
+  <Project Name="Challenge10_AsGlobalFunctions" Path="Challenge10_AsGlobalFunctions/Challenge10_AsGlobalFunctions.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -62,6 +63,7 @@
       <Project Name="Mystring-operator-functions" ConfigName="Debug"/>
       <Project Name="Mystring-insertion-extraction" ConfigName="Debug"/>
       <Project Name="Challenge10" ConfigName="Debug"/>
+      <Project Name="Challenge10_AsGlobalFunctions" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -95,6 +97,7 @@
       <Project Name="Mystring-operator-functions" ConfigName="Release"/>
       <Project Name="Mystring-insertion-extraction" ConfigName="Release"/>
       <Project Name="Challenge10" ConfigName="Release"/>
+      <Project Name="Challenge10_AsGlobalFunctions" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
