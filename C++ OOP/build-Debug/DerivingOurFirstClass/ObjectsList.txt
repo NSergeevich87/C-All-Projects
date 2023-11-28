@@ -1,0 +1,1 @@
+../build-Debug/DerivingOurFirstClass/Nickacc.cpp.o ../build-Debug/DerivingOurFirstClass/Account.cpp.o ../build-Debug/DerivingOurFirstClass/main.cpp.o   

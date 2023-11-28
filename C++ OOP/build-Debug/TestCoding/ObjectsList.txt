@@ -1,0 +1,1 @@
+../build-Debug/TestCoding/main.cpp.o ../build-Debug/TestCoding/Player.cpp.o   

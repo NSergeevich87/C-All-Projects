@@ -1,0 +1,1 @@
+../build-Debug/ProtectedMembersClassAccess/main.cpp.o   

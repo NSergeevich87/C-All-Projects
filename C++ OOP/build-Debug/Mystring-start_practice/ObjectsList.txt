@@ -1,0 +1,1 @@
+../build-Debug/Mystring-start_practice/main.cpp.o ../build-Debug/Mystring-start_practice/Mystr.cpp.o   
