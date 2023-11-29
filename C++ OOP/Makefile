@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ ProtectedMembersClassAccess - Debug ]----------"
-	@cd "ProtectedMembersClassAccess" && "$(MAKE)" -f  "ProtectedMembersClassAccess.mk"
+	@echo "----------Building project:[ InheritanceCopyConstructorAssignmentOperator - Debug ]----------"
+	@cd "InheritanceCopyConstructorAssignmentOperator" && "$(MAKE)" -f  "InheritanceCopyConstructorAssignmentOperator.mk"
 clean:
-	@echo "----------Cleaning project:[ ProtectedMembersClassAccess - Debug ]----------"
-	@cd "ProtectedMembersClassAccess" && "$(MAKE)" -f  "ProtectedMembersClassAccess.mk" clean
+	@echo "----------Cleaning project:[ InheritanceCopyConstructorAssignmentOperator - Debug ]----------"
+	@cd "InheritanceCopyConstructorAssignmentOperator" && "$(MAKE)" -f  "InheritanceCopyConstructorAssignmentOperator.mk" clean

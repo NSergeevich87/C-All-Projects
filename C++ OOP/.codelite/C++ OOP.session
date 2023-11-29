@@ -1,60 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\C++ OOP.workspace">
-  <int Value="6" Name="m_selectedTab"/>
+  <int Value="2" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\C++ OOP.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\main.cpp" Name="FileName"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\ConstructorsAndDestructors\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\Account.h" Name="FileName"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\Account.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\Nickacc.h" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\Nickacc.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\TestCode\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\ProtectedMembersClassAccess\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="25" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\InheritanceCopyConstructorAssignmentOperator\main.cpp" Name="FileName"/>
+      <int Value="19" Name="FirstVisibleLine"/>
+      <int Value="71" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="42" Name="Count"/>
+    <long Value="54" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Challenge10_AsGlobalFunctions/Mystring.cpp" Name="file"/>
       <int Value="81" Name="lineno"/>
@@ -216,6 +188,118 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint10">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="11" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint11">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="16" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint12">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="21" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint13">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="35" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint14">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="40" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint15">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="45" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint16">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ConstructorsAndDestructors/main.cpp" Name="file"/>
+      <int Value="57" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint17">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/CopyConstructor/main.cpp" Name="file"/>
       <int Value="26" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -231,7 +315,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint11">
+    <SerializedObject Name="Breakpoint18">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/CopyConstructor/main.cpp" Name="file"/>
       <int Value="31" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -247,7 +331,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint12">
+    <SerializedObject Name="Breakpoint19">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/CopyConstructor/main.cpp" Name="file"/>
       <int Value="47" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -263,7 +347,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint13">
+    <SerializedObject Name="Breakpoint20">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
       <int Value="21" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -279,7 +363,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint14">
+    <SerializedObject Name="Breakpoint21">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
       <int Value="27" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -295,120 +379,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint15">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
-      <int Value="32" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint16">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
-      <int Value="45" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint17">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DefaultConstructor/main.cpp" Name="file"/>
-      <int Value="39" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint18">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DerivingOurFirstClass/main.cpp" Name="file"/>
-      <int Value="19" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint19">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DerivingOurFirstClass/main.cpp" Name="file"/>
-      <int Value="9" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint20">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ImplementingMethods1/main.cpp" Name="file"/>
-      <int Value="56" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint21">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
-      <int Value="25" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
     <SerializedObject Name="Breakpoint22">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
       <int Value="32" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -424,6 +396,118 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint23">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DeepCopy/main.cpp" Name="file"/>
+      <int Value="45" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint24">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DefaultConstructor/main.cpp" Name="file"/>
+      <int Value="39" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint25">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DerivingOurFirstClass/main.cpp" Name="file"/>
+      <int Value="19" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint26">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/DerivingOurFirstClass/main.cpp" Name="file"/>
+      <int Value="9" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint27">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/ImplementingMethods1/main.cpp" Name="file"/>
+      <int Value="56" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint28">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
+      <int Value="25" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint29">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
+      <int Value="32" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint30">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
       <int Value="37" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -439,7 +523,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint24">
+    <SerializedObject Name="Breakpoint31">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
       <int Value="43" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -455,7 +539,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint25">
+    <SerializedObject Name="Breakpoint32">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/MoveConstructor/main.cpp" Name="file"/>
       <int Value="59" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -471,7 +555,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint26">
+    <SerializedObject Name="Breakpoint33">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-copy-assignment/NewString.cpp" Name="file"/>
       <int Value="23" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -487,7 +571,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint27">
+    <SerializedObject Name="Breakpoint34">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-copy-assignment/NewString.cpp" Name="file"/>
       <int Value="3" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -503,7 +587,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint28">
+    <SerializedObject Name="Breakpoint35">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-copy-assignment/NewString.cpp" Name="file"/>
       <int Value="35" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -519,7 +603,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint29">
+    <SerializedObject Name="Breakpoint36">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-copy-assignment/NewString.cpp" Name="file"/>
       <int Value="9" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -535,7 +619,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint30">
+    <SerializedObject Name="Breakpoint37">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-copy-assignment/main.cpp" Name="file"/>
       <int Value="8" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -551,7 +635,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint31">
+    <SerializedObject Name="Breakpoint38">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="10" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -567,7 +651,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint32">
+    <SerializedObject Name="Breakpoint39">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="25" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -583,7 +667,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint33">
+    <SerializedObject Name="Breakpoint40">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="3" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -599,7 +683,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint34">
+    <SerializedObject Name="Breakpoint41">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="32" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -615,7 +699,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint35">
+    <SerializedObject Name="Breakpoint42">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="38" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -631,7 +715,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint36">
+    <SerializedObject Name="Breakpoint43">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="51" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -647,7 +731,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint37">
+    <SerializedObject Name="Breakpoint44">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/Mystring.cpp" Name="file"/>
       <int Value="63" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -663,7 +747,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint38">
+    <SerializedObject Name="Breakpoint45">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/Mystring-move-assignment/main.cpp" Name="file"/>
       <int Value="8" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -679,7 +763,7 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint39">
+    <SerializedObject Name="Breakpoint46">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/StaticClassMembers/main.cpp" Name="file"/>
       <int Value="13" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
@@ -695,9 +779,9 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint40">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\main.cpp" Name="file"/>
-      <int Value="19" Name="lineno"/>
+    <SerializedObject Name="Breakpoint47">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="11" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -711,9 +795,89 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint41">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\DerivingOurFirstClass\main.cpp" Name="file"/>
-      <int Value="9" Name="lineno"/>
+    <SerializedObject Name="Breakpoint48">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="16" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint49">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="21" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint50">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="33" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint51">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="38" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint52">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="43" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint53">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\BaseClassInitialization\main.cpp" Name="file"/>
+      <int Value="51" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>

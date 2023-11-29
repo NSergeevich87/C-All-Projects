@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="ConstructorsAndDestructors" Version="11000" InternalType="User templates">
+<CodeLite_Project Name="InheritanceCopyConstructorAssignmentOperator" Version="11000" InternalType="User templates">
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">

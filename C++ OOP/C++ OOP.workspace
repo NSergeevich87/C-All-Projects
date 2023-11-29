@@ -31,8 +31,11 @@
   <Project Name="Challenge10" Path="Challenge10/Challenge10.project" Active="No"/>
   <Project Name="Challenge10_AsGlobalFunctions" Path="Challenge10_AsGlobalFunctions/Challenge10_AsGlobalFunctions.project" Active="No"/>
   <Project Name="DerivingOurFirstClass" Path="DerivingOurFirstClass/DerivingOurFirstClass.project" Active="No"/>
-  <Project Name="ProtectedMembersClassAccess" Path="ProtectedMembersClassAccess/ProtectedMembersClassAccess.project" Active="Yes"/>
+  <Project Name="ProtectedMembersClassAccess" Path="ProtectedMembersClassAccess/ProtectedMembersClassAccess.project" Active="No"/>
   <Project Name="TestCode" Path="TestCode/TestCode.project" Active="No"/>
+  <Project Name="ConstructorsAndDestructors" Path="ConstructorsAndDestructors/ConstructorsAndDestructors.project" Active="No"/>
+  <Project Name="BaseClassInitialization" Path="BaseClassInitialization/BaseClassInitialization.project" Active="No"/>
+  <Project Name="InheritanceCopyConstructorAssignmentOperator" Path="InheritanceCopyConstructorAssignmentOperator/InheritanceCopyConstructorAssignmentOperator.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -70,6 +73,9 @@
       <Project Name="DerivingOurFirstClass" ConfigName="Debug"/>
       <Project Name="ProtectedMembersClassAccess" ConfigName="Debug"/>
       <Project Name="TestCode" ConfigName="Debug"/>
+      <Project Name="ConstructorsAndDestructors" ConfigName="Debug"/>
+      <Project Name="BaseClassInitialization" ConfigName="Debug"/>
+      <Project Name="InheritanceCopyConstructorAssignmentOperator" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -107,6 +113,9 @@
       <Project Name="DerivingOurFirstClass" ConfigName="Release"/>
       <Project Name="ProtectedMembersClassAccess" ConfigName="Release"/>
       <Project Name="TestCode" ConfigName="Release"/>
+      <Project Name="ConstructorsAndDestructors" ConfigName="Release"/>
+      <Project Name="BaseClassInitialization" ConfigName="Release"/>
+      <Project Name="InheritanceCopyConstructorAssignmentOperator" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

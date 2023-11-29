@@ -1,64 +1,60 @@
-//#include <climits>
-//#include <cfloat>
 #include <iostream>
-#include <vector> // vector <char> chars{}; or vector <char<int>> chars2d;
-#include <iomanip> // cout << fixed << setprecision (2);
 
 using namespace std;
 
-class Player
+class Base
 {
     private:
-        string name {};
-        int health {};
-        int xp {};
+        int val{};
     
     public:
-        void set_name(string n) { name = n; }
-        void set_health(int hp) { health = hp; }
-        // Overload constructors:
-        Player() { cout << "No args constructor called" << endl; }
-        Player( string name ) { cout << "Just name constructor called" << endl; }
-        Player( string name, int health, int xp ) { cout << "All args constructor called" << endl; }
-        // Destructor call:
-        ~Player() { cout << "Destructor called for " << name << endl; }
+        Base() : val{0}
+        {
+            cout << "Base constructor was called" << endl;
+        }
+        
+        Base(int new_val) : val{new_val}
+        {
+            cout << "Base overload constructor was called" << endl;
+        }
+        
+        ~Base()
+        {
+            cout << "Base destructor was called" << endl;
+        }
+};
+
+class Derived : public Base
+{
+    using Base::Base;
+    
+    private:
+        int val{};
+        
+    public:
+        Derived() : val{0}
+        {
+            cout << "Derived constructor was called" << endl;
+        }
+        
+        Derived(int new_val) : val{new_val * 2}
+        {
+            cout << "Derived overload constructor was called" << endl;
+        }
+        
+        ~Derived()
+        {
+            cout << "Derived destructor was called" << endl;
+        }
 };
 
 int main()
 {
-    char selection {};
+    //Base base1;
+    //Base base2{1000};
     
-    do 
-    {
-        cout << "==========================================" << endl;
-        
-        
-        Player Nick;
-        Nick.set_name("Nikita");
-        
-        
-        Player player1("Nikita");
-        player1.set_name("Nikita");
-           
-        Player player2("Daniil", 100, 10);
-        player2.set_name("Daniil");
-        
-        
-        
-        Player *enemy = new Player;
-        enemy->set_name("Destroyer"); //(*enemy).set_name
-        
-        Player *enemy_boss = new Player("Boss", 1000, 0);
-        enemy_boss->set_name("Boss");
-        
-        delete enemy;
-        delete enemy_boss;
-        
-        cout << "==========================================" << endl;
-        cout << "Start one more time? (Y/N) : ";
-        cin >> selection;
-    } while (selection != 'N' && selection != 'n');
-    cout << "Closing program..." << endl;
+    //Derived der1;
+    Derived der2{1000};
     
     cout << endl;
     return 0;
