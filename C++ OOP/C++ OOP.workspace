@@ -36,7 +36,8 @@
   <Project Name="ConstructorsAndDestructors" Path="ConstructorsAndDestructors/ConstructorsAndDestructors.project" Active="No"/>
   <Project Name="BaseClassInitialization" Path="BaseClassInitialization/BaseClassInitialization.project" Active="No"/>
   <Project Name="InheritanceCopyConstructorAssignmentOperator" Path="InheritanceCopyConstructorAssignmentOperator/InheritanceCopyConstructorAssignmentOperator.project" Active="No"/>
-  <Project Name="RedefiningBaseClassMethods" Path="RedefiningBaseClassMethods/RedefiningBaseClassMethods.project" Active="Yes"/>
+  <Project Name="RedefiningBaseClassMethods" Path="RedefiningBaseClassMethods/RedefiningBaseClassMethods.project" Active="No"/>
+  <Project Name="Challenge11(Account)" Path="Challenge11(Account)/Challenge11(Account).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -78,6 +79,7 @@
       <Project Name="BaseClassInitialization" ConfigName="Debug"/>
       <Project Name="InheritanceCopyConstructorAssignmentOperator" ConfigName="Debug"/>
       <Project Name="RedefiningBaseClassMethods" ConfigName="Debug"/>
+      <Project Name="Challenge11(Account)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -119,6 +121,7 @@
       <Project Name="BaseClassInitialization" ConfigName="Release"/>
       <Project Name="InheritanceCopyConstructorAssignmentOperator" ConfigName="Release"/>
       <Project Name="RedefiningBaseClassMethods" ConfigName="Release"/>
+      <Project Name="Challenge11(Account)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
