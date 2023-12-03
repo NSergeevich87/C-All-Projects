@@ -39,7 +39,7 @@ int main()
     vector<Chacking_Account> Third_Accounts;
     Third_Accounts.push_back(Chacking_Account {});
     Third_Accounts.push_back(Chacking_Account {"Ksy", 1000});
-    Third_Accounts.push_back(Chacking_Account {"Nick", 2000, 3});
+    Third_Accounts.push_back(Chacking_Account {"Nick", 2000});
     
     display(Third_Accounts);
     deposit(Third_Accounts, 1000);

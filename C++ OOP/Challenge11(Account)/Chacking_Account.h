@@ -12,11 +12,8 @@ private:
     static constexpr double def_balance = 0.0;
     static constexpr double def_fee = 1.5;
     
-protected:
-    double fee;
-    
 public:
-    Chacking_Account(std::string name_val = def_name, double bal_val = def_balance, double fee_val = def_fee);
+    Chacking_Account(std::string name_val = def_name, double bal_val = def_balance);
     bool withdraw(double amount);
     double get_fee() const;
 

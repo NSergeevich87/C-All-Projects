@@ -19,17 +19,13 @@ private:
     static constexpr int def_withdraw_counter = 3;
     
 protected:
-    double bonus_deposit;
-    double bonus;
-    double withdraw_limite;
     int withdraw_counter;
+    /*double bonus_deposit;
+    double bonus;
+    double withdraw_limite;*/
     
 public:
-    Trust_Account(std::string name_val = def_name, double bal_val = def_balance, double rate_val = def_int_rate, 
-        double val_bonus_deposit = def_bonus_deposit, 
-        double val_bonus = def_bonus, 
-        double val_withdraw_limite = def_withdraw_limite,
-        int val_withdraw_counter = def_withdraw_counter);
+    Trust_Account(std::string name_val = def_name, double bal_val = def_balance, double rate_val = def_int_rate);
         
     bool deposit(double amount);
     bool withdraw(double amount);

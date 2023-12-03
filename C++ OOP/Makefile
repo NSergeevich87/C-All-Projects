@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Challenge11(Account) - Debug ]----------"
-	@cd "Challenge11(Account)" && "$(MAKE)" -f  "Challenge11(Account).mk"
+	@echo "----------Building project:[ TheProblemStaticAssignment(NonVirtual) - Debug ]----------"
+	@cd "TheProblemStaticAssignment(NonVirtual)" && "$(MAKE)" -f  "TheProblemStaticAssignment(NonVirtual).mk"
 clean:
-	@echo "----------Cleaning project:[ Challenge11(Account) - Debug ]----------"
-	@cd "Challenge11(Account)" && "$(MAKE)" -f  "Challenge11(Account).mk" clean
+	@echo "----------Cleaning project:[ TheProblemStaticAssignment(NonVirtual) - Debug ]----------"
+	@cd "TheProblemStaticAssignment(NonVirtual)" && "$(MAKE)" -f  "TheProblemStaticAssignment(NonVirtual).mk" clean
