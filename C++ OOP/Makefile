@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ TheProblemStaticAssignment(NonVirtual) - Debug ]----------"
-	@cd "TheProblemStaticAssignment(NonVirtual)" && "$(MAKE)" -f  "TheProblemStaticAssignment(NonVirtual).mk"
+	@echo "----------Building project:[ VirtualFunctions - Debug ]----------"
+	@cd "VirtualFunctions" && "$(MAKE)" -f  "VirtualFunctions.mk"
 clean:
-	@echo "----------Cleaning project:[ TheProblemStaticAssignment(NonVirtual) - Debug ]----------"
-	@cd "TheProblemStaticAssignment(NonVirtual)" && "$(MAKE)" -f  "TheProblemStaticAssignment(NonVirtual).mk" clean
+	@echo "----------Cleaning project:[ VirtualFunctions - Debug ]----------"
+	@cd "VirtualFunctions" && "$(MAKE)" -f  "VirtualFunctions.mk" clean

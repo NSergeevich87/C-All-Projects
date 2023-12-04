@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=TheProblemStaticAssignment(NonVirtual)
+ProjectName            :=VirtualFunctions
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP"
-ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/TheProblemStaticAssignment(NonVirtual)"
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/TheProblemStaticAssignment(NonVirtual)
+ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/VirtualFunctions"
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/VirtualFunctions
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -96,7 +96,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/TheProblemStaticAssignment(NonVirtual)/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/C++ OOP/VirtualFunctions/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
