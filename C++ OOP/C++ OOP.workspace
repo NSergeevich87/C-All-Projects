@@ -39,7 +39,9 @@
   <Project Name="RedefiningBaseClassMethods" Path="RedefiningBaseClassMethods/RedefiningBaseClassMethods.project" Active="No"/>
   <Project Name="Challenge11(Account)" Path="Challenge11(Account)/Challenge11(Account).project" Active="No"/>
   <Project Name="TheProblemStaticAssignment(NonVirtual)" Path="TheProblemStaticAssignment(NonVirtual)/TheProblemStaticAssignment(NonVirtual).project" Active="No"/>
-  <Project Name="VirtualFunctions" Path="VirtualFunctions/VirtualFunctions.project" Active="Yes"/>
+  <Project Name="VirtualFunctions" Path="VirtualFunctions/VirtualFunctions.project" Active="No"/>
+  <Project Name="BaseClassReferences" Path="BaseClassReferences/BaseClassReferences.project" Active="No"/>
+  <Project Name="PureVirtualFunctions" Path="PureVirtualFunctions/PureVirtualFunctions.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -84,6 +86,8 @@
       <Project Name="Challenge11(Account)" ConfigName="Debug"/>
       <Project Name="TheProblemStaticAssignment(NonVirtual)" ConfigName="Debug"/>
       <Project Name="VirtualFunctions" ConfigName="Debug"/>
+      <Project Name="BaseClassReferences" ConfigName="Debug"/>
+      <Project Name="PureVirtualFunctions" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -128,6 +132,8 @@
       <Project Name="Challenge11(Account)" ConfigName="Release"/>
       <Project Name="TheProblemStaticAssignment(NonVirtual)" ConfigName="Release"/>
       <Project Name="VirtualFunctions" ConfigName="Release"/>
+      <Project Name="BaseClassReferences" ConfigName="Release"/>
+      <Project Name="PureVirtualFunctions" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
