@@ -41,7 +41,9 @@
   <Project Name="TheProblemStaticAssignment(NonVirtual)" Path="TheProblemStaticAssignment(NonVirtual)/TheProblemStaticAssignment(NonVirtual).project" Active="No"/>
   <Project Name="VirtualFunctions" Path="VirtualFunctions/VirtualFunctions.project" Active="No"/>
   <Project Name="BaseClassReferences" Path="BaseClassReferences/BaseClassReferences.project" Active="No"/>
-  <Project Name="PureVirtualFunctions" Path="PureVirtualFunctions/PureVirtualFunctions.project" Active="Yes"/>
+  <Project Name="PureVirtualFunctions" Path="PureVirtualFunctions/PureVirtualFunctions.project" Active="No"/>
+  <Project Name="Interfaces-start" Path="Interfaces-start/Interfaces-start.project" Active="No"/>
+  <Project Name="Interfaces-complete" Path="Interfaces-complete/Interfaces-complete.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -88,6 +90,8 @@
       <Project Name="VirtualFunctions" ConfigName="Debug"/>
       <Project Name="BaseClassReferences" ConfigName="Debug"/>
       <Project Name="PureVirtualFunctions" ConfigName="Debug"/>
+      <Project Name="Interfaces-start" ConfigName="Debug"/>
+      <Project Name="Interfaces-complete" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -134,6 +138,8 @@
       <Project Name="VirtualFunctions" ConfigName="Release"/>
       <Project Name="BaseClassReferences" ConfigName="Release"/>
       <Project Name="PureVirtualFunctions" ConfigName="Release"/>
+      <Project Name="Interfaces-start" ConfigName="Release"/>
+      <Project Name="Interfaces-complete" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
