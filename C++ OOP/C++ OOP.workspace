@@ -43,7 +43,8 @@
   <Project Name="BaseClassReferences" Path="BaseClassReferences/BaseClassReferences.project" Active="No"/>
   <Project Name="PureVirtualFunctions" Path="PureVirtualFunctions/PureVirtualFunctions.project" Active="No"/>
   <Project Name="Interfaces-start" Path="Interfaces-start/Interfaces-start.project" Active="No"/>
-  <Project Name="Interfaces-complete" Path="Interfaces-complete/Interfaces-complete.project" Active="Yes"/>
+  <Project Name="Interfaces-complete" Path="Interfaces-complete/Interfaces-complete.project" Active="No"/>
+  <Project Name="Challenge12(Polymorphism)" Path="Challenge12(Polymorphism)/Challenge12(Polymorphism).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -92,6 +93,7 @@
       <Project Name="PureVirtualFunctions" ConfigName="Debug"/>
       <Project Name="Interfaces-start" ConfigName="Debug"/>
       <Project Name="Interfaces-complete" ConfigName="Debug"/>
+      <Project Name="Challenge12(Polymorphism)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -140,6 +142,7 @@
       <Project Name="PureVirtualFunctions" ConfigName="Release"/>
       <Project Name="Interfaces-start" ConfigName="Release"/>
       <Project Name="Interfaces-complete" ConfigName="Release"/>
+      <Project Name="Challenge12(Polymorphism)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
