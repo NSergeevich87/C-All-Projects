@@ -20,7 +20,6 @@ public:
     virtual bool withdraw(double amount) override;
     
     virtual ~Checking_Account() = default;
-
 };
 
 #endif // _CHECKING_ACCOUNT_H_
