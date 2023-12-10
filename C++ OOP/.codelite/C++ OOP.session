@@ -4,15 +4,22 @@
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\C++ OOP.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\SharedPointers\main.cpp" Name="FileName"/>
+      <int Value="41" Name="FirstVisibleLine"/>
+      <int Value="61" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\UniquePointers\main.cpp" Name="FileName"/>
-      <int Value="1" Name="FirstVisibleLine"/>
-      <int Value="22" Name="CurrentLine"/>
+      <int Value="3" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="64" Name="Count"/>
+    <long Value="65" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
       <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/BaseClassInitialization/main.cpp" Name="file"/>
       <int Value="11" Name="lineno"/>
@@ -862,7 +869,7 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint53">
-      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/StaticClassMembers/main.cpp" Name="file"/>
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Account.cpp" Name="file"/>
       <int Value="13" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -878,8 +885,8 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint54">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Account.cpp" Name="file"/>
-      <int Value="13" Name="lineno"/>
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Account.cpp" Name="file"/>
+      <int Value="17" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -894,23 +901,7 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint55">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Account.cpp" Name="file"/>
-      <int Value="17" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <long Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint56">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Account.cpp" Name="file"/>
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Account.cpp" Name="file"/>
       <int Value="22" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -925,8 +916,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint57">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint56">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Account.cpp" Name="file"/>
       <int Value="3" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -941,8 +932,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint58">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint57">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Account.cpp" Name="file"/>
       <int Value="9" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -957,8 +948,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint59">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Savings_Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint58">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Savings_Account.cpp" Name="file"/>
       <int Value="11" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -973,8 +964,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint60">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Savings_Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint59">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Savings_Account.cpp" Name="file"/>
       <int Value="17" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -989,8 +980,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint61">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Savings_Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint60">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Savings_Account.cpp" Name="file"/>
       <int Value="3" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -1005,8 +996,8 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint62">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\Savings_Account.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint61">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/Savings_Account.cpp" Name="file"/>
       <int Value="7" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
@@ -1021,9 +1012,41 @@
       <wxString Value="" Name="conditions"/>
       <int Value="0" Name="origin"/>
     </SerializedObject>
-    <SerializedObject Name="Breakpoint63">
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\RedefiningBaseClassMethods\main.cpp" Name="file"/>
+    <SerializedObject Name="Breakpoint62">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/RedefiningBaseClassMethods/main.cpp" Name="file"/>
       <int Value="24" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint63">
+      <wxString Value="C:/Users/Professional/Documents/C++ All Projects/C++ OOP/StaticClassMembers/main.cpp" Name="file"/>
+      <int Value="13" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <long Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint64">
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\C++ OOP\SharedPointers\main.cpp" Name="file"/>
+      <int Value="49" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
