@@ -46,7 +46,10 @@
   <Project Name="Interfaces-complete" Path="Interfaces-complete/Interfaces-complete.project" Active="No"/>
   <Project Name="Challenge12(Polymorphism)" Path="Challenge12(Polymorphism)/Challenge12(Polymorphism).project" Active="No"/>
   <Project Name="UniquePointers" Path="UniquePointers/UniquePointers.project" Active="No"/>
-  <Project Name="SharedPointers" Path="SharedPointers/SharedPointers.project" Active="Yes"/>
+  <Project Name="SharedPointers" Path="SharedPointers/SharedPointers.project" Active="No"/>
+  <Project Name="WeakPointers" Path="WeakPointers/WeakPointers.project" Active="No"/>
+  <Project Name="CustomDeleters" Path="CustomDeleters/CustomDeleters.project" Active="No"/>
+  <Project Name="Challenge13(SmartPointers)" Path="Challenge13(SmartPointers)/Challenge13(SmartPointers).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -98,6 +101,9 @@
       <Project Name="Challenge12(Polymorphism)" ConfigName="Debug"/>
       <Project Name="UniquePointers" ConfigName="Debug"/>
       <Project Name="SharedPointers" ConfigName="Debug"/>
+      <Project Name="WeakPointers" ConfigName="Debug"/>
+      <Project Name="CustomDeleters" ConfigName="Debug"/>
+      <Project Name="Challenge13(SmartPointers)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -149,6 +155,9 @@
       <Project Name="Challenge12(Polymorphism)" ConfigName="Release"/>
       <Project Name="UniquePointers" ConfigName="Release"/>
       <Project Name="SharedPointers" ConfigName="Release"/>
+      <Project Name="WeakPointers" ConfigName="Release"/>
+      <Project Name="CustomDeleters" ConfigName="Release"/>
+      <Project Name="Challenge13(SmartPointers)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
