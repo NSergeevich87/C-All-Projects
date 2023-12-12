@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Challenge13(SmartPointers) - Debug ]----------"
-	@cd "Challenge13(SmartPointers)" && "$(MAKE)" -f  "Challenge13(SmartPointers).mk"
+	@echo "----------Building project:[ Exceptions_MilesPerGallon - Debug ]----------"
+	@cd "Exceptions_MilesPerGallon" && "$(MAKE)" -f  "Exceptions_MilesPerGallon.mk"
 clean:
-	@echo "----------Cleaning project:[ Challenge13(SmartPointers) - Debug ]----------"
-	@cd "Challenge13(SmartPointers)" && "$(MAKE)" -f  "Challenge13(SmartPointers).mk" clean
+	@echo "----------Cleaning project:[ Exceptions_MilesPerGallon - Debug ]----------"
+	@cd "Exceptions_MilesPerGallon" && "$(MAKE)" -f  "Exceptions_MilesPerGallon.mk" clean

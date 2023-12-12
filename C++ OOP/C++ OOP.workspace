@@ -49,7 +49,8 @@
   <Project Name="SharedPointers" Path="SharedPointers/SharedPointers.project" Active="No"/>
   <Project Name="WeakPointers" Path="WeakPointers/WeakPointers.project" Active="No"/>
   <Project Name="CustomDeleters" Path="CustomDeleters/CustomDeleters.project" Active="No"/>
-  <Project Name="Challenge13(SmartPointers)" Path="Challenge13(SmartPointers)/Challenge13(SmartPointers).project" Active="Yes"/>
+  <Project Name="Challenge13(SmartPointers)" Path="Challenge13(SmartPointers)/Challenge13(SmartPointers).project" Active="No"/>
+  <Project Name="Exceptions_MilesPerGallon" Path="Exceptions_MilesPerGallon/Exceptions_MilesPerGallon.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -104,6 +105,7 @@
       <Project Name="WeakPointers" ConfigName="Debug"/>
       <Project Name="CustomDeleters" ConfigName="Debug"/>
       <Project Name="Challenge13(SmartPointers)" ConfigName="Debug"/>
+      <Project Name="Exceptions_MilesPerGallon" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -158,6 +160,7 @@
       <Project Name="WeakPointers" ConfigName="Release"/>
       <Project Name="CustomDeleters" ConfigName="Release"/>
       <Project Name="Challenge13(SmartPointers)" ConfigName="Release"/>
+      <Project Name="Exceptions_MilesPerGallon" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
