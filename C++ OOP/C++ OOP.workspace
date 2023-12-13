@@ -50,7 +50,11 @@
   <Project Name="WeakPointers" Path="WeakPointers/WeakPointers.project" Active="No"/>
   <Project Name="CustomDeleters" Path="CustomDeleters/CustomDeleters.project" Active="No"/>
   <Project Name="Challenge13(SmartPointers)" Path="Challenge13(SmartPointers)/Challenge13(SmartPointers).project" Active="No"/>
-  <Project Name="Exceptions_MilesPerGallon" Path="Exceptions_MilesPerGallon/Exceptions_MilesPerGallon.project" Active="Yes"/>
+  <Project Name="Exceptions_MilesPerGallon" Path="Exceptions_MilesPerGallon/Exceptions_MilesPerGallon.project" Active="No"/>
+  <Project Name="Exceptions_Functions" Path="Exceptions_Functions/Exceptions_Functions.project" Active="No"/>
+  <Project Name="Exceptions_MultipleEx" Path="Exceptions_MultipleEx/Exceptions_MultipleEx.project" Active="No"/>
+  <Project Name="Exceptions_StackUnwinding" Path="Exceptions_StackUnwinding/Exceptions_StackUnwinding.project" Active="No"/>
+  <Project Name="Exceptions_UserDefinedClasses" Path="Exceptions_UserDefinedClasses/Exceptions_UserDefinedClasses.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -106,6 +110,10 @@
       <Project Name="CustomDeleters" ConfigName="Debug"/>
       <Project Name="Challenge13(SmartPointers)" ConfigName="Debug"/>
       <Project Name="Exceptions_MilesPerGallon" ConfigName="Debug"/>
+      <Project Name="Exceptions_Functions" ConfigName="Debug"/>
+      <Project Name="Exceptions_MultipleEx" ConfigName="Debug"/>
+      <Project Name="Exceptions_StackUnwinding" ConfigName="Debug"/>
+      <Project Name="Exceptions_UserDefinedClasses" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -161,6 +169,10 @@
       <Project Name="CustomDeleters" ConfigName="Release"/>
       <Project Name="Challenge13(SmartPointers)" ConfigName="Release"/>
       <Project Name="Exceptions_MilesPerGallon" ConfigName="Release"/>
+      <Project Name="Exceptions_Functions" ConfigName="Release"/>
+      <Project Name="Exceptions_MultipleEx" ConfigName="Release"/>
+      <Project Name="Exceptions_StackUnwinding" ConfigName="Release"/>
+      <Project Name="Exceptions_UserDefinedClasses" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
