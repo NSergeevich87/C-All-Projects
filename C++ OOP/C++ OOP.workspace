@@ -54,7 +54,9 @@
   <Project Name="Exceptions_Functions" Path="Exceptions_Functions/Exceptions_Functions.project" Active="No"/>
   <Project Name="Exceptions_MultipleEx" Path="Exceptions_MultipleEx/Exceptions_MultipleEx.project" Active="No"/>
   <Project Name="Exceptions_StackUnwinding" Path="Exceptions_StackUnwinding/Exceptions_StackUnwinding.project" Active="No"/>
-  <Project Name="Exceptions_UserDefinedClasses" Path="Exceptions_UserDefinedClasses/Exceptions_UserDefinedClasses.project" Active="Yes"/>
+  <Project Name="Exceptions_UserDefinedClasses" Path="Exceptions_UserDefinedClasses/Exceptions_UserDefinedClasses.project" Active="No"/>
+  <Project Name="Exceptions_Constructor" Path="Exceptions_Constructor/Exceptions_Constructor.project" Active="No"/>
+  <Project Name="Challenge14(Exceptions)" Path="Challenge14(Exceptions)/Challenge14(Exceptions).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -114,6 +116,8 @@
       <Project Name="Exceptions_MultipleEx" ConfigName="Debug"/>
       <Project Name="Exceptions_StackUnwinding" ConfigName="Debug"/>
       <Project Name="Exceptions_UserDefinedClasses" ConfigName="Debug"/>
+      <Project Name="Exceptions_Constructor" ConfigName="Debug"/>
+      <Project Name="Challenge14(Exceptions)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -173,6 +177,8 @@
       <Project Name="Exceptions_MultipleEx" ConfigName="Release"/>
       <Project Name="Exceptions_StackUnwinding" ConfigName="Release"/>
       <Project Name="Exceptions_UserDefinedClasses" ConfigName="Release"/>
+      <Project Name="Exceptions_Constructor" ConfigName="Release"/>
+      <Project Name="Challenge14(Exceptions)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

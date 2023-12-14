@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Exceptions_UserDefinedClasses - Debug ]----------"
-	@cd "Exceptions_UserDefinedClasses" && "$(MAKE)" -f  "Exceptions_UserDefinedClasses.mk"
+	@echo "----------Building project:[ Challenge14(Exceptions) - Debug ]----------"
+	@cd "Challenge14(Exceptions)" && "$(MAKE)" -f  "Challenge14(Exceptions).mk"
 clean:
-	@echo "----------Cleaning project:[ Exceptions_UserDefinedClasses - Debug ]----------"
-	@cd "Exceptions_UserDefinedClasses" && "$(MAKE)" -f  "Exceptions_UserDefinedClasses.mk" clean
+	@echo "----------Cleaning project:[ Challenge14(Exceptions) - Debug ]----------"
+	@cd "Challenge14(Exceptions)" && "$(MAKE)" -f  "Challenge14(Exceptions).mk" clean
