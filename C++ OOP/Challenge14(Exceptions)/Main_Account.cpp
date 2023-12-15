@@ -8,3 +8,8 @@ bool Main_Account::withdraw(double amount)
 {
     return Account::withdraw(amount);
 }
+
+void Main_Account::get_bal()
+{
+    Account::get_bal();
+}

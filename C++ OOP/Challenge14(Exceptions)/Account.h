@@ -2,6 +2,7 @@
 #define _ACCOUNT_H_
 
 #include <string>
+#include <iostream>
 
 class Account
 {
@@ -15,6 +16,7 @@ protected:
     
 public:
     Account(std::string name_val = def_name, double bal_val = def_balance);
+    virtual void get_bal() = 0;
     virtual bool withdraw(double amount) = 0;
     virtual ~Account() = default;
 };
