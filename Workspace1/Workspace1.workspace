@@ -13,7 +13,7 @@
   <Project Name="Constants" Path="Constants/Constants.project" Active="No"/>
   <Project Name="Challenge2" Path="Challenge2/Challenge2.project" Active="No"/>
   <Project Name="Arrays" Path="Arrays/Arrays.project" Active="No"/>
-  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="Yes"/>
+  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="No"/>
   <Project Name="Challenge3" Path="Challenge3/Challenge3.project" Active="No"/>
   <Project Name="ArithmeticOperators" Path="ArithmeticOperators/ArithmeticOperators.project" Active="No"/>
   <Project Name="IncrementDecrementOperators" Path="IncrementDecrementOperators/IncrementDecrementOperators.project" Active="No"/>
@@ -62,6 +62,10 @@
   <Project Name="References" Path="References/References.project" Active="No"/>
   <Project Name="Debugger" Path="Debugger/Debugger.project" Active="No"/>
   <Project Name="Challenge8" Path="Challenge8/Challenge8.project" Active="No"/>
+  <Project Name="Manip_Boolean" Path="Manip_Boolean/Manip_Boolean.project" Active="No"/>
+  <Project Name="Manip_Integer" Path="Manip_Integer/Manip_Integer.project" Active="No"/>
+  <Project Name="Manip_Floating" Path="Manip_Floating/Manip_Floating.project" Active="No"/>
+  <Project Name="Manip_Fields" Path="Manip_Fields/Manip_Fields.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -127,6 +131,10 @@
       <Project Name="References" ConfigName="Debug"/>
       <Project Name="Debugger" ConfigName="Debug"/>
       <Project Name="Challenge8" ConfigName="Debug"/>
+      <Project Name="Manip_Boolean" ConfigName="Debug"/>
+      <Project Name="Manip_Integer" ConfigName="Debug"/>
+      <Project Name="Manip_Floating" ConfigName="Debug"/>
+      <Project Name="Manip_Fields" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -192,6 +200,10 @@
       <Project Name="References" ConfigName="Release"/>
       <Project Name="Debugger" ConfigName="Release"/>
       <Project Name="Challenge8" ConfigName="Release"/>
+      <Project Name="Manip_Boolean" ConfigName="Release"/>
+      <Project Name="Manip_Integer" ConfigName="Release"/>
+      <Project Name="Manip_Floating" ConfigName="Release"/>
+      <Project Name="Manip_Fields" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
