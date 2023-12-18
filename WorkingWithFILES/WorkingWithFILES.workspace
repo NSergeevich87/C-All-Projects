@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="WorkingWithFILES" Database="" Version="10000">
+  <Project Name="ReadFile_1" Path="ReadFile_1/ReadFile_1.project" Active="No"/>
+  <Project Name="ReadFile_2" Path="ReadFile_2/ReadFile_2.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="ReadFile_1" ConfigName="Debug"/>
+      <Project Name="ReadFile_2" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="ReadFile_1" ConfigName="Release"/>
+      <Project Name="ReadFile_2" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
