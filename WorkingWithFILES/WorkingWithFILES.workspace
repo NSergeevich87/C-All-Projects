@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="WorkingWithFILES" Database="" Version="10000">
   <Project Name="ReadFile_1" Path="ReadFile_1/ReadFile_1.project" Active="No"/>
-  <Project Name="ReadFile_2" Path="ReadFile_2/ReadFile_2.project" Active="Yes"/>
+  <Project Name="ReadFile_2" Path="ReadFile_2/ReadFile_2.project" Active="No"/>
+  <Project Name="Practice" Path="Practice/Practice.project" Active="No"/>
+  <Project Name="ReadFile_3" Path="ReadFile_3/ReadFile_3.project" Active="No"/>
+  <Project Name="ReadFile_4" Path="ReadFile_4/ReadFile_4.project" Active="No"/>
+  <Project Name="Challenge16(ReadFile)" Path="Challenge16(ReadFile)/Challenge16(ReadFile).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
       <Project Name="ReadFile_1" ConfigName="Debug"/>
       <Project Name="ReadFile_2" ConfigName="Debug"/>
+      <Project Name="Practice" ConfigName="Debug"/>
+      <Project Name="ReadFile_3" ConfigName="Debug"/>
+      <Project Name="ReadFile_4" ConfigName="Debug"/>
+      <Project Name="Challenge16(ReadFile)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
       <Project Name="ReadFile_1" ConfigName="Release"/>
       <Project Name="ReadFile_2" ConfigName="Release"/>
+      <Project Name="Practice" ConfigName="Release"/>
+      <Project Name="ReadFile_3" ConfigName="Release"/>
+      <Project Name="ReadFile_4" ConfigName="Release"/>
+      <Project Name="Challenge16(ReadFile)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

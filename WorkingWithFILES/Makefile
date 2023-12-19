@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ ReadFile_2 - Debug ]----------"
-	@cd "ReadFile_2" && "$(MAKE)" -f  "ReadFile_2.mk"
+	@echo "----------Building project:[ Challenge16(ReadFile) - Debug ]----------"
+	@cd "Challenge16(ReadFile)" && "$(MAKE)" -f  "Challenge16(ReadFile).mk"
 clean:
-	@echo "----------Cleaning project:[ ReadFile_2 - Debug ]----------"
-	@cd "ReadFile_2" && "$(MAKE)" -f  "ReadFile_2.mk" clean
+	@echo "----------Cleaning project:[ Challenge16(ReadFile) - Debug ]----------"
+	@cd "Challenge16(ReadFile)" && "$(MAKE)" -f  "Challenge16(ReadFile).mk" clean
