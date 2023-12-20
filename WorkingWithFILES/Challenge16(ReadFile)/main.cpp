@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+    cout << setprecision(2);
+    
     const int field{20};
     const int left_side{10};
     const int right_side{10};

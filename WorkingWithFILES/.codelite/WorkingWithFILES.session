@@ -4,29 +4,19 @@
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\WorkingWithFILES.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\Practice\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="12" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\Challenge17(ReadFile)\main.cpp" Name="FileName"/>
+      <int Value="24" Name="FirstVisibleLine"/>
+      <int Value="68" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
+      <IntVector Name="CollapsedFolds">
+        <IntVectorItem Value="22"/>
+        <IntVectorItem Value="44"/>
+        <IntVectorItem Value="80"/>
+      </IntVector>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\ReadFile_1\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\ReadFile_2\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\Practice\myfile.txt" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\WorkingWithFILES\Challenge17(ReadFile)\RomeoAndJuliet.txt" Name="FileName"/>
+      <int Value="687" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
