@@ -5,16 +5,16 @@
 using namespace std;
 
 string BaseInterface();
-int WordFinder(const string &word, const string &find);
-void Conclusion(const int &totalW, const int &targetW); 
+bool WordFinder(const string &word, const string &find);
+void Conclusion(const int &totalW, const int &targetW, const string &word); 
 
 int main()
 {
     string line{};
     string findW{};
     
-    int TotalWords{}; 
-    int TargetWords{};
+    int TotalWords{0}; 
+    int TargetWords{0};
     
     ifstream in_file;
     in_file.open("RomeoAndJuliet.txt");
@@ -28,14 +28,16 @@ int main()
     
     findW = BaseInterface(); // Получаем слово для поиска
     
-    while(!in_file.eof())
+    while(in_file >> line)
     {
-        in_file >> line;
         TotalWords++;
-        TargetWords += WordFinder(line, findW);
+        if(WordFinder(line, findW))
+        {
+            ++TargetWords;
+        }
     }
     
-    Conclusion(TotalWords, TargetWords);
+    Conclusion(TotalWords, TargetWords, findW);
     
     in_file.close();
     return 0;
@@ -44,42 +46,60 @@ int main()
 string BaseInterface()
 {
     const int field{50};
-    //const int left_side{25};
-    //const int right_side{25};
+    string temp{}; // Переменная для варианта с независимостью регистра
     string word{};
     cout << setw((field - 34) / 2) << "" << "Welcome to the word search program\n" << endl;
     cout << setfill('-') << setw(field) << "" << endl;
     cout << setfill(' ');
     cout << "\nEnter word that you should to find: ";
-    cin >> word;
-    cout << "Your word is: " << word << " - let's find it..." << endl;
+    cin >> temp;
     
-    return word;
+    // Сделаем регистро независимым
+    /*for(size_t i = 0; i < temp.size(); ++i)
+    {
+        word += tolower(temp.at(i));
+    }*/
+    
+    cout << "Your word is: '" << temp << "' - let's find it..." << endl;
+    
+    return temp;
 }
 
-int WordFinder(const string &word, const string &find)
+bool WordFinder(const string &word, const string &find)
 {
-    string compare {word};
+    /*string compare {word};
     string finding {find};
     string editedW{};
-    int TargetWords{};
+    //int targetW{};
     
     for(size_t i = 0; i < compare.size(); ++i)
     {
-        if(compare.at(i) != '.' || compare.at(i) != ',')
-        {
-            editedW += compare.at(i);
-        }
+        if(ispunct(compare.at(i))) break;
+        //else editedW += compare.at(i);
+        else editedW += tolower(compare.at(i));    // Вариант регистронезависимый
     }
     
-    if(editedW == finding) ++TargetWords;
+    if(editedW == finding) return true;//targetW++;
     
-    return TargetWords;
+    return false;*/
+    
+    // second example
+    size_t found = word.find(find);
+    if (found == string::npos) return false;
+    else return true;
 }
 
-void Conclusion(const int &totalW, const int &targetW)
+void Conclusion(const int &totalW, const int &targetW, const string &word)
 {
-    cout << endl;
-    cout << "All words: " << totalW << endl;
-    cout << "Target words: " << targetW << endl;
+    const int field{50};
+    const int left_side{25};
+    const int right_side{25};
+    
+    string tarW {word};
+    
+    cout << "\n" << setfill('-') << setw(field) << "" << endl;
+    cout << setfill(' ');
+    
+    cout << setw(left_side) << left << "All words:" << setw(right_side) << right << totalW << endl;
+    cout << "Target word '" << tarW << "' was found '" << targetW << "' times" << endl;
 }

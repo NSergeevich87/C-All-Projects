@@ -1,1 +1,0 @@
-../build-Debug/ReadFile_1/main.cpp.o   

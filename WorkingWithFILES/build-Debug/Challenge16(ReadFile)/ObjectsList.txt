@@ -1,1 +1,0 @@
-../build-Debug/Challenge16(ReadFile)/main.cpp.o   
