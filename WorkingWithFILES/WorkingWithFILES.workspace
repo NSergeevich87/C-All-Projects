@@ -6,7 +6,10 @@
   <Project Name="ReadFile_3" Path="ReadFile_3/ReadFile_3.project" Active="No"/>
   <Project Name="ReadFile_4" Path="ReadFile_4/ReadFile_4.project" Active="No"/>
   <Project Name="Challenge16(ReadFile)" Path="Challenge16(ReadFile)/Challenge16(ReadFile).project" Active="No"/>
-  <Project Name="Challenge17(ReadFile)" Path="Challenge17(ReadFile)/Challenge17(ReadFile).project" Active="Yes"/>
+  <Project Name="Challenge17(ReadFile)" Path="Challenge17(ReadFile)/Challenge17(ReadFile).project" Active="No"/>
+  <Project Name="WriteFile" Path="WriteFile/WriteFile.project" Active="No"/>
+  <Project Name="CopyFile_1" Path="CopyFile_1/CopyFile_1.project" Active="No"/>
+  <Project Name="Challenge18(ReWriteFile)" Path="Challenge18(ReWriteFile)/Challenge18(ReWriteFile).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -17,6 +20,9 @@
       <Project Name="ReadFile_4" ConfigName="Debug"/>
       <Project Name="Challenge16(ReadFile)" ConfigName="Debug"/>
       <Project Name="Challenge17(ReadFile)" ConfigName="Debug"/>
+      <Project Name="WriteFile" ConfigName="Debug"/>
+      <Project Name="CopyFile_1" ConfigName="Debug"/>
+      <Project Name="Challenge18(ReWriteFile)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -27,6 +33,9 @@
       <Project Name="ReadFile_4" ConfigName="Release"/>
       <Project Name="Challenge16(ReadFile)" ConfigName="Release"/>
       <Project Name="Challenge17(ReadFile)" ConfigName="Release"/>
+      <Project Name="WriteFile" ConfigName="Release"/>
+      <Project Name="CopyFile_1" ConfigName="Release"/>
+      <Project Name="Challenge18(ReWriteFile)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
