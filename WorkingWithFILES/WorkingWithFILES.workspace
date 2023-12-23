@@ -9,7 +9,8 @@
   <Project Name="Challenge17(ReadFile)" Path="Challenge17(ReadFile)/Challenge17(ReadFile).project" Active="No"/>
   <Project Name="WriteFile" Path="WriteFile/WriteFile.project" Active="No"/>
   <Project Name="CopyFile_1" Path="CopyFile_1/CopyFile_1.project" Active="No"/>
-  <Project Name="Challenge18(ReWriteFile)" Path="Challenge18(ReWriteFile)/Challenge18(ReWriteFile).project" Active="Yes"/>
+  <Project Name="Challenge18(ReWriteFile)" Path="Challenge18(ReWriteFile)/Challenge18(ReWriteFile).project" Active="No"/>
+  <Project Name="StringStream" Path="StringStream/StringStream.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -23,6 +24,7 @@
       <Project Name="WriteFile" ConfigName="Debug"/>
       <Project Name="CopyFile_1" ConfigName="Debug"/>
       <Project Name="Challenge18(ReWriteFile)" ConfigName="Debug"/>
+      <Project Name="StringStream" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -36,6 +38,7 @@
       <Project Name="WriteFile" ConfigName="Release"/>
       <Project Name="CopyFile_1" ConfigName="Release"/>
       <Project Name="Challenge18(ReWriteFile)" ConfigName="Release"/>
+      <Project Name="StringStream" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
