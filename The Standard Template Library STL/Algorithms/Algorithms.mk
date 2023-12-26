@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=Iterators
+ProjectName            :=Algorithms
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :="C:/Users/Professional/Documents/C++ All Projects/The Standard Template Library STL"
-ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/The Standard Template Library STL/Iterators"
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Iterators
+ProjectPath            :="C:/Users/Professional/Documents/C++ All Projects/The Standard Template Library STL/Algorithms"
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Algorithms
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -96,7 +96,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/The Standard Template Library STL/Iterators/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Professional/Documents/C++ All Projects/The Standard Template Library STL/Algorithms/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 

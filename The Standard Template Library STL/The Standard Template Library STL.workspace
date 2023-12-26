@@ -3,7 +3,8 @@
   <Project Name="FunctionTemplates" Path="FunctionTemplates/FunctionTemplates.project" Active="No"/>
   <Project Name="ClassTemplates" Path="ClassTemplates/ClassTemplates.project" Active="No"/>
   <Project Name="ClassTemplateArray" Path="ClassTemplateArray/ClassTemplateArray.project" Active="No"/>
-  <Project Name="Iterators" Path="Iterators/Iterators.project" Active="Yes"/>
+  <Project Name="Iterators" Path="Iterators/Iterators.project" Active="No"/>
+  <Project Name="Algorithms" Path="Algorithms/Algorithms.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -11,6 +12,7 @@
       <Project Name="ClassTemplates" ConfigName="Debug"/>
       <Project Name="ClassTemplateArray" ConfigName="Debug"/>
       <Project Name="Iterators" ConfigName="Debug"/>
+      <Project Name="Algorithms" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -18,6 +20,7 @@
       <Project Name="ClassTemplates" ConfigName="Release"/>
       <Project Name="ClassTemplateArray" ConfigName="Release"/>
       <Project Name="Iterators" ConfigName="Release"/>
+      <Project Name="Algorithms" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
