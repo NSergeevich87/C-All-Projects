@@ -1,42 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\The Standard Template Library STL.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\The Standard Template Library STL.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\ClassTemplateArray\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Iterators\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Algorithms\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Array\main.cpp" Name="FileName"/>
-      <int Value="68" Name="FirstVisibleLine"/>
-      <int Value="158" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Vector\main.cpp" Name="FileName"/>
+      <int Value="60" Name="FirstVisibleLine"/>
+      <int Value="171" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
-        <IntVectorItem Value="8"/>
-        <IntVectorItem Value="15"/>
-        <IntVectorItem Value="81"/>
-        <IntVectorItem Value="93"/>
-        <IntVectorItem Value="108"/>
-        <IntVectorItem Value="124"/>
-        <IntVectorItem Value="144"/>
+        <IntVectorItem Value="28"/>
+        <IntVectorItem Value="35"/>
+        <IntVectorItem Value="42"/>
+        <IntVectorItem Value="64"/>
+        <IntVectorItem Value="97"/>
+        <IntVectorItem Value="109"/>
+        <IntVectorItem Value="128"/>
       </IntVector>
     </TabInfo>
   </TabInfoArray>
