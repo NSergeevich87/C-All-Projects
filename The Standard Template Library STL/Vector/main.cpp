@@ -172,6 +172,117 @@ void test6()
     display_2(nums);
 }
 
+void test7()
+{
+    cout << "\nTest7=============================" << endl;
+    
+    std::vector<int> vec1 { 1, 2, 3, 4, 5, 6 };
+    std::vector<int> vec2 { 10, 20, 30, 40 };
+    
+    std::cout << "Vector_1: ";
+    display_1(vec1);
+    std::cout << std::endl;
+    std::cout << "Vector_2: ";
+    display_1(vec2);
+    std::cout << std::endl;
+    
+    vec1.swap(vec2);
+    
+    std::cout << "Vector_1: ";
+    display_1(vec1);
+    std::cout << std::endl;
+    std::cout << "Vector_2: ";
+    display_1(vec2);
+    std::cout << std::endl;
+}
+
+void test8()
+{
+    cout << "\nTest8=============================" << endl;
+    
+    vector<int> vec { 4, 54, 6, 5, 78, 9, 87, 65 };
+    display_1(vec);
+    
+    std::sort(begin(vec), end(vec));
+    display_1(vec);
+}
+
+void test9()
+{
+    cout << "\nTest9=============================" << endl;
+    
+    std::vector<int> vec1 { 1, 2, 3, 4, 5 };
+    std::vector<int> vec2 { 10, 20 };
+    
+    display_1(vec1);
+    display_1(vec2);
+    cout << endl;
+    
+    std::copy(vec1.begin(), vec1.end(), std::back_inserter(vec2));
+    display_1(vec1);
+    display_1(vec2);
+    cout << endl;
+    sort(begin(vec2), end(vec2));
+    display_1(vec2);
+    
+    // copy_if (the element is even)
+    vec1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    vec2 = { 10, 20 };
+    
+    display_1(vec1);
+    display_1(vec2);
+    
+    std::copy_if(begin(vec1), end(vec1), std::back_inserter(vec2),
+        [] (int x) { return x % 2 == 0; });
+        
+    display_1(vec1);
+    display_1(vec2);
+}
+
+void test10()
+{
+    cout << "\nTest10=============================" << endl;
+    // перемножим два вектора и запишем результат в новый вектор
+    
+    std::vector<int> vec1 { 1, 2, 3, 4, 5 };
+    std::vector<int> vec2 { 10, 20, 30, 40, 50 };
+    std::vector<int> vec3 {};
+    
+    display_1(vec1);
+    display_1(vec2);
+    display_1(vec3);
+    
+    std::transform(vec1.begin(), vec1.end(), begin(vec2), // что? берем полностью векто1 и начало вектора2
+        back_inserter(vec3),                              // куда? копируем в вектор3
+        [] (int x, int y) { return x * y; });             // как? используем лямбду для описания правила
+        
+    display_1(vec1);
+    display_1(vec2);
+    display_1(vec3);
+}
+
+void test11()
+{
+    cout << "\nTest11=============================" << endl;
+    // есть 2 вектора, мы хотим второй вектор вставить в первый перед определенным элементом
+    
+    std::vector<int> vec1 { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    std::vector<int> vec2 { 111, 222, 333, 444, 555 };
+    
+    display_1(vec1);
+    display_1(vec2);
+    
+    std::vector<int>::iterator it = std::find(begin(vec1), end(vec1), 5);
+    if (it != vec1.end())
+    {
+        std::cout << "inserting..." << std::endl;
+        vec1.insert(it, begin(vec2), end(vec2)); 
+    }
+    else cout << "Element not found" << endl;
+    
+    display_1(vec1);
+}
+
 int main()
 {
     //test1();
@@ -179,12 +290,12 @@ int main()
     //test3();
     //test4();
     //test5();
-    test6();
+    //test6();
     //test7();
     //test8();
     //test9();
     //test10();
-    //test11();
+    test11();
     
     return 0;
 }

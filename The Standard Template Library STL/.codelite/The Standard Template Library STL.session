@@ -4,19 +4,11 @@
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\The Standard Template Library STL.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Vector\main.cpp" Name="FileName"/>
-      <int Value="60" Name="FirstVisibleLine"/>
-      <int Value="171" Name="CurrentLine"/>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Deque\main.cpp" Name="FileName"/>
+      <int Value="120" Name="FirstVisibleLine"/>
+      <int Value="154" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds">
-        <IntVectorItem Value="28"/>
-        <IntVectorItem Value="35"/>
-        <IntVectorItem Value="42"/>
-        <IntVectorItem Value="64"/>
-        <IntVectorItem Value="97"/>
-        <IntVectorItem Value="109"/>
-        <IntVectorItem Value="128"/>
-      </IntVector>
+      <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
