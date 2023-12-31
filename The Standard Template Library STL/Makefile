@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Deque - Debug ]----------"
-	@cd "Deque" && "$(MAKE)" -f  "Deque.mk"
+	@echo "----------Building project:[ List - Debug ]----------"
+	@cd "List" && "$(MAKE)" -f  "List.mk"
 clean:
-	@echo "----------Cleaning project:[ Deque - Debug ]----------"
-	@cd "Deque" && "$(MAKE)" -f  "Deque.mk" clean
+	@echo "----------Cleaning project:[ List - Debug ]----------"
+	@cd "List" && "$(MAKE)" -f  "List.mk" clean
