@@ -36,9 +36,9 @@ class Song
 
 ostream &operator<<(ostream &os, const Song &s)
 {
-    os << setw(15) << left << s.name 
-       << setw(15) << left << s.singer 
-       << setw(2)  << left << s.rating << "\n";
+    os << setw(15) << right << s.name 
+       << setw(15) << right << s.singer 
+       << setw(8)  << right << s.rating;
     return os;
 }
 
@@ -51,6 +51,94 @@ void print_nemu()
          << setw(15) << left << "L - List the current playlist"  << "\n"
          << "===============================================" << "\n"
          << setw(15) << left << "Enter a selection (Q to quit): ";
+}
+
+void play_first_song(list<Song> &songs, list<Song>::iterator &i)
+{
+    auto it = songs.begin();
+    i = songs.begin();
+    
+    while(it != songs.end())
+    {
+        if (it == i)
+        {
+            cout << "Play -> " << *i << endl;
+            ++it;
+        }
+        cout << setw(8) << "" << *it << endl;
+        ++it;
+    }
+}
+
+void play_next_song(list<Song> &songs, list<Song>::iterator &i)
+{
+    auto it = songs.begin();
+    if(*i == songs.back()) i = songs.begin();
+    else ++i;
+    
+    while(it != songs.end())
+    {
+        if (it == i)
+        {
+            cout << "Play -> " << *i << endl;
+            ++it;
+        }
+        else
+        {
+            cout << setw(8) << "" << *it << endl;
+            ++it;
+        }
+    }
+}
+
+void play_previous_song(list<Song> &songs, list<Song>::iterator &i)
+{
+    auto it = songs.begin();
+    if(i != songs.begin()) i--;
+    else advance(i, songs.size() - 1);
+    
+    while(it != songs.end())
+    {
+        if(it == i)
+        {
+            cout << "Play -> " << *i << endl;
+            ++it;
+        }
+        else
+        {
+            cout << setw(8) << "" << *it << endl;
+            ++it; 
+        }
+    }
+}
+
+void work_with_answer(list<Song> &songs, list<Song>::iterator &i, const char l)
+{
+    switch(l)
+    {
+        case 'F':
+            cout << "\n" << setw(30) << right << "F - Play First Song" << endl; // field 47
+            play_first_song(songs, i);
+            break;
+        case 'N':
+            cout << "\n" << setw(30) << right << "N - Play Next song" << endl;
+            play_next_song(songs, i);
+            break;
+        case 'P':
+            cout << "\n" << setw(30) << right << "P - Play Previous song" << endl;
+            play_previous_song(songs, i);
+            break;
+        case 'A':
+            cout << "\n" << setw(30) << right << "A - Add and play a new Song at current location" << endl;
+            break;
+        case 'L':
+            cout << "\n" << setw(40) << right << "L - List the current playlist" << endl;
+            break;
+        case 'Q':
+            cout << "Q - quit" << endl;
+            break;
+        default: cout << "\n" << setw(30) << right << "Incorrect! Try again!" << endl;
+    }
 }
 
 int main()
@@ -75,7 +163,7 @@ int main()
         answer = toupper(answer);
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        
+        work_with_answer(my_songs, it, answer);
     }
     while(answer != 'Q');
         

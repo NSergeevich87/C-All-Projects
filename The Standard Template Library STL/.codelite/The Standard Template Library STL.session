@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\The Standard Template Library STL.workspace">
-  <int Value="2" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\The Standard Template Library STL.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Challenge_19(Deque)\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\List\main.cpp" Name="FileName"/>
-      <int Value="134" Name="FirstVisibleLine"/>
+      <int Value="99" Name="FirstVisibleLine"/>
       <int Value="165" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\The Standard Template Library STL\Challenge_20(List)\main.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="65" Name="CurrentLine"/>
+      <int Value="15" Name="FirstVisibleLine"/>
+      <int Value="117" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
         <IntVectorItem Value="11"/>
         <IntVectorItem Value="37"/>
+        <IntVectorItem Value="45"/>
+        <IntVectorItem Value="56"/>
+        <IntVectorItem Value="73"/>
+        <IntVectorItem Value="94"/>
       </IntVector>
     </TabInfo>
   </TabInfoArray>
