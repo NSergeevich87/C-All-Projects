@@ -5,6 +5,7 @@
 #include <string>
 #include <cctype>
 #include <limits>
+#include <fstream>
 
 using namespace std;
 
@@ -36,9 +37,9 @@ class Song
 
 ostream &operator<<(ostream &os, const Song &s)
 {
-    os << setw(15) << right << s.name 
-       << setw(15) << right << s.singer 
-       << setw(8)  << right << s.rating;
+    os << setw(20) << left << s.name 
+       << setw(30) << left << s.singer 
+       << setw(2)  << left << s.rating;
     return os;
 }
 
@@ -49,6 +50,7 @@ void print_nemu()
          << setw(15) << left << "P - Play Previous song"  << "\n"
          << setw(15) << left << "A - Add and play a new Song at current location"  << "\n"
          << setw(15) << left << "L - List the current playlist"  << "\n"
+         << setw(15) << left << "W - Write All Songs to File" << "\n"
          << "===============================================" << "\n"
          << setw(15) << left << "Enter a selection (Q to quit): ";
 }
@@ -112,6 +114,66 @@ void play_previous_song(list<Song> &songs, list<Song>::iterator &i)
     }
 }
 
+void playlist(const list<Song> &songs)
+{
+    auto it = songs.begin();
+    while(it != songs.end())
+    {
+        cout << *it << endl;
+        it++;
+    }
+}
+
+void add_play_new_song(list<Song> &songs, list<Song>::iterator &i)
+{
+    string name{};
+    string singer{};
+    int rating{};
+    
+    cout << "Enter name of the song: ";
+    getline(cin, name);
+    cout << "Enter singer of the song: ";
+    getline(cin, singer);
+    cout << "Enter rating from 1 to 5: ";
+    cin >> rating;
+    
+    songs.emplace(i, name, singer, rating);
+    
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    
+    advance(i, -1);
+    
+    auto it = begin(songs);
+    while(it != end(songs))
+    {
+        if (it == i) cout << "Play -> " << *it << endl;
+        else cout << setw(8) << left << "" << *it << endl;
+        it++;
+    }
+}
+
+void write_to_file(list<Song> &songs)
+{
+    ofstream file;
+    file.open("songs.txt", ios::app);
+    if(!file)
+    {
+        cerr << "Some problem with file!" << endl;
+        return;
+    }
+    cout << "Writing to file..." << endl;
+    
+    list<Song>::iterator it = songs.begin();
+    while(it != songs.end())
+    {
+        file << *it << endl;
+        it++;
+    }
+    
+    file.close();
+}
+
 void work_with_answer(list<Song> &songs, list<Song>::iterator &i, const char l)
 {
     switch(l)
@@ -130,9 +192,15 @@ void work_with_answer(list<Song> &songs, list<Song>::iterator &i, const char l)
             break;
         case 'A':
             cout << "\n" << setw(30) << right << "A - Add and play a new Song at current location" << endl;
+            add_play_new_song(songs, i);
             break;
         case 'L':
             cout << "\n" << setw(40) << right << "L - List the current playlist" << endl;
+            playlist(songs);
+            break;
+        case 'W':
+            cout << "\n" << setw(40) << right << "W - Write All Songs to File" << endl;
+            write_to_file(songs);
             break;
         case 'Q':
             cout << "Q - quit" << endl;
@@ -147,11 +215,12 @@ int main()
     
     list<Song> my_songs
     {
-        {"name1", "singer1", 4},
-        {"name2", "singer2", 5},
-        {"name3", "singer3", 3},
-        {"name4", "singer4", 4},
-        {"name5", "singer5", 5}
+        {"God's Plan",        "Drake",                     5},
+        {"Never Be The Same", "Camila Cabello",            5},
+        {"Pray For Me",       "The Weekend and K. Lamar",  4},
+        {"The Middle",        "Zedd, Maren Morris & Grey", 5},
+        {"Wait",              "Maroone 5",                 4},
+        {"Whatever It Takes", "Imagine Dragons",           3}
     };
     
     list<Song>::iterator it = my_songs.begin();
