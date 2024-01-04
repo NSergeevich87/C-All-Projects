@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Set - Debug ]----------"
-	@cd "Set" && "$(MAKE)" -f  "Set.mk"
+	@echo "----------Building project:[ Map - Debug ]----------"
+	@cd "Map" && "$(MAKE)" -f  "Map.mk"
 clean:
-	@echo "----------Cleaning project:[ Set - Debug ]----------"
-	@cd "Set" && "$(MAKE)" -f  "Set.mk" clean
+	@echo "----------Cleaning project:[ Map - Debug ]----------"
+	@cd "Map" && "$(MAKE)" -f  "Map.mk" clean
