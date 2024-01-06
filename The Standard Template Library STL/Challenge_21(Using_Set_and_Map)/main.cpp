@@ -61,8 +61,9 @@ void part1()
         while(file >> line)
         {
             line = clear_line(line);
+            word_counter[line]++;
             
-            map<string, int>::iterator it = word_counter.find(line);
+            /*map<string, int>::iterator it = word_counter.find(line);
             
             if(it != end(word_counter))
             {
@@ -73,7 +74,7 @@ void part1()
             {
                 word_counter.insert(make_pair(line, 1));
                 it++;
-            }
+            }*/
         }
         
         file.close();
@@ -86,6 +87,7 @@ void part2()
 {
     string line {};
     string word {};
+    int line_counter{};
     map<string, set<int>> words_lines {};
     
     ifstream in_file {"Words.txt"};
@@ -94,22 +96,29 @@ void part2()
     {
         cout << "File -> OK" << endl;
         
-        while(!in_file.eof())
-        {
-            getline(in_file, line);
-            istringstream iss{line};
-            iss >> word;
-            cout << word << endl;
+        while(getline(in_file, line))                  // Берем целую строку
+        {                 
+            istringstream iss{line};                   // Всю строку записываем в istringstream
+            line_counter++;
             
+            while(iss >> word)                         // Теперь работаем с каждым отдельным словом в строке
+            {
+                word = clear_line(word);
+                
+                words_lines[word].insert(line_counter);
+            }
+            cout << endl;
         }
         
+        in_file.close();
+        display(words_lines);
     }
     else cout << "Error opening input file" << endl;
 }
 
 int main()
 {
-    //part1();
+    part1();
     part2();
     return 0;
 }
