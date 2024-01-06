@@ -13,7 +13,10 @@
   <Project Name="Challenge_20(List)" Path="Challenge_20(List)/Challenge_20(List).project" Active="No"/>
   <Project Name="Set" Path="Set/Set.project" Active="No"/>
   <Project Name="Map" Path="Map/Map.project" Active="No"/>
-  <Project Name="Challenge_21(Using_Set_and_Map)" Path="Challenge_21(Using_Set_and_Map)/Challenge_21(Using_Set_and_Map).project" Active="Yes"/>
+  <Project Name="Challenge_21(Using_Set_and_Map)" Path="Challenge_21(Using_Set_and_Map)/Challenge_21(Using_Set_and_Map).project" Active="No"/>
+  <Project Name="Stack" Path="Stack/Stack.project" Active="No"/>
+  <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
+  <Project Name="Challenge_22(Stack_Queue)" Path="Challenge_22(Stack_Queue)/Challenge_22(Stack_Queue).project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -31,6 +34,9 @@
       <Project Name="Set" ConfigName="Debug"/>
       <Project Name="Map" ConfigName="Debug"/>
       <Project Name="Challenge_21(Using_Set_and_Map)" ConfigName="Debug"/>
+      <Project Name="Stack" ConfigName="Debug"/>
+      <Project Name="Queue" ConfigName="Debug"/>
+      <Project Name="Challenge_22(Stack_Queue)" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -48,6 +54,9 @@
       <Project Name="Set" ConfigName="Release"/>
       <Project Name="Map" ConfigName="Release"/>
       <Project Name="Challenge_21(Using_Set_and_Map)" ConfigName="Release"/>
+      <Project Name="Stack" ConfigName="Release"/>
+      <Project Name="Queue" ConfigName="Release"/>
+      <Project Name="Challenge_22(Stack_Queue)" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

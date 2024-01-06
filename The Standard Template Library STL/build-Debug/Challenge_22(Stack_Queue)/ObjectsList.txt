@@ -1,0 +1,1 @@
+../build-Debug/Challenge_22(Stack_Queue)/main.cpp.o   
