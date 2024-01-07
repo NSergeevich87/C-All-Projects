@@ -17,7 +17,8 @@
   <Project Name="Stack" Path="Stack/Stack.project" Active="No"/>
   <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
   <Project Name="Challenge_22(Stack_Queue)" Path="Challenge_22(Stack_Queue)/Challenge_22(Stack_Queue).project" Active="No"/>
-  <Project Name="PriorityQueue" Path="PriorityQueue/PriorityQueue.project" Active="Yes"/>
+  <Project Name="PriorityQueue" Path="PriorityQueue/PriorityQueue.project" Active="No"/>
+  <Project Name="Test" Path="Test/Test.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -39,6 +40,7 @@
       <Project Name="Queue" ConfigName="Debug"/>
       <Project Name="Challenge_22(Stack_Queue)" ConfigName="Debug"/>
       <Project Name="PriorityQueue" ConfigName="Debug"/>
+      <Project Name="Test" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -60,6 +62,7 @@
       <Project Name="Queue" ConfigName="Release"/>
       <Project Name="Challenge_22(Stack_Queue)" ConfigName="Release"/>
       <Project Name="PriorityQueue" ConfigName="Release"/>
+      <Project Name="Test" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
