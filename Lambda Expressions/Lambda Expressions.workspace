@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Lambda Expressions" Database="" Version="10000">
   <Project Name="FunctionObjects" Path="FunctionObjects/FunctionObjects.project" Active="No"/>
-  <Project Name="StatelessLambda" Path="StatelessLambda/StatelessLambda.project" Active="Yes"/>
+  <Project Name="StatelessLambda" Path="StatelessLambda/StatelessLambda.project" Active="No"/>
+  <Project Name="Test" Path="Test/Test.project" Active="No"/>
+  <Project Name="StatefulLambda" Path="StatefulLambda/StatefulLambda.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
       <Project Name="FunctionObjects" ConfigName="Debug"/>
       <Project Name="StatelessLambda" ConfigName="Debug"/>
+      <Project Name="Test" ConfigName="Debug"/>
+      <Project Name="StatefulLambda" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
       <Project Name="FunctionObjects" ConfigName="Release"/>
       <Project Name="StatelessLambda" ConfigName="Release"/>
+      <Project Name="Test" ConfigName="Release"/>
+      <Project Name="StatefulLambda" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
