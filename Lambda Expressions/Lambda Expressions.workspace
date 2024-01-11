@@ -3,7 +3,8 @@
   <Project Name="FunctionObjects" Path="FunctionObjects/FunctionObjects.project" Active="No"/>
   <Project Name="StatelessLambda" Path="StatelessLambda/StatelessLambda.project" Active="No"/>
   <Project Name="Test" Path="Test/Test.project" Active="No"/>
-  <Project Name="StatefulLambda" Path="StatefulLambda/StatefulLambda.project" Active="Yes"/>
+  <Project Name="StatefulLambda" Path="StatefulLambda/StatefulLambda.project" Active="No"/>
+  <Project Name="STL_Lambdas" Path="STL_Lambdas/STL_Lambdas.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -11,6 +12,7 @@
       <Project Name="StatelessLambda" ConfigName="Debug"/>
       <Project Name="Test" ConfigName="Debug"/>
       <Project Name="StatefulLambda" ConfigName="Debug"/>
+      <Project Name="STL_Lambdas" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -18,6 +20,7 @@
       <Project Name="StatelessLambda" ConfigName="Release"/>
       <Project Name="Test" ConfigName="Release"/>
       <Project Name="StatefulLambda" ConfigName="Release"/>
+      <Project Name="STL_Lambdas" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

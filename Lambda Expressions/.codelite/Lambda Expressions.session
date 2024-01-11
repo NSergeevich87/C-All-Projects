@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\Lambda Expressions.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="4" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\Lambda Expressions.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,32 +12,34 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\StatelessLambda\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="181" Name="CurrentLine"/>
+      <int Value="2" Name="FirstVisibleLine"/>
+      <int Value="3" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\Test\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="14" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\StatefulLambda\main.cpp" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="169" Name="CurrentLine"/>
+      <int Value="214" Name="FirstVisibleLine"/>
+      <int Value="288" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
         <IntVectorItem Value="7"/>
         <IntVectorItem Value="21"/>
-        <IntVectorItem Value="40"/>
-        <IntVectorItem Value="59"/>
-        <IntVectorItem Value="84"/>
-        <IntVectorItem Value="104"/>
-        <IntVectorItem Value="124"/>
       </IntVector>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\STL_Lambdas\main.cpp" Name="FileName"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="37" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
