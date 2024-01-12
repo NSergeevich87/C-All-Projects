@@ -26,20 +26,19 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\StatefulLambda\main.cpp" Name="FileName"/>
-      <int Value="214" Name="FirstVisibleLine"/>
-      <int Value="288" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds">
-        <IntVectorItem Value="7"/>
-        <IntVectorItem Value="21"/>
-      </IntVector>
+      <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Professional\Documents\C++ All Projects\Lambda Expressions\STL_Lambdas\main.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="37" Name="CurrentLine"/>
+      <int Value="129" Name="FirstVisibleLine"/>
+      <int Value="153" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
+      <IntVector Name="CollapsedFolds">
+        <IntVectorItem Value="134"/>
+      </IntVector>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
