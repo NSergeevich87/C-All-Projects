@@ -6,12 +6,12 @@
 class Human : public Actor
 {
 protected:
-    std::string name{};
-    bool isMakeOrder{};
-    bool isTakeOrder{};
+    std::string name{"No_name"};
+    bool isMakeOrder{false};
+    bool isTakeOrder{false};
 
 public:
-    Human(std::string name_val) : Actor(name_val) {}
+    Human(std::string name_val) : name{ name_val } {}
 
     virtual std::string get_name() override;
     virtual void setMakeOrder(bool value) override;

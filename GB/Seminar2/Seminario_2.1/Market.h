@@ -17,5 +17,6 @@ public:
 	virtual void AcceptToMarket(Human human) override;
 	virtual void ReleaseFromMarket(std::vector<Human> humans) override;
 	virtual void Update() override;
+	void PrintQueue();
 };
 

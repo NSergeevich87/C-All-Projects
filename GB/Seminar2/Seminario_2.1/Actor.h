@@ -11,7 +11,7 @@ protected:
     bool isTakeOrder{};
 
 public:
-    Actor(std::string name_val) : name{ name_val } {}
+    Actor() = default;
     virtual std::string get_name() = 0;
     ~Actor() = default;
 };

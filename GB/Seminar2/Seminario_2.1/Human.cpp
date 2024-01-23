@@ -4,8 +4,7 @@
 
 std::string Human::get_name()
 {
-    //std::cout << name << "\n";
-    return Actor::name;
+    return name;
 }
 void Human::setMakeOrder(bool value)
 {
