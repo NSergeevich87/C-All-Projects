@@ -1,5 +1,5 @@
 #include "Groups.h"
-#include "algorithm"
+#include <algorithm>
 
 void Groups::AddStudent(Student& obj)
 {
@@ -8,13 +8,15 @@ void Groups::AddStudent(Student& obj)
 
 void Groups::DeleteStudent(std::string name)
 {
-	std::vector<Student>::iterator it = Students.begin();
+	auto it = Students.begin();
 	while (it != Students.end())
 	{
 		if (it->GetName() == name)
 		{
 			Students.erase(it);
+			break;
 		}
+		else it++;
 	}
 }
 

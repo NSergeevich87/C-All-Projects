@@ -7,8 +7,11 @@
 
 class Groups : public Iterator 
 {
-public:
+private:
 	std::vector<Student> Students{};
+
+public:
+	Groups() = default;
 
 	virtual void AddStudent(Student& obj) override final;
 	virtual void DeleteStudent(std::string name) override final;

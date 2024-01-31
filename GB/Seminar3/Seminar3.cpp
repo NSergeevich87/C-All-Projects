@@ -25,7 +25,9 @@ int main()
 
 	Students.PrintStudents();
 
-	Students.DeleteStudent("Nick");
+	Students.DeleteStudent("Daniil");
+
+	cout << "\n";
 
 	Students.PrintStudents();
 
