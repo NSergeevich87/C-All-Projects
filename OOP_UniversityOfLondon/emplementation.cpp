@@ -67,7 +67,7 @@ void printInvalidChoice()
 
 bool choiceProcess(int num)
 {
-    map<int, void (*)()> choiceMap;
+    std::map<int, void (*)()> choiceMap;
     choiceMap[1] = printHelp;
     choiceMap[2] = printExchangeStats;
     choiceMap[3] = makeAnOffer;
@@ -106,20 +106,4 @@ bool choiceProcess(int num)
     }
 
     return false;
-}
-
-int main() 
-{
-    bool quit = false;
-
-    while (!quit)
-    {
-        printMenu();
-
-        int choice = getUserChoice();
-
-        quit = choiceProcess(choice);
-    }
-
-    return 0;
 }
