@@ -1,9 +1,33 @@
 #include <iostream>
 #include <map>
 
+#include "headers/MerkelMain.h"
+
 using namespace std;
 
-void printMenu()
+MerkelMain::MerkelMain()
+{
+}
+
+MerkelMain::~MerkelMain()
+{
+}
+
+void MerkelMain::run()
+{
+    bool quit = false;
+
+    while (!quit)
+    {
+        printMenu();
+
+        int choice = getUserChoice();
+
+        quit = choiceProcess(choice);
+    }
+}
+
+void MerkelMain::printMenu()
 {
     cout << "====================================" << endl;
     cout << "1: Print help" << endl;
@@ -16,7 +40,7 @@ void printMenu()
     cout << "====================================" << endl;
 }
 
-int getUserChoice()
+int MerkelMain::getUserChoice()
 {
     int choice;
     cout << "Please enter a number: ";
@@ -25,79 +49,80 @@ int getUserChoice()
     return choice;
 }
 
-void printHelp()
+void MerkelMain::printHelp()
 {
     cout << "Help - This is a simple exchange program" << endl;
 }
 
-void printExchangeStats()
+void MerkelMain::printExchangeStats()
 {
     cout << "Exchange stats - No stats available" << endl;
 }
 
-void makeAnOffer()
+void MerkelMain::makeAnOffer()
 {
     cout << "Make an offer - No offer available" << endl;
 }
 
-void makeABid()
+void MerkelMain::makeABid()
 {
     cout << "Make a bid - No bid available" << endl;
 }
 
-void printWallet()
+void MerkelMain::printWallet()
 {
     cout << "Print wallet - No wallet available" << endl;
 }
 
-void goNextTimeFrame()
+void MerkelMain::goNextTimeFrame()
 {
     cout << "Continue - Continue the program" << endl;
 }
 
-void shutDown()
+void MerkelMain::shutDown()
 {
     cout << "Quit - Quit the program" << endl;
 }
 
-void printInvalidChoice()
+void MerkelMain::printInvalidChoice()
 {
     cout << "Invalid choice" << endl;
 }
 
-bool choiceProcess(int num)
+bool MerkelMain::choiceProcess(int num)
 {
-    std::map<int, void (*)()> choiceMap;
-    choiceMap[1] = printHelp;
-    choiceMap[2] = printExchangeStats;
-    choiceMap[3] = makeAnOffer;
-    choiceMap[4] = makeABid;
-    choiceMap[5] = printWallet;
-    choiceMap[6] = goNextTimeFrame;
-    choiceMap[7] = shutDown;
+    std::map<int, void (MerkelMain::*)()> choiceMap;
+    
+    choiceMap[1] = &MerkelMain::printHelp;
+    choiceMap[2] = &MerkelMain::printExchangeStats;
+    choiceMap[3] = &MerkelMain::makeAnOffer;
+    choiceMap[4] = &MerkelMain::makeABid;
+    choiceMap[5] = &MerkelMain::printWallet;
+    choiceMap[6] = &MerkelMain::goNextTimeFrame;
+    choiceMap[7] = &MerkelMain::shutDown;
 
     switch (num)
     {
     case 1:
-        choiceMap[1]();
+        (this->*choiceMap[1])();
         break;
     case 2:
-        choiceMap[2]();
+        (this->*choiceMap[2])();
         break;
     case 3:
-        choiceMap[3]();
+        (this->*choiceMap[3])();
         break;
     case 4:
-        choiceMap[4]();
+        (this->*choiceMap[4])();
         break;
     case 5:
-        choiceMap[5]();
+        (this->*choiceMap[5])();
         break;
     case 6:
-        choiceMap[6]();
+        (this->*choiceMap[6])();
         break;
     case 7:
-        choiceMap[7]();
+        (this->*choiceMap[7])();
         return true;
         break;
     default:
