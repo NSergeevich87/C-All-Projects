@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 
@@ -11,6 +13,7 @@ std::ostream &operator<<(std::ostream &os, const OrderBookType &type);
 
 class OrderBookEntry
 {
+    /** Overload ostream operator << for print in console */
     friend std::ostream &operator<<(std::ostream &os, const OrderBookEntry &obe);
 
     private:
@@ -21,17 +24,15 @@ class OrderBookEntry
         double amount;
     
     public:
+        /** Constructor */
         OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val);
+        /** Default destructor */
+        ~OrderBookEntry() = default;
 
-        ~OrderBookEntry() {}
-
+        /** Some basic functions */
         std::string getTimestamp();
-
         std::string getPair() const;
-
         OrderBookType getType() const;
-
         double getPrice() const;
-
         double getAmount() const;
 };

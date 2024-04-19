@@ -1,20 +1,16 @@
 #include <iostream>
+#include <vector>
 #include <map>
 
 #include "headers/MerkelMain.h"
+#include "headers/OrderBookEntry.h"
 
 using namespace std;
 
-MerkelMain::MerkelMain()
-{
-}
-
-MerkelMain::~MerkelMain()
-{
-}
-
 void MerkelMain::run()
 {
+    loadOrderBook();
+
     bool quit = false;
 
     while (!quit)
@@ -25,6 +21,49 @@ void MerkelMain::run()
 
         quit = choiceProcess(choice);
     }
+}
+
+void MerkelMain::loadOrderBook()
+{
+    orderBook.push_back(OrderBookEntry(
+        "2020/03/17 17:01:24.884492", 
+        "ETH/RTM", 
+        OrderBookType::BID, 
+        0.02183269, 
+        4.89101735
+    ));
+
+    orderBook.push_back(OrderBookEntry(
+        "2020/03/17 17:01:24.884492", 
+        "ETH/RTM", 
+        OrderBookType::BID, 
+        0.02183264, 
+        3.9101735
+    ));
+
+    orderBook.push_back(OrderBookEntry(
+        "2020/03/17 17:01:24.884492", 
+        "ETH/RTM", 
+        OrderBookType::ASK, 
+        0.02196165, 
+        0.00630238
+    ));
+
+    orderBook.push_back(OrderBookEntry(
+        "2020/03/17 17:01:24.884492", 
+        "ETH/RTM", 
+        OrderBookType::ASK, 
+        0.02227042, 
+        37.7
+    ));
+
+    orderBook.push_back(OrderBookEntry(
+        "2020/03/17 17:01:24.884492", 
+        "RTM/BTC", 
+        OrderBookType::BID, 
+        0.03, 
+        3.9101735
+    ));
 }
 
 void MerkelMain::printMenu()
@@ -56,7 +95,7 @@ void MerkelMain::printHelp()
 
 void MerkelMain::printExchangeStats()
 {
-    cout << "Exchange stats - No stats available" << endl;
+    cout << "Exchange stats - Order Book has: " << orderBook.size() << " entries." << endl;
 }
 
 void MerkelMain::makeAnOffer()
