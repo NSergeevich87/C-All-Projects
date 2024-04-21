@@ -5,6 +5,7 @@
 
 #include "headers/OrderBookEntry.h"
 #include "headers/MerkelMain.h"
+#include "headers/Tokeniser.h"
 
 using namespace std;
 
@@ -64,6 +65,31 @@ int main()
 {
     MerkelMain main;
     main.run();
+
+    Tokeniser tokeniser;
+    vector<string> orderBook;
+    orderBook.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.02186299,0.1");
+    orderBook.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.02185561,9.14455526");
+    orderBook.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.0218247,0.01248192");
+    orderBook.push_back("2020/03/17 17:01:40.107326,BTC/USDT,bid,5327.46290721,0.00024266");
+    orderBook.push_back("2020/03/17 17:01:45.111661,DOGE/BTC,ask,0.00000076,3010444.3290228");
+    orderBook.push_back("");
+    orderBook.push_back(",,,");
+    orderBook.push_back("test");
+    orderBook.push_back(",test");
+    orderBook.push_back("test,");
+    orderBook.push_back("test,test");
+    orderBook.push_back(",,test,,");
+
+    for(const string& entry: orderBook)
+    {
+        vector<string> tokens = tokeniser.tokenise(entry, ',');
+        for(const string& token: tokens)
+        {
+            cout << token << " ";
+        }
+        cout << endl;
+    }
 
     {
         // OrderBookPrint(orderBook);

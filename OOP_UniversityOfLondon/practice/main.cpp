@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 //#include "vector3D.h"
 
@@ -33,9 +34,6 @@ int main()
     std::cout << "Hello to my tokenise program!\n";
 
     std::vector<std::string> vectorStrings;
-    vectorStrings.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.02187307,3.467434");
-    vectorStrings.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.02187305,6.85567013");
-    vectorStrings.push_back("2020/03/17 17:01:24.884492,ETH/BTC,bid,0.021873,1.");
 
     for (std::string line : vectorStrings)
     {
@@ -48,6 +46,44 @@ int main()
 
     //vector3D v1(25.5, 30.5, 35.5);
     //std::cout << "The norm of the vector is: " << v1.norm() << std::endl;
+
+    std::ifstream dataCSVfile{"test.csv"};
+
+    if (dataCSVfile.is_open())
+    {
+        std::cout << "File opened successfully\n";
+        std::string line;
+
+        while (std::getline(dataCSVfile, line))
+        {
+            std::vector<std::string> tokens = tokenise(line, ',');
+            if (tokens.size() != 5)
+            {
+                std::cout << "Error of line: " << line << std::endl;
+                continue;
+            }
+
+            try
+            {
+                double price = std::stod(tokens[3]);
+                double amount = std::stod(tokens[4]);
+                std::cout << "Price: " << price << " Amount: " << amount << std::endl;
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Bad double number! " << tokens[3] << '\n';
+                std::cerr << "Bad double number! " << tokens[4] << '\n';
+            }
+            
+            
+        }
+
+        dataCSVfile.close();
+    }
+    else
+    {
+        std::cout << "Error opening file\n";
+    }
 
     return 0;
 }
