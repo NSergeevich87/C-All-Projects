@@ -6,7 +6,8 @@
 enum class OrderBookType 
 {
     BID,
-    ASK
+    ASK,
+    UNKNOWN
 };
 
 std::ostream &operator<<(std::ostream &os, const OrderBookType &type);
