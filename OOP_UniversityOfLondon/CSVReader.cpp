@@ -15,14 +15,22 @@ std::vector<OrderBookEntry> CSVReader::readCSV(std::string csvFile)
         std::cout << "File opened successfully" << std::endl;
         while(std::getline(file_csv, line))
         {
-            std::vector<std::string> tokens = tokeniser(line, ',');
-            OrderBookEntry obe = stringsToOBE(tokens);
-            entries.push_back(obe);
+            try
+            {
+                std::vector<std::string> tokens = tokeniser(line, ',');
+                OrderBookEntry obe = stringsToOBE(tokens);
+                entries.push_back(obe);
+            }
+            catch(const std::exception& e)
+            {
+                std::cout << "CSVReader::readCSV() - bad data" << '\n';
+            }
         }
     }
 
     file_csv.close();
 
+    std::cout << "CSVReader::readCSV() - " << entries.size() << " entries read from file\n";
     return entries;
 }
 
@@ -32,23 +40,19 @@ std::vector<std::string> CSVReader::tokeniser(std::string line, char separator)
 
     std::vector<std::string> tokens;
     std::string token;
-    signed start, end {0};
-    
+    signed int start, end {0};
+
+    start = temp_line.find_first_not_of(separator, 0);
     do
     {
-        start = temp_line.find_first_not_of(separator);
-        if (start != std::string::npos)
-        {
-            end = temp_line.find_first_of(separator, start);
-            if (end == std::string::npos)
-            {
-                end = temp_line.length();
-            }
-            token = temp_line.substr(start, end - start);
-            tokens.push_back(token);
-            temp_line = temp_line.substr(end);
-        }
-    } while (start != std::string::npos);
+        end = temp_line.find_first_of(separator, start);
+        if (start == temp_line.length() || start == end) break;
+        if (end >= 0) token = temp_line.substr(start, end - start);
+        else token = temp_line.substr(start, temp_line.length() - start);
+        
+        tokens.push_back(token);
+        start = end + 1;
+    } while (end > 0);
 
     return tokens;
 }
@@ -57,14 +61,12 @@ OrderBookEntry CSVReader::stringsToOBE(std::vector<std::string> tokens)
 {
     if (tokens.size() != 5)
     {
-        return OrderBookEntry{"","",OrderBookType::UNKNOWN,0,0};
-    }
+        std::cout << "Bad line !" << std::endl;
+        throw std::exception{};
+    }  
 
-    std::string timestamp = tokens[0];
-    std::string pair = tokens[1];
-    OrderBookType type = tokens[2] == "BID" ? OrderBookType::BID : OrderBookType::ASK;
-    double price;
-    double amount;
+    //OrderBookType type = tokens[2] == "BID" ? OrderBookType::BID : OrderBookType::ASK;
+    double price, amount {0};
     try
     {
         price = std::stod(tokens[3]);
@@ -72,8 +74,9 @@ OrderBookEntry CSVReader::stringsToOBE(std::vector<std::string> tokens)
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Error with double conversion!" << '\n';
+        std::cout << "Error with double conversion!" << '\n';
+        throw;
     }
 
-    return OrderBookEntry{timestamp, pair, type, price, amount};
+    return OrderBookEntry{tokens[0], tokens[1], OrderBookEntry::stringToOrderBookType(tokens[2]), price, amount};
 }

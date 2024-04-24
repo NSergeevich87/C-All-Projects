@@ -64,13 +64,10 @@ double computePriceSpread(const std::vector<OrderBookEntry>& entries)
 
 int main() 
 {
-    //MerkelMain main;
-    //main.run();
+    MerkelMain app;
+    app.run();
 
-    CSVReader reader;
-    vector<OrderBookEntry> orderBookEntry = reader.readCSV("testCSV.csv");
-    
-    OrderBookPrint(orderBookEntry);
+    //OrderBookPrint(orderBook);
     //cout << "Average price: " << computeAveragePrice(orderBook) << endl;
     //cout << "Low price: " << computeLowPrice(orderBook) << endl;
     //cout << "High price: " << computeHighPrice(orderBook) << endl;

@@ -36,4 +36,6 @@ class OrderBookEntry
         OrderBookType getType() const;
         double getPrice() const;
         double getAmount() const;
+        
+        static OrderBookType stringToOrderBookType(std::string s);
 };

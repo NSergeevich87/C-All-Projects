@@ -53,3 +53,19 @@ std::ostream &operator<<(std::ostream &os, const OrderBookType &type)
 
     return os;
 }
+
+OrderBookType OrderBookEntry::stringToOrderBookType(std::string s)
+{
+    if (s == "bid")
+    {
+        return OrderBookType::BID;
+    }
+    else if (s == "ask")
+    {
+        return OrderBookType::ASK;
+    }
+    else
+    {
+        return OrderBookType::UNKNOWN;
+    }
+}
