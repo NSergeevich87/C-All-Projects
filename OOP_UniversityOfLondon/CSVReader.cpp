@@ -17,8 +17,8 @@ std::vector<OrderBookEntry> CSVReader::readCSV(std::string csvFile)
         {
             try
             {
-                std::vector<std::string> tokens = tokeniser(line, ',');
-                OrderBookEntry obe = stringsToOBE(tokens);
+                //std::vector<std::string> tokens = tokeniser(line, ',');
+                OrderBookEntry obe = stringsToOBE(tokeniser(line, ','));
                 entries.push_back(obe);
             }
             catch(const std::exception& e)
@@ -36,19 +36,17 @@ std::vector<OrderBookEntry> CSVReader::readCSV(std::string csvFile)
 
 std::vector<std::string> CSVReader::tokeniser(std::string line, char separator)
 {
-    std::string temp_line = line;
-
     std::vector<std::string> tokens;
     std::string token;
     signed int start, end {0};
 
-    start = temp_line.find_first_not_of(separator, 0);
+    start = line.find_first_not_of(separator, 0);
     do
     {
-        end = temp_line.find_first_of(separator, start);
-        if (start == temp_line.length() || start == end) break;
-        if (end >= 0) token = temp_line.substr(start, end - start);
-        else token = temp_line.substr(start, temp_line.length() - start);
+        end = line.find_first_of(separator, start);
+        if (start == line.length() || start == end) break;
+        if (end >= 0) token = line.substr(start, end - start);
+        else token = line.substr(start, line.length() - start);
         
         tokens.push_back(token);
         start = end + 1;

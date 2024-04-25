@@ -5,9 +5,9 @@
 
 enum class OrderBookType 
 {
-    BID,
-    ASK,
-    UNKNOWN
+    bid,
+    ask,
+    unknown
 };
 
 std::ostream &operator<<(std::ostream &os, const OrderBookType &type);
@@ -33,7 +33,7 @@ class OrderBookEntry
         /** Some basic functions */
         std::string getTimestamp();
         std::string getPair() const;
-        OrderBookType getType() const;
+        OrderBookType getType();
         double getPrice() const;
         double getAmount() const;
         

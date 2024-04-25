@@ -15,7 +15,7 @@ std::string OrderBookEntry::getPair() const
     return pair;
 }
 
-OrderBookType OrderBookEntry::getType() const
+OrderBookType OrderBookEntry::getType()
 {
     return type;
 }
@@ -40,10 +40,10 @@ std::ostream &operator<<(std::ostream &os, const OrderBookType &type)
 {
     switch (type)
     {
-    case OrderBookType::BID:
+    case OrderBookType::bid:
         os << "BID";
         break;
-    case OrderBookType::ASK:
+    case OrderBookType::ask:
         os << "ASK";
         break;
     default:
@@ -58,14 +58,13 @@ OrderBookType OrderBookEntry::stringToOrderBookType(std::string s)
 {
     if (s == "bid")
     {
-        return OrderBookType::BID;
+        return OrderBookType::bid;
     }
-    else if (s == "ask")
+    
+    if (s == "ask")
     {
-        return OrderBookType::ASK;
+        return OrderBookType::ask;
     }
-    else
-    {
-        return OrderBookType::UNKNOWN;
-    }
+
+    return OrderBookType::unknown;
 }

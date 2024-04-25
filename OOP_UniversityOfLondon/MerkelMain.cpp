@@ -59,16 +59,17 @@ void MerkelMain::printHelp()
 
 void MerkelMain::printExchangeStats()
 {
-    unsigned int bid, ask {0};
+    int bid = 0;
+    int ask = 0;
 
-    for (const OrderBookEntry &entry : orderBook)
+    for (OrderBookEntry &entry : orderBook)
     {
-        if (entry.getType() == OrderBookType::BID)
+        if (entry.getType() == OrderBookType::bid)
         {
             bid++;
         }
         
-        if (entry.getType() == OrderBookType::ASK)
+        if (entry.getType() == OrderBookType::ask)
         {
             ask++;
         }

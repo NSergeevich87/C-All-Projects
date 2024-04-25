@@ -67,7 +67,8 @@ int main()
     MerkelMain app;
     app.run();
 
-    //OrderBookPrint(orderBook);
+    //vector<OrderBookEntry> books = CSVReader::readCSV("20200317.csv");
+    //OrderBookPrint(books);
     //cout << "Average price: " << computeAveragePrice(orderBook) << endl;
     //cout << "Low price: " << computeLowPrice(orderBook) << endl;
     //cout << "High price: " << computeHighPrice(orderBook) << endl;
