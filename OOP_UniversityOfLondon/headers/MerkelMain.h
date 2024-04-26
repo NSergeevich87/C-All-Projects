@@ -1,12 +1,11 @@
 #pragma once
 
-#include "OrderBookEntry.h"
+#include "OrderBook.h"
 
 class MerkelMain
 {
     private:
-        /** Vector of OrderBookEntry to save all orders*/
-        std::vector<OrderBookEntry> orderBook;
+        OrderBook orderBook{"20200317.csv"};
 
     public:
         /** Default constructor */
@@ -18,9 +17,6 @@ class MerkelMain
         void run();
 
     private:
-        /** This function load orders from csv file */
-        void loadOrderBook();
-
         void printMenu();
         int getUserChoice();
         void printHelp();

@@ -2,17 +2,15 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <iomanip>
 
 #include "headers/MerkelMain.h"
-#include "headers/OrderBookEntry.h"
 #include "headers/CSVReader.h"
 
 using namespace std;
 
 void MerkelMain::run()
 {
-    loadOrderBook();
-
     bool quit = false;
 
     while (!quit)
@@ -25,14 +23,9 @@ void MerkelMain::run()
     }
 }
 
-void MerkelMain::loadOrderBook()
-{
-    orderBook = CSVReader::readCSV("20200317.csv");
-}
-
 void MerkelMain::printMenu()
 {
-    cout << "====================================" << endl;
+    cout << setw(40) << setfill('=') << "" << endl;
     cout << "1: Print help" << endl;
     cout << "2: Print exchange stats" << endl;
     cout << "3: Make an offer" << endl;
@@ -40,7 +33,7 @@ void MerkelMain::printMenu()
     cout << "5: Print wallet" << endl;
     cout << "6: Continue" << endl;
     cout << "7: Quit" << endl;
-    cout << "====================================" << endl;
+    cout << setw(40) << setfill('=') << "" << endl;
 }
 
 int MerkelMain::getUserChoice()
@@ -59,23 +52,19 @@ void MerkelMain::printHelp()
 
 void MerkelMain::printExchangeStats()
 {
-    int bid = 0;
-    int ask = 0;
-
-    for (OrderBookEntry &entry : orderBook)
+    cout << "Exchange stats: " << "\n";
+    for (const string& product : orderBook.getKnownProducts())
     {
-        if (entry.getType() == OrderBookType::bid)
-        {
-            bid++;
-        }
-        
-        if (entry.getType() == OrderBookType::ask)
-        {
-            ask++;
-        }
+        cout << "\n" << setfill(' ') << "Product: " << setw(31) << product << "\n" << endl;
+        std::vector<OrderBookEntry> orders = orderBook.getOrders(
+            "2020/03/17 17:01:24.884492",
+            product,
+            OrderBookType::ask);
+        cout << "Asks Orders: " << setw(27) << right << setfill('_') << orders.size() << "\n";
+        cout << "Asks High price: " << setw(23) << right << setfill('_') << OrderBook::getHighPrice(orders) << "\n";
+        cout << "Asks Low price: " << setw(24) << right << setfill('_') << OrderBook::getLowPrice(orders) << "\n";
+        cout << "Asks Spread: " << setw(27) << right << setfill('_') << OrderBook::getSpread(OrderBook::getHighPrice(orders), OrderBook::getLowPrice(orders)) << "\n";  
     }
-
-    cout << "Order book entries: " << orderBook.size() << " Bids: " << bid << " Asks: " << ask << endl;
 }
 
 void MerkelMain::makeAnOffer()
