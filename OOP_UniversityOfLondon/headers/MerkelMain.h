@@ -6,6 +6,7 @@ class MerkelMain
 {
     private:
         OrderBook orderBook{"20200317.csv"};
+        std::string currentTime;
 
     public:
         /** Default constructor */

@@ -24,4 +24,21 @@ class OrderBook
         static double getLowPrice(const std::vector<OrderBookEntry>& orders);
         /** static function for getting spread */
         static double getSpread(const double max, const double min);
+        /** get earliest time from order book */
+        std::string getEarliestTime();
+        /** returns the next time after
+         * the sent time in the orderbook
+         * If there is no next timestamp, wraps around to the first timestamp 
+        */
+        std::string getNextTime(const std::string& timestamp);
+        /** check products for current time */
+        bool checkProductExists(std::string timestamp, std::string product);
+
+        /** exercise for weekly assessment */
+        /** change value and % for time */
+        void changingValueAndPercentageForAsks(std::string timestamp);
+        /** high price for time */
+        double highPriceForTime(std::string timestamp);
+        /** low price for time */
+        double lowPriceForTime(std::string timestamp);
 };

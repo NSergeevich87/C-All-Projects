@@ -13,6 +13,8 @@ void MerkelMain::run()
 {
     bool quit = false;
 
+    currentTime = orderBook.getEarliestTime();
+
     while (!quit)
     {
         printMenu();
@@ -34,6 +36,7 @@ void MerkelMain::printMenu()
     cout << "6: Continue" << endl;
     cout << "7: Quit" << endl;
     cout << setw(40) << setfill('=') << "" << endl;
+    cout << setw(10) << right << "Current Time: " << currentTime << "\n";
 }
 
 int MerkelMain::getUserChoice()
@@ -56,8 +59,16 @@ void MerkelMain::printExchangeStats()
     for (const string& product : orderBook.getKnownProducts())
     {
         cout << "\n" << setfill(' ') << "Product: " << setw(31) << product << "\n" << endl;
+        
+        /** first we need to check existing of products with current time */
+        if (!orderBook.checkProductExists(currentTime, product))
+        {
+            cout << "No data available for this product at this time" << endl;
+            continue;
+        }
+
         std::vector<OrderBookEntry> orders = orderBook.getOrders(
-            "2020/03/17 17:01:24.884492",
+            currentTime,
             product,
             OrderBookType::ask);
         cout << "Asks Orders: " << setw(27) << right << setfill('_') << orders.size() << "\n";
@@ -84,7 +95,9 @@ void MerkelMain::printWallet()
 
 void MerkelMain::goNextTimeFrame()
 {
-    cout << "Continue - Continue the program" << endl;
+    cout << "Going to next time frame\n";
+    currentTime = orderBook.getNextTime(currentTime);
+    cout << "Current Time: " << currentTime << endl;
 }
 
 void MerkelMain::shutDown()

@@ -1,6 +1,7 @@
 #include "headers/OrderBook.h"
 
 #include <map>
+#include <algorithm>
 
 /** Construct, reading a csv data file */
 OrderBook::OrderBook(std::string filename)
@@ -73,4 +74,63 @@ double OrderBook::getLowPrice(const std::vector<OrderBookEntry>& orders)
 double OrderBook::getSpread(const double max, const double min)
 {
     return max - min;
+}
+
+/** get earliest time from order book */
+std::string OrderBook::getEarliestTime()
+{
+    /** before we need sort orders */
+    std::sort(orders.begin(), orders.end(), [](OrderBookEntry a, OrderBookEntry b) { 
+        return a.getTimestamp() < b.getTimestamp(); 
+        });
+
+    return orders[0].getTimestamp();
+}
+/** get next timestamp */
+std::string OrderBook::getNextTime(const std::string& timestamp)
+{
+    std::string next_timestamp = "";
+
+    for (OrderBookEntry& order : orders)
+    {
+        if (order.getTimestamp() > timestamp)
+        {
+            next_timestamp = order.getTimestamp();
+            break;
+        }
+    }
+
+    if (next_timestamp == "")
+    {
+        next_timestamp = getEarliestTime();
+    }
+
+    return next_timestamp;
+}
+/** check products for current time */
+bool OrderBook::checkProductExists(std::string timestamp, std::string product)
+{
+    for (OrderBookEntry& order : orders)
+    {
+        if (order.getTimestamp() == timestamp && order.getPair() == product)
+            return true;
+    }
+
+    return false;
+}
+
+/** change value and % for time */
+void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
+{
+    /** get all pairs */
+    std::vector<std::string> pairs = getKnownProducts();
+    /** we need to set start value of all pairs */
+    std::map<std::string, double> start_value;
+    for (const std::string& pair : pairs)
+    {
+        /** we should to find value for earliest time */
+        start_value[pair] = getOrders(getEarliestTime(), pair, OrderBookType::ask)[0].getPrice();
+    }
+    /** then get actual value for current time */
+    std::map<std::string, double> actual_value;
 }
