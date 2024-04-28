@@ -124,17 +124,20 @@ void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
 {
     /** get all pairs */
     std::vector<std::string> pairs = getKnownProducts();
-    /** get all timestamps */
-    //std::vector<std::string> timestamps = getAllTimestamps();
 
     /** we need to set start and actual values of all pairs */
     std::map<std::string, double> min_value;
     std::map<std::string, double> max_value;
+    std::map<std::string, double> actual_value;
+    // test
+    std::map<std::string, double> first_mid_value;
 
     for (const std::string& pair : pairs)
     {
         min_value[pair] = findMinValueOfPairForTime(orders, timestamp, pair);
         max_value[pair] = findMaxValueOfPairForTime(orders, timestamp, pair);
+        actual_value[pair] = findActualValueOfPairForTime(orders, timestamp, pair);
+        first_mid_value[pair] = findFirstMediumValueOfPairForTime(orders, pair);
     }
 
     /** print values */
@@ -142,27 +145,27 @@ void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
     {
         std::cout << "Pair: " << pair << " Minimal price: " << min_value[pair] << std::endl;
         std::cout << "Pair: " << pair << " Maximum price: " << max_value[pair] << std::endl;
+        std::cout << "Pair: " << pair << " Actual price: " << actual_value[pair] << std::endl;
+        std::cout << "Pair: " << pair << " First mid price: " << first_mid_value[pair] << std::endl;
+
+        if ((first_mid_value[pair] - actual_value[pair]) <= 0)
+        {
+            /** print distance */
+            std::cout << "Pair: " << pair << " Distance: +" << actual_value[pair] - first_mid_value[pair] << std::endl;
+            /** print the difference as a percentage */
+            std::cout << "Pair: " << pair << " Difference as a percentage: +" << (actual_value[pair] - first_mid_value[pair]) / first_mid_value[pair] * 100 << "%" << std::endl;
+        }
+        else
+        {
+            /** print distance */
+            std::cout << "Pair: " << pair << " Distance: -" << first_mid_value[pair] - actual_value[pair] << std::endl;
+            /** print the difference as a percentage */
+            std::cout << "Pair: " << pair << " Difference as a percentage: -" << (first_mid_value[pair] - actual_value[pair]) / first_mid_value[pair] * 100 << "%" << std::endl;
+        }
+        
     }
 }
 
-/** get all timestamps in order book */
-std::vector<std::string> OrderBook::getAllTimestamps()
-{
-    std::vector<std::string> timestamps;
-    std::map<std::string, bool> timestamp_map;
-
-    for (const OrderBookEntry& order : orders)
-    {
-        timestamp_map[order.getTimestamp()] = true;
-    }
-
-    for (const auto& p : timestamp_map)
-    {
-        timestamps.push_back(p.first);
-    }
-
-    return timestamps;
-}
 /** find min value of pair for time */
 double OrderBook::findMinValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair)
 {
@@ -215,8 +218,52 @@ double OrderBook::findMaxValueOfPairForTime(std::vector<OrderBookEntry> books, s
     return max;
 }
 
-/** get all orders */
-std::vector<OrderBookEntry> OrderBook::getALLOrders()
+/** find actual value of pair for current time */
+double OrderBook::findActualValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair)
 {
-    return orders;
+    std::vector<double> values;
+
+    for (OrderBookEntry& order : books)
+    {
+        if (order.getTimestamp() == timestamp && order.getPair() == pair)
+        {
+            values.push_back(order.getPrice());
+        }
+    }
+
+    std::sort(values.begin(), values.end());
+
+    if (values.size() % 2 == 0)
+    {
+        return (values[values.size() / 2 - 1] + values[values.size() / 2]) / 2;
+    }
+    else
+    {
+        return values[values.size() / 2];
+    }
+}
+
+/** find first medium value of pair for first time */
+double OrderBook::findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string pair)
+{
+    std::vector<double> values;
+
+    for (OrderBookEntry& order : books)
+    {
+        if (order.getTimestamp() == getEarliestTime() && order.getPair() == pair)
+        {
+            values.push_back(order.getPrice());
+        }
+    }
+
+    std::sort(values.begin(), values.end());
+
+    if (values.size() % 2 == 0)
+    {
+        return (values[values.size() / 2 - 1] + values[values.size() / 2]) / 2;
+    }
+    else
+    {
+        return values[values.size() / 2];
+    }
 }

@@ -164,18 +164,5 @@ void MerkelMain::changingValueAndPercentageForAsks()
 {
     cout << "Minimal and Maximum values until current time: \n";
 
-    for (const string& product : orderBook.getKnownProducts())
-    {
-        cout << "\n" << setfill(' ') << "Product: " << setw(31) << product << "\n" << endl;
-        
-        if (!orderBook.checkProductExists(currentTime, product))
-        {
-            cout << "No data available for this product at this time" << endl;
-            continue;
-        }
-
-        std::vector<OrderBookEntry> orders = orderBook.getALLOrders();
-
-        orderBook.changingValueAndPercentageForAsks(currentTime);  
-    }
+    orderBook.changingValueAndPercentageForAsks(currentTime); 
 }

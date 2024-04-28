@@ -38,14 +38,15 @@ class OrderBook
         /** exercise for weekly assessment */
         /** change value and % for time */
         void changingValueAndPercentageForAsks(std::string timestamp);
-        /** high price for time */
-        double highPriceForTime(std::string timestamp);
-        /** low price for time */
-        double lowPriceForTime(std::string timestamp);
+
         /** get all timestamps in order book */
         std::vector<std::string> getAllTimestamps();
         /** find min value of pair for time */
         double findMinValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
         /** find max value of pair for time */
         double findMaxValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
+        /** find actual value of pair for current time */
+        double findActualValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
+        /** find first medium value of pair for first time */
+        double findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string pair);
 };
