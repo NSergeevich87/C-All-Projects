@@ -31,7 +31,7 @@ class OrderBookEntry
         ~OrderBookEntry() = default;
 
         /** Some basic functions */
-        std::string getTimestamp();
+        std::string getTimestamp() const;
         std::string getPair() const;
         OrderBookType getType();
         double getPrice() const;

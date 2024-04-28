@@ -124,13 +124,99 @@ void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
 {
     /** get all pairs */
     std::vector<std::string> pairs = getKnownProducts();
-    /** we need to set start value of all pairs */
-    std::map<std::string, double> start_value;
+    /** get all timestamps */
+    //std::vector<std::string> timestamps = getAllTimestamps();
+
+    /** we need to set start and actual values of all pairs */
+    std::map<std::string, double> min_value;
+    std::map<std::string, double> max_value;
+
     for (const std::string& pair : pairs)
     {
-        /** we should to find value for earliest time */
-        start_value[pair] = getOrders(getEarliestTime(), pair, OrderBookType::ask)[0].getPrice();
+        min_value[pair] = findMinValueOfPairForTime(orders, timestamp, pair);
+        max_value[pair] = findMaxValueOfPairForTime(orders, timestamp, pair);
     }
-    /** then get actual value for current time */
-    std::map<std::string, double> actual_value;
+
+    /** print values */
+    for (const std::string& pair : pairs)
+    {
+        std::cout << "Pair: " << pair << " Minimal price: " << min_value[pair] << std::endl;
+        std::cout << "Pair: " << pair << " Maximum price: " << max_value[pair] << std::endl;
+    }
+}
+
+/** get all timestamps in order book */
+std::vector<std::string> OrderBook::getAllTimestamps()
+{
+    std::vector<std::string> timestamps;
+    std::map<std::string, bool> timestamp_map;
+
+    for (const OrderBookEntry& order : orders)
+    {
+        timestamp_map[order.getTimestamp()] = true;
+    }
+
+    for (const auto& p : timestamp_map)
+    {
+        timestamps.push_back(p.first);
+    }
+
+    return timestamps;
+}
+/** find min value of pair for time */
+double OrderBook::findMinValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair)
+{
+    double min = 0.0;
+
+    for (OrderBookEntry& order : books)
+    {
+        if (order.getTimestamp() <= timestamp && order.getPair() == pair)
+        {
+            if (min == 0.0)
+            {
+                min = order.getPrice();
+            }
+            else
+            {
+                if (order.getPrice() < min)
+                {
+                    min = order.getPrice();
+                }
+            }
+        }
+    }
+
+    return min;
+}
+
+/** find min value of pair for time */
+double OrderBook::findMaxValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair)
+{
+    double max = 0.0;
+
+    for (OrderBookEntry& order : books)
+    {
+        if (order.getTimestamp() <= timestamp && order.getPair() == pair)
+        {
+            if (max == 0.0)
+            {
+                max = order.getPrice();
+            }
+            else
+            {
+                if (order.getPrice() > max)
+                {
+                    max = order.getPrice();
+                }
+            }
+        }
+    }
+
+    return max;
+}
+
+/** get all orders */
+std::vector<OrderBookEntry> OrderBook::getALLOrders()
+{
+    return orders;
 }

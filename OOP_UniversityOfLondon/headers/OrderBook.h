@@ -18,6 +18,7 @@ class OrderBook
         std::vector<std::string> getKnownProducts();
         /** return vector of orders according to the sent filters */
         std::vector<OrderBookEntry> getOrders(std::string timestamp, std::string product, OrderBookType type);
+        std::vector<OrderBookEntry> getALLOrders();
         /** static function for getting high price */
         static double getHighPrice(const std::vector<OrderBookEntry>& orders);
         /** static function for getting low price */
@@ -41,4 +42,10 @@ class OrderBook
         double highPriceForTime(std::string timestamp);
         /** low price for time */
         double lowPriceForTime(std::string timestamp);
+        /** get all timestamps in order book */
+        std::vector<std::string> getAllTimestamps();
+        /** find min value of pair for time */
+        double findMinValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
+        /** find max value of pair for time */
+        double findMaxValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
 };

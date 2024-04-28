@@ -5,7 +5,8 @@
 class MerkelMain
 {
     private:
-        OrderBook orderBook{"20200317.csv"};
+        //OrderBook orderBook{"20200317.csv"};
+        OrderBook orderBook{"testCSV.csv"};
         std::string currentTime;
 
     public:
@@ -29,4 +30,7 @@ class MerkelMain
         void shutDown();
         void printInvalidChoice();
         bool choiceProcess(int num);
+
+        /** exercise for weekly assessment */
+        void changingValueAndPercentageForAsks();
 };

@@ -5,7 +5,7 @@ OrderBookEntry::OrderBookEntry(std::string timestamp_val, std::string pair_val, 
 {
 }
 
-std::string OrderBookEntry::getTimestamp()
+std::string OrderBookEntry::getTimestamp() const
 {
     return timestamp;
 }

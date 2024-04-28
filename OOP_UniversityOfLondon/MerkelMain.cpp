@@ -34,7 +34,8 @@ void MerkelMain::printMenu()
     cout << "4: Make a bid" << endl;
     cout << "5: Print wallet" << endl;
     cout << "6: Continue" << endl;
-    cout << "7: Quit" << endl;
+    cout << "7: Print changing stats" << endl;
+    cout << "8: Quit" << endl;
     cout << setw(40) << setfill('=') << "" << endl;
     cout << setw(10) << right << "Current Time: " << currentTime << "\n";
 }
@@ -120,7 +121,8 @@ bool MerkelMain::choiceProcess(int num)
     choiceMap[4] = &MerkelMain::makeABid;
     choiceMap[5] = &MerkelMain::printWallet;
     choiceMap[6] = &MerkelMain::goNextTimeFrame;
-    choiceMap[7] = &MerkelMain::shutDown;
+    choiceMap[7] = &MerkelMain::changingValueAndPercentageForAsks;
+    choiceMap[8] = &MerkelMain::shutDown;
 
     switch (num)
     {
@@ -144,6 +146,9 @@ bool MerkelMain::choiceProcess(int num)
         break;
     case 7:
         (this->*choiceMap[7])();
+        break;
+    case 8:
+        (this->*choiceMap[7])();
         return true;
         break;
     default:
@@ -152,4 +157,25 @@ bool MerkelMain::choiceProcess(int num)
     }
 
     return false;
+}
+
+/** exercise for weekly assessment */
+void MerkelMain::changingValueAndPercentageForAsks()
+{
+    cout << "Minimal and Maximum values until current time: \n";
+
+    for (const string& product : orderBook.getKnownProducts())
+    {
+        cout << "\n" << setfill(' ') << "Product: " << setw(31) << product << "\n" << endl;
+        
+        if (!orderBook.checkProductExists(currentTime, product))
+        {
+            cout << "No data available for this product at this time" << endl;
+            continue;
+        }
+
+        std::vector<OrderBookEntry> orders = orderBook.getALLOrders();
+
+        orderBook.changingValueAndPercentageForAsks(currentTime);  
+    }
 }
