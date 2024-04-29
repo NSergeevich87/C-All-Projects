@@ -23,8 +23,8 @@ class MerkelMain
         int getUserChoice();
         void printHelp();
         void printExchangeStats();
-        void makeAnOffer();
-        void makeABid();
+        void makeAsk();
+        void makeBid();
         void printWallet();
         void goNextTimeFrame();
         void shutDown();

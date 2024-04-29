@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <iomanip>
+#include <limits>
 
 #include "headers/MerkelMain.h"
 #include "headers/CSVReader.h"
@@ -30,8 +31,8 @@ void MerkelMain::printMenu()
     cout << setw(40) << setfill('=') << "" << endl;
     cout << "1: Print help" << endl;
     cout << "2: Print exchange stats" << endl;
-    cout << "3: Make an offer" << endl;
-    cout << "4: Make a bid" << endl;
+    cout << "3: Make ASK" << endl;
+    cout << "4: Make BID" << endl;
     cout << "5: Print wallet" << endl;
     cout << "6: Continue" << endl;
     cout << "7: Print changing stats" << endl;
@@ -42,9 +43,21 @@ void MerkelMain::printMenu()
 
 int MerkelMain::getUserChoice()
 {
-    int choice;
+    int choice = 0;
+    string input;
+
     cout << "Please enter a number: ";
-    cin >> choice;
+    getline(cin, input);
+
+    try
+    {
+        choice = stoi(input);
+    }
+    catch(const std::exception& e)
+    {
+        //
+    }
+
     cout << "\nYou entered: " << choice << endl;
     return choice;
 }
@@ -79,12 +92,39 @@ void MerkelMain::printExchangeStats()
     }
 }
 
-void MerkelMain::makeAnOffer()
+void MerkelMain::makeAsk()
 {
-    cout << "Make an offer - No offer available" << endl;
+    string input;
+
+    cout << "Make ASK - enter: BTC/USDT,5406,0.0136" << endl;
+    
+    /** clean the input buffer from the previous input */
+    //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    getline(cin, input);
+
+    std::vector<std::string> parts = CSVReader::tokeniser(input, ',');
+    if (parts.size() != 3)
+    {
+        cout << "Invalid input" << endl;
+    }
+    else
+    {
+        try
+        {
+            OrderBookEntry obe = CSVReader::stringsToOBE(
+                currentTime, parts[0], OrderBookType::ask, parts[1], parts[2]);
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "Bad input!" << '\n';
+        }
+    }
+
+    cout << "You entered: " << input << endl;
 }
 
-void MerkelMain::makeABid()
+void MerkelMain::makeBid()
 {
     cout << "Make a bid - No bid available" << endl;
 }
@@ -117,8 +157,8 @@ bool MerkelMain::choiceProcess(int num)
     
     choiceMap[1] = &MerkelMain::printHelp;
     choiceMap[2] = &MerkelMain::printExchangeStats;
-    choiceMap[3] = &MerkelMain::makeAnOffer;
-    choiceMap[4] = &MerkelMain::makeABid;
+    choiceMap[3] = &MerkelMain::makeAsk;
+    choiceMap[4] = &MerkelMain::makeBid;
     choiceMap[5] = &MerkelMain::printWallet;
     choiceMap[6] = &MerkelMain::goNextTimeFrame;
     choiceMap[7] = &MerkelMain::changingValueAndPercentageForAsks;

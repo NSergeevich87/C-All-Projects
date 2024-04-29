@@ -78,3 +78,26 @@ OrderBookEntry CSVReader::stringsToOBE(std::vector<std::string> tokens)
 
     return OrderBookEntry{tokens[0], tokens[1], OrderBookEntry::stringToOrderBookType(tokens[2]), price, amount};
 }
+
+OrderBookEntry CSVReader::stringsToOBE(
+            std::string timestamp, 
+            std::string pair, 
+            OrderBookType type, 
+            std::string price, 
+            std::string amount
+        )
+{
+    double price_val, amount_val;
+    try
+    {
+        price_val = std::stod(price);
+        amount_val = std::stod(amount);
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << "Error with double conversion!" << '\n';
+        throw;
+    }
+
+    return OrderBookEntry{timestamp, pair, type, price_val, amount_val};
+}

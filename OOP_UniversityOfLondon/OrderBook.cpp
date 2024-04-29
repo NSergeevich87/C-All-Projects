@@ -145,7 +145,7 @@ void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
     {
         std::cout << "Pair: " << pair << " Minimal price: " << min_value[pair] << std::endl;
         std::cout << "Pair: " << pair << " Maximum price: " << max_value[pair] << std::endl;
-        std::cout << "Pair: " << pair << " Actual price: " << actual_value[pair] << std::endl;
+        std::cout << "Pair: " << pair << " Actual mid price: " << actual_value[pair] << std::endl;
         std::cout << "Pair: " << pair << " First mid price: " << first_mid_value[pair] << std::endl;
 
         if ((first_mid_value[pair] - actual_value[pair]) <= 0)
@@ -231,16 +231,14 @@ double OrderBook::findActualValueOfPairForTime(std::vector<OrderBookEntry> books
         }
     }
 
-    std::sort(values.begin(), values.end());
+    double value = 0.0;
 
-    if (values.size() % 2 == 0)
+    for (double& val : values)
     {
-        return (values[values.size() / 2 - 1] + values[values.size() / 2]) / 2;
+        value += val;
     }
-    else
-    {
-        return values[values.size() / 2];
-    }
+
+    return value / values.size();
 }
 
 /** find first medium value of pair for first time */
@@ -256,14 +254,12 @@ double OrderBook::findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> 
         }
     }
 
-    std::sort(values.begin(), values.end());
+    double value = 0.0;
 
-    if (values.size() % 2 == 0)
+    for (double& val : values)
     {
-        return (values[values.size() / 2 - 1] + values[values.size() / 2]) / 2;
+        value += val;
     }
-    else
-    {
-        return values[values.size() / 2];
-    }
+
+    return value / values.size();
 }
