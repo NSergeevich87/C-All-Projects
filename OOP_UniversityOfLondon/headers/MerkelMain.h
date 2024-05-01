@@ -5,8 +5,8 @@
 class MerkelMain
 {
     private:
-        //OrderBook orderBook{"20200317.csv"};
-        OrderBook orderBook{"testCSV.csv"};
+        OrderBook orderBook{"20200317.csv"};
+        //OrderBook orderBook{"testCSV.csv"};
         std::string currentTime;
 
     public:

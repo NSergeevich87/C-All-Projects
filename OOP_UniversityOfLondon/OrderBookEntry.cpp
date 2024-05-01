@@ -30,6 +30,11 @@ double OrderBookEntry::getAmount() const
     return amount;
 }
 
+void OrderBookEntry::setAmount(double amount_val)
+{
+    amount = amount_val;
+}
+
 std::ostream &operator<<(std::ostream &os, const OrderBookEntry &obe)
 {
     os << "Timestamp: " << obe.timestamp << " Pair: " << obe.pair << " Type: " << obe.type << " Price: " << obe.price << " Amount: " << obe.amount;
@@ -67,4 +72,22 @@ OrderBookType OrderBookEntry::stringToOrderBookType(std::string s)
     }
 
     return OrderBookType::unknown;
+}
+
+/** compare two order book entries by timestamp */
+bool OrderBookEntry::compareByTimestamp(const OrderBookEntry &a, const OrderBookEntry &b)
+{
+    return a.getTimestamp() < b.getTimestamp();
+}
+
+/** compare two order book entries by price ascending */
+bool OrderBookEntry::compareByPriceAsc(const OrderBookEntry &a, const OrderBookEntry &b)
+{
+    return a.getPrice() < b.getPrice();
+}
+
+/** compare two order book entries by price descending */
+bool OrderBookEntry::compareByPriceDesc(const OrderBookEntry &a, const OrderBookEntry &b)
+{
+    return a.getPrice() > b.getPrice();
 }

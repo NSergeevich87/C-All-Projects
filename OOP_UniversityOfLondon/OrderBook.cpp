@@ -129,20 +129,23 @@ void OrderBook::changingValueAndPercentageForAsks(std::string timestamp)
     std::map<std::string, double> min_value;
     std::map<std::string, double> max_value;
     std::map<std::string, double> actual_value;
-    // test
     std::map<std::string, double> first_mid_value;
 
     for (const std::string& pair : pairs)
     {
+        if (checkProductExists(timestamp, pair) == false) continue;
+        
         min_value[pair] = findMinValueOfPairForTime(orders, timestamp, pair);
         max_value[pair] = findMaxValueOfPairForTime(orders, timestamp, pair);
         actual_value[pair] = findActualValueOfPairForTime(orders, timestamp, pair);
-        first_mid_value[pair] = findFirstMediumValueOfPairForTime(orders, pair);
+        first_mid_value[pair] = findFirstMediumValueOfPairForTime(orders, timestamp, pair);
     }
 
     /** print values */
     for (const std::string& pair : pairs)
     {
+        if (checkProductExists(timestamp, pair) == false) continue;
+
         std::cout << "Pair: " << pair << " Minimal price: " << min_value[pair] << std::endl;
         std::cout << "Pair: " << pair << " Maximum price: " << max_value[pair] << std::endl;
         std::cout << "Pair: " << pair << " Actual mid price: " << actual_value[pair] << std::endl;
@@ -242,13 +245,23 @@ double OrderBook::findActualValueOfPairForTime(std::vector<OrderBookEntry> books
 }
 
 /** find first medium value of pair for first time */
-double OrderBook::findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string pair)
+double OrderBook::findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string currentTimestamp, std::string pair)
 {
+    std::vector<std::string> timestamps = getAllTimestamps();
     std::vector<double> values;
+    int timestams_index = 0;
 
     for (OrderBookEntry& order : books)
     {
-        if (order.getTimestamp() == getEarliestTime() && order.getPair() == pair)
+        if (timestamps[timestams_index] > currentTimestamp)
+        {
+            break;
+        }
+        else if (!checkProductExists(timestamps[timestams_index], pair))
+        {
+            timestams_index++;
+            continue;
+        }else if (order.getTimestamp() == timestamps[timestams_index] && order.getPair() == pair)
         {
             values.push_back(order.getPrice());
         }
@@ -262,4 +275,95 @@ double OrderBook::findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> 
     }
 
     return value / values.size();
+}
+
+/** get all timestamps in order book */
+std::vector<std::string> OrderBook::getAllTimestamps()
+{
+    std::vector<std::string> timestamps;
+
+    for (OrderBookEntry& order : orders)
+    {
+        timestamps.push_back(order.getTimestamp());
+    }
+
+    return timestamps;
+}
+/** insert new order into orders */
+void OrderBook::insertOrder(OrderBookEntry& order)
+{
+    orders.push_back(order);
+    std::sort(orders.begin(), orders.end(), OrderBookEntry::compareByTimestamp);
+}
+
+/** implement matching algorithm of bids and asks */
+std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, std::string product)
+{
+
+    /**
+     * PSEUDOCODE
+     * 
+     * 1. Get all asks and bids for the product at the timestamp
+     *    asks = getOrders()
+     *    bids = getOrders()
+     * 2. Create a vector of OrderBookEntry to store the matched orders
+     *    vector sales = []
+     * 3. Sort the asks by ascending price
+     *    sort(asks)
+     * 4. Sort the bids by descending price
+     *    sort(bids)
+     * 5. Loop through the asks and bids
+     *   for ask in asks
+     *          for bid in bids
+     *             if ask.price <= bid.price
+     *                sale = new order()
+     *                sale.price = ask.price
+     *                ...
+     *                bid.amount == ask.amount
+     *                bid.amount >= ask.amount
+     *                bid.amount < ask.amount
+    */
+
+    std::vector<OrderBookEntry> asks = getOrders(timestamp, product, OrderBookType::ask);
+    std::vector<OrderBookEntry> bids = getOrders(timestamp, product, OrderBookType::bid);
+    std::vector<OrderBookEntry> sales;
+
+    std::sort(asks.begin(), asks.end(), OrderBookEntry::compareByPriceAsc);
+    std::sort(bids.begin(), bids.end(), OrderBookEntry::compareByPriceDesc);
+
+    for (OrderBookEntry& ask : asks)
+    {
+        for (OrderBookEntry& bid : bids)
+        {
+            if (ask.getPrice() <= bid.getPrice())
+            {
+                OrderBookEntry sale{timestamp, product, OrderBookType::sale, ask.getPrice(), 0};
+
+                if (bid.getAmount() == ask.getAmount())
+                {
+                    sale.setAmount(ask.getAmount());
+                    sales.push_back(sale);
+                    bid.setAmount(0);
+                    break;
+                }
+                else if (bid.getAmount() > ask.getAmount())
+                {
+                    sale.setAmount(ask.getAmount());
+                    sales.push_back(sale);
+                    bid.setAmount(bid.getAmount() - ask.getAmount());
+                    break;
+                }
+                else
+                {
+                    sale.setAmount(bid.getAmount());
+                    sales.push_back(sale);
+                    ask.setAmount(ask.getAmount() - bid.getAmount());
+                    bid.setAmount(0);
+                    continue;
+                }
+            }
+        }
+    }
+
+    return sales;
 }

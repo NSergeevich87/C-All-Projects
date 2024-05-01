@@ -48,5 +48,10 @@ class OrderBook
         /** find actual value of pair for current time */
         double findActualValueOfPairForTime(std::vector<OrderBookEntry> books, std::string timestamp, std::string pair);
         /** find first medium value of pair for first time */
-        double findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string pair);
+        double findFirstMediumValueOfPairForTime(std::vector<OrderBookEntry> books, std::string currentTimestamp, std::string pair);
+        /** insert new order into orders */
+        void insertOrder(OrderBookEntry& order);
+
+        /** implement matching algorithm of bids and asks */
+        std::vector<OrderBookEntry> matchAsksToBids(std::string timestamp, std::string product);
 };

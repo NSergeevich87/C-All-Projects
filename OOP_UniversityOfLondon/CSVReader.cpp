@@ -23,7 +23,7 @@ std::vector<OrderBookEntry> CSVReader::readCSV(std::string csvFile)
             }
             catch(const std::exception& e)
             {
-                std::cout << "CSVReader::readCSV() - bad data" << '\n';
+                std::cout << "CSVReader::readCSV() -> bad data" << '\n';
             }
         }
     }
@@ -72,7 +72,7 @@ OrderBookEntry CSVReader::stringsToOBE(std::vector<std::string> tokens)
     }
     catch(const std::exception& e)
     {
-        std::cout << "Error with double conversion!" << '\n';
+        std::cout << "CSVReader::stringsToOBE() -> Error with double conversion!" << '\n';
         throw;
     }
 
@@ -95,7 +95,7 @@ OrderBookEntry CSVReader::stringsToOBE(
     }
     catch(const std::exception& e)
     {
-        std::cout << "Error with double conversion!" << '\n';
+        std::cout << "CSVReader::stringsToOBE() -> Error with double conversion!" << '\n';
         throw;
     }
 

@@ -114,10 +114,11 @@ void MerkelMain::makeAsk()
         {
             OrderBookEntry obe = CSVReader::stringsToOBE(
                 currentTime, parts[0], OrderBookType::ask, parts[1], parts[2]);
+            orderBook.insertOrder(obe);
         }
         catch(const std::exception& e)
         {
-            std::cerr << "Bad input!" << '\n';
+            std::cerr << "MerkelMain::makeAsk() -> Bad input!" << '\n';
         }
     }
 
@@ -126,7 +127,30 @@ void MerkelMain::makeAsk()
 
 void MerkelMain::makeBid()
 {
-    cout << "Make a bid - No bid available" << endl;
+    cout << "Make BID - enter: BTC/USDT,5406,0.0136" << endl;
+    string input;
+    getline(cin, input);
+
+    std::vector<std::string> parts = CSVReader::tokeniser(input, ',');
+    if (parts.size() != 3)
+    {
+        cout << "Invalid input" << endl;
+    }
+    else
+    {
+        try
+        {
+            OrderBookEntry obe = CSVReader::stringsToOBE(
+                currentTime, parts[0], OrderBookType::bid, parts[1], parts[2]);
+            orderBook.insertOrder(obe);
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "MerkelMain::makeBid() -> Bad input!" << '\n';
+        }
+    }
+
+    cout << "You entered: " << input << endl;
 }
 
 void MerkelMain::printWallet()
@@ -188,7 +212,7 @@ bool MerkelMain::choiceProcess(int num)
         (this->*choiceMap[7])();
         break;
     case 8:
-        (this->*choiceMap[7])();
+        (this->*choiceMap[8])();
         return true;
         break;
     default:
