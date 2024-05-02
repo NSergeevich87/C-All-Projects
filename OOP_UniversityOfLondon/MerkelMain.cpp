@@ -161,6 +161,18 @@ void MerkelMain::printWallet()
 void MerkelMain::goNextTimeFrame()
 {
     cout << "Going to next time frame\n";
+
+    /** test matching algorithm */
+    for (const string& product : orderBook.getKnownProducts())
+    {
+        vector<OrderBookEntry> transactions = orderBook.matchAsksToBids(currentTime, product);
+        cout << "Product: " << product << " All sails: " << transactions.size() << endl;
+        for (const OrderBookEntry& obe : transactions)
+        {
+            cout << "Sale pair: " << obe.getPair() << " Sale amoount: " << obe.getAmount() << " Price: " << obe.getPrice() << endl;
+        }
+    }
+
     currentTime = orderBook.getNextTime(currentTime);
     cout << "Current Time: " << currentTime << endl;
 }
