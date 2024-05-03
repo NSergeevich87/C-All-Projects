@@ -1,10 +1,12 @@
 #pragma once
 
 #include "OrderBook.h"
+#include "Wallet.h"
 
 class MerkelMain
 {
     private:
+        Wallet wallet;
         OrderBook orderBook{"testCSV.csv"};
         //OrderBook orderBook{"testCSV.csv"};
         std::string currentTime;

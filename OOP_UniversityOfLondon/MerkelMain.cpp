@@ -13,7 +13,8 @@ using namespace std;
 void MerkelMain::run()
 {
     bool quit = false;
-
+    /** for test */
+    wallet.insertCurrency("BTC", 10);
     currentTime = orderBook.getEarliestTime();
 
     while (!quit)
@@ -155,7 +156,7 @@ void MerkelMain::makeBid()
 
 void MerkelMain::printWallet()
 {
-    cout << "Print wallet - No wallet available" << endl;
+    cout << wallet.toString() << endl;
 }
 
 void MerkelMain::goNextTimeFrame()
