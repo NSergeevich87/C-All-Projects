@@ -337,7 +337,18 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, st
         {
             if (ask.getPrice() <= bid.getPrice())
             {
-                OrderBookEntry sale{timestamp, product, OrderBookType::sale, ask.getPrice(), 0};
+                OrderBookEntry sale{timestamp, product, OrderBookType::saleASK, ask.getPrice(), 0};
+
+                if (bid.getUsername() == "simuser")
+                {
+                    sale.setUsername("simuser");
+                    sale.setType(OrderBookType::saleBID);
+                } 
+                if (ask.getUsername() == "simuser")
+                {
+                    sale.setUsername("simuser");
+                    sale.setType(OrderBookType::saleASK);
+                } 
 
                 if (bid.getAmount() == ask.getAmount())
                 {
@@ -360,57 +371,6 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, st
                     ask.setAmount(ask.getAmount() - bid.getAmount());
                     bid.setAmount(0);
                     continue;
-                }
-            }
-        }
-    }
-
-    return sales;
-}
-/** matching bids to asks for practice */
-std::vector<OrderBookEntry> OrderBook::matchBidsToAsks(std::string timestamp, std::string product)
-{
-    std::vector<OrderBookEntry> asks = getOrders(timestamp, product, OrderBookType::ask);
-    std::vector<OrderBookEntry> bids = getOrders(timestamp, product, OrderBookType::bid);
-
-    std::sort(asks.begin(), asks.end(), OrderBookEntry::compareByPriceAsc);
-    std::sort(bids.begin(), bids.end(), OrderBookEntry::compareByPriceDesc);
-
-    std::vector<OrderBookEntry> sales;
-
-    for (OrderBookEntry& bid : bids)
-    {
-        for (OrderBookEntry& ask :asks)
-        {
-            if (bid.getPrice() <= ask.getPrice())
-            {
-                OrderBookEntry sale{timestamp, product, OrderBookType::sale, bid.getPrice(), 0};
-
-                if (bid.getAmount() == ask.getAmount())
-                {
-                    sale.setAmount(ask.getAmount());
-                    sales.push_back(sale);
-                    bid.setAmount(0);
-                    ask.setAmount(0);
-                    break;
-                }
-
-                if (bid.getAmount() > ask.getAmount())
-                {
-                    sale.setAmount(ask.getAmount());
-                    sales.push_back(sale);
-                    bid.setAmount(bid.getAmount() - ask.getAmount());
-                    ask.setAmount(0);
-                    continue;
-                }
-
-                if (bid.getAmount() < ask.getAmount())
-                {
-                    sale.setAmount(bid.getAmount());
-                    sales.push_back(sale);
-                    ask.setAmount(ask.getAmount() - bid.getAmount());
-                    bid.setAmount(0);
-                    break;
                 }
             }
         }

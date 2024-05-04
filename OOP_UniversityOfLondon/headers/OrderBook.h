@@ -54,6 +54,4 @@ class OrderBook
 
         /** implement matching algorithm of bids and asks */
         std::vector<OrderBookEntry> matchAsksToBids(std::string timestamp, std::string product);
-        /** just for practice */
-        std::vector<OrderBookEntry> matchBidsToAsks(std::string timestamp, std::string product);
 };

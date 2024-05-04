@@ -7,8 +7,9 @@ enum class OrderBookType
 {
     bid,
     ask,
-    unknown,
-    sale
+    saleASK,
+    saleBID,
+    unknown
 };
 
 std::ostream &operator<<(std::ostream &os, const OrderBookType &type);
@@ -24,10 +25,11 @@ class OrderBookEntry
         OrderBookType type;
         double price;
         double amount;
+        std::string username;
     
     public:
         /** Constructor */
-        OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val);
+        OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val, std::string username_val = "default_name");
         /** Default destructor */
         ~OrderBookEntry() = default;
 
@@ -38,6 +40,18 @@ class OrderBookEntry
         double getPrice() const;
         double getAmount() const;
         void setAmount(double amount_val);
+        void setType(OrderBookType type_val)
+        {
+            type = type_val;
+        }
+        void setUsername(std::string username_val)
+        {
+            username = username_val;
+        }
+        std::string getUsername() const
+        {
+            return username;
+        }
         
         static OrderBookType stringToOrderBookType(std::string s);
         /** compare two orderbookentries */

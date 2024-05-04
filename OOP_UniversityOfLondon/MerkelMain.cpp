@@ -97,7 +97,7 @@ void MerkelMain::makeAsk()
 {
     string input;
 
-    cout << "Make ASK - enter: BTC/USDT,5406,0.0136" << endl;
+    cout << "Make ASK - enter like this: BTC/USDT,5406,0.0136" << endl;
     
     /** clean the input buffer from the previous input */
     //cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -107,7 +107,7 @@ void MerkelMain::makeAsk()
     std::vector<std::string> parts = CSVReader::tokeniser(input, ',');
     if (parts.size() != 3)
     {
-        cout << "Invalid input" << endl;
+        cout << "MerkelMain::makeAsk() -> Bad input" << endl;
     }
     else
     {
@@ -115,7 +115,17 @@ void MerkelMain::makeAsk()
         {
             OrderBookEntry obe = CSVReader::stringsToOBE(
                 currentTime, parts[0], OrderBookType::ask, parts[1], parts[2]);
-            orderBook.insertOrder(obe);
+            obe.setUsername("simuser");
+
+            if (wallet.canFullfillOrder(obe))
+            {
+                cout << "You have enough money to make this order" << endl;
+                orderBook.insertOrder(obe);
+            }
+            else
+            {
+                cout << "You don't have enough money to make this order" << endl;
+            }
         }
         catch(const std::exception& e)
         {
@@ -128,14 +138,14 @@ void MerkelMain::makeAsk()
 
 void MerkelMain::makeBid()
 {
-    cout << "Make BID - enter: BTC/USDT,5406,0.0136" << endl;
+    cout << "Make BID - enter like this: BTC/USDT,5406,0.0136" << endl;
     string input;
     getline(cin, input);
 
     std::vector<std::string> parts = CSVReader::tokeniser(input, ',');
     if (parts.size() != 3)
     {
-        cout << "Invalid input" << endl;
+        cout << "MerkelMain::makeBid() -> Bad input!" << endl;
     }
     else
     {
@@ -143,7 +153,17 @@ void MerkelMain::makeBid()
         {
             OrderBookEntry obe = CSVReader::stringsToOBE(
                 currentTime, parts[0], OrderBookType::bid, parts[1], parts[2]);
-            orderBook.insertOrder(obe);
+            obe.setUsername("simuser");
+
+            if (wallet.canFullfillOrder(obe))
+            {
+                cout << "You have enough money to make this order" << endl;
+                orderBook.insertOrder(obe);
+            }
+            else
+            {
+                cout << "You don't have enough money to make this order" << endl;
+            }
         }
         catch(const std::exception& e)
         {
@@ -156,7 +176,7 @@ void MerkelMain::makeBid()
 
 void MerkelMain::printWallet()
 {
-    cout << wallet.toString() << endl;
+    cout << wallet << endl;
 }
 
 void MerkelMain::goNextTimeFrame()

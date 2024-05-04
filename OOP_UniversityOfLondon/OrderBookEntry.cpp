@@ -1,7 +1,7 @@
 #include "headers/OrderBookEntry.h"
 
-OrderBookEntry::OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val)
-    : timestamp(timestamp_val), pair(pair_val), type(type_val), price(price_val), amount(amount_val)
+OrderBookEntry::OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val, std::string username_val)
+    : timestamp(timestamp_val), pair(pair_val), type(type_val), price(price_val), amount(amount_val), username(username_val)
 {
 }
 

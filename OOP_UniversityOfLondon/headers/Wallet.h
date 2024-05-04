@@ -6,6 +6,12 @@
 
 class Wallet
 {
+    friend std::ostream& operator<<(std::ostream& os, Wallet& wallet)
+    {
+        os << wallet.toString();
+        return os;
+    }
+
     public:
         Wallet() = default;
         /** insert currency to the wallet */

@@ -53,6 +53,7 @@ bool Wallet::canFullfillOrder(OrderBookEntry order)
     {
         double amount = order.getAmount();
         std::string currency = currencies[0];
+        std::cout << "Currency: " << currencies[0] << " Amount: " << amount << "\n";
         return containsCurrency(currency, amount);    
     }
 
@@ -60,6 +61,7 @@ bool Wallet::canFullfillOrder(OrderBookEntry order)
     {
         double amount = order.getAmount() * order.getPrice();
         std::string currency = currencies[1];
+        std::cout << "Currency: " << currencies[1] << " Amount: " << amount << "\n";
         return containsCurrency(currency, amount);
     }
 
