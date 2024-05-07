@@ -357,14 +357,16 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, st
                     bid.setAmount(0);
                     break;
                 }
-                else if (bid.getAmount() > ask.getAmount())
+
+                if (bid.getAmount() > ask.getAmount())
                 {
                     sale.setAmount(ask.getAmount());
                     sales.push_back(sale);
                     bid.setAmount(bid.getAmount() - ask.getAmount());
                     break;
                 }
-                else
+
+                if (bid.getAmount() < ask.getAmount() && bid.getAmount() > 0)
                 {
                     sale.setAmount(bid.getAmount());
                     sales.push_back(sale);

@@ -29,7 +29,13 @@ class OrderBookEntry
     
     public:
         /** Constructor */
-        OrderBookEntry(std::string timestamp_val, std::string pair_val, OrderBookType type_val, double price_val, double amount_val, std::string username_val = "default_name");
+        OrderBookEntry(
+            std::string timestamp_val, 
+            std::string pair_val, 
+            OrderBookType type_val,
+            double price_val,
+            double amount_val,
+            std::string username_val = "default_name");
         /** Default destructor */
         ~OrderBookEntry() = default;
 

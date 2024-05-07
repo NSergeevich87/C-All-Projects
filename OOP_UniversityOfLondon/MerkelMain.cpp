@@ -187,10 +187,14 @@ void MerkelMain::goNextTimeFrame()
     for (const string& product : orderBook.getKnownProducts())
     {
         vector<OrderBookEntry> transactions = orderBook.matchAsksToBids(currentTime, product);
-        cout << "Product: " << product << " All sails: " << transactions.size() << endl;
-        for (const OrderBookEntry& obe : transactions)
+
+        for (OrderBookEntry& obe : transactions)
         {
-            cout << "Sale pair: " << obe.getPair() << " Sale amoount: " << obe.getAmount() << " Price: " << obe.getPrice() << endl;
+            if (obe.getUsername() == "simuser")
+            {
+                wallet.processSale(obe);
+                cout << "Sale pair: " << obe.getPair() << " Sale amoount: " << obe.getAmount() << " Price: " << obe.getPrice() << endl;
+            }
         }
     }
 

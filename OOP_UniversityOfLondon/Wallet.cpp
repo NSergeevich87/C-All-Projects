@@ -67,3 +67,22 @@ bool Wallet::canFullfillOrder(OrderBookEntry order)
 
     return false;
 }
+
+void Wallet::processSale(OrderBookEntry& sale)
+{
+    std::vector<std::string> currencies = CSVReader::tokeniser(sale.getPair(), '/');
+    if (sale.getType() == OrderBookType::saleASK)
+    {
+        double outgoingAmount = sale.getAmount();
+        std::string outgoingCurrency = currencies[0];
+        removeCurrency(outgoingCurrency, outgoingAmount);
+        insertCurrency(currencies[1], sale.getAmount() * sale.getPrice());
+    }
+    if (sale.getType() == OrderBookType::saleBID)
+    {
+        double incomingAmount = sale.getAmount();
+        std::string incomingCurrency = currencies[0];
+        removeCurrency(currencies[1], sale.getAmount() * sale.getPrice());
+        insertCurrency(incomingCurrency, incomingAmount);
+    }
+}
