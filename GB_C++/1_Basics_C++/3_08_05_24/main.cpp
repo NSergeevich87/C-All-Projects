@@ -19,7 +19,7 @@ int main()
 
     while (!quit)
     {
-        cout << "This homework has 7 tasks:\n";
+        cout << "This homework has 8 tasks:\n";
         cout << "1. Scuare of numbers.\n";
         cout << "2. Recalc price of item.\n";
         cout << "3. Create a character.\n";
