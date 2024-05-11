@@ -23,13 +23,11 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-
     bool quit = false;
 
     while (!quit)
     {
-        cout << "This homework has 1 tasks:\n";
+        cout << "This homework has 18 tasks:\n";
         cout << "1. Boss_and_his_ask.\n";
         cout << "2. Buy_an_elephant.\n";
         cout << "3. Table_of_powers.\n";
