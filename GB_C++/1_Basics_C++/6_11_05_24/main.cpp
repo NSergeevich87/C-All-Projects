@@ -15,31 +15,39 @@
 #include "task_13.cpp"
 #include "task_14.cpp"
 #include "task_15.cpp"
+#include "task_16.cpp"
+#include "task_17.cpp"
+#include "task_18.cpp"
 
 using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+
     bool quit = false;
 
     while (!quit)
     {
-        cout << "This homework has 15 tasks:\n";
-        cout << "1. Coordinate plane\n";
-        cout << "2. ATM\n";
-        cout << "3. Leap year\n";
-        cout << "4. Bridge and overload\n";
-        cout << "5. Triangle\n";
-        cout << "6. Matching numbers\n";
-        cout << "7. Military enlistment office\n";
-        cout << "8. Winnie the Pooh and the day of troubles\n";
-        cout << "9. Time to have lunch\n";
-        cout << "10. Normal flight\n";
-        cout << "11. May holidays\n";
-        cout << "12. May holidays - complication\n";
-        cout << "13. ATM - 2\n";
-        cout << "14. Brick - complication\n";
-        cout << "15. Sad adulthood\n";
+        cout << "This homework has 1 tasks:\n";
+        cout << "1. Boss_and_his_ask.\n";
+        cout << "2. Buy_an_elephant.\n";
+        cout << "3. Table_of_powers.\n";
+        cout << "4. Reminder.\n";
+        cout << "5. ATM_3.0.\n";
+        cout << "6. Sum_of_numbers.\n";
+        cout << "7. ATM_4.0.\n";
+        cout << "8. Square_of_the_plot.\n";
+        cout << "9. Leather_bag.\n";
+        cout << "10. Military_time.\n";
+        cout << "11. Cuckoo.\n";
+        cout << "12. Too_large_numbers.\n";
+        cout << "13. Collectors.\n";
+        cout << "14. Lucky_ticket.\n";
+        cout << "15. Fibonacci_numbers.\n";
+        cout << "16. Deposits.\n";
+        cout << "17. Fractions.\n";
+        cout << "18. Guess_the_number.\n";
         cout << "Enter number of task or 'q' for quit: ";
         string task;
         getline(cin, task);
@@ -136,6 +144,24 @@ int main()
             cout << "Task 15:\n";
             task_15 t15;
             t15.run();
+        }
+        else if (task == "16")
+        {
+            cout << "Task 16:\n";
+            task_16 t16;
+            t16.run();
+        }
+        else if (task == "17")
+        {
+            cout << "Task 17:\n";
+            task_17 t17;
+            t17.run();
+        }
+        else if (task == "18")
+        {
+            cout << "Task 18:\n";
+            task_18 t18;
+            t18.run();
         }
         else
         {
