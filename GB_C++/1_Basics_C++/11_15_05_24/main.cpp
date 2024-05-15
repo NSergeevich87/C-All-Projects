@@ -5,8 +5,8 @@ using namespace std;
 
 #include "task_1.cpp"
 #include "task_2.cpp"
-// #include "task_3.cpp"
-// #include "task_4.cpp"
+#include "task_3.cpp"
+#include "task_4.cpp"
 
 int main()
 {
@@ -17,6 +17,8 @@ int main()
         cout << "This homework has 2 tasks:\n";
         cout << "1. Caesar cipher\n";
         cout << "2. Email validation\n";
+        cout << "3. IP validation\n";
+        cout << "4. Tic-tac-toe\n";
         cout << "Enter number of task or 'q' for quit: ";
         string task;
         getline(cin, task);
@@ -52,6 +54,14 @@ int main()
             case 2:
                 task_2 t2;
                 t2.run();
+                break;
+            case 3:
+                task_3 t3;
+                t3.run();
+                break;
+            case 4:
+                task_4 t4;
+                t4.run();
                 break;
             default:
                 cout << "Task not found!" << endl;
