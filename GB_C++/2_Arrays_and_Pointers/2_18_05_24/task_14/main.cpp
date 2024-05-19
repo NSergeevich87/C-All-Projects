@@ -42,23 +42,51 @@ output: 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 int main() {
     std::vector<int> db(20);
     int i = 0;
     int n = 0;
-    while (true) {
-        std::cin >> n;
-        if (n == -1) {
-            for (int k = 0; k < 20; ++k) {
+
+    // while (true) {
+    //     std::cin >> n;
+    //     if (n == -1) {
+    //         for (int k = 0; k < 20; ++k) {
+    //             std::cout << db[k] << " ";
+    //         }
+    //         std::cout << std::endl;
+    //         break;
+    //     } else {
+    //         db[i] = n;
+    //         i = (i + 1) % 20;
+    //         std::cout << "i: " << i << "\n";
+    //     }
+    // }
+    
+    while (n != -2)
+    {
+        cout << "Enter number: ";
+        cin >> n;
+        if (n == -1)
+        {
+            for (int k = i; k < db.size(); ++k)
+            {
                 std::cout << db[k] << " ";
             }
-            std::cout << std::endl;
-            break;
+            for (int k = 0; k < i; ++k)
+            {
+                std::cout << db[k] << " ";
+            }
         } else {
             db[i] = n;
-            i = (i + 1) % 20;
-            std::cout << "i: " << i << "\n";
+            i++;
+            if (i == 20)
+            {
+                i = 0;
+            }
         }
     }
+
     return 0;
 }
