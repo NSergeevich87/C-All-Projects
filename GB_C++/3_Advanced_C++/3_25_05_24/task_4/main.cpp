@@ -190,7 +190,10 @@ void saveGame(std::vector<Character>& characters)
     }
     for (int i = 0; i < characters.size(); i++)
     {
-        file.write((char*)&(characters[i].name), sizeof(characters[i].name));
+        int len = characters[i].name.length();
+        file.write((char*)&len, sizeof(len));
+        file.write(characters[i].name.c_str(), len);
+
         file.write((char*)&(characters[i].health), sizeof(characters[i].health));
         file.write((char*)&(characters[i].armor), sizeof(characters[i].armor));
         file.write((char*)&(characters[i].damage), sizeof(characters[i].damage));
@@ -208,36 +211,45 @@ void loadGame(std::vector<Character>& characters)
     std::ifstream file("save.bin", std::ios::binary);
     if (file.is_open())
     {
-        //characters.clear();
+        characters.clear();
         while (!file.eof())
         {
             Character character;
-            file.read((char*)&character.name, sizeof(character.name));
-            
+            int len;
+            file.read((char*)&len, sizeof(len));
+            character.name.resize(len);
+            file.read((char*)character.name.c_str(), len);
+
             file.read((char*)&character.health, sizeof(character.health));
             file.read((char*)&character.armor, sizeof(character.armor));
             file.read((char*)&character.damage, sizeof(character.damage));
             file.read((char*)&character.x, sizeof(character.x));
             file.read((char*)&character.y, sizeof(character.y));
             file.read((char*)&character.isPlayer, sizeof(character.isPlayer));
+
+            if (file.eof())
+            {
+                break;
+            }
+            
             characters.push_back(character);
         }
         file.close();
+
+        std::cout << "Game loaded" << std::endl;
     }
     else
     {
         std::cout << "Save file not found" << std::endl;
     }
-
-    std::cout << "Game loaded" << std::endl;
 }
 
 int main()
 {
     srand(time(0));
-    std::vector<Character> characters  = {};
+    std::vector<Character> characters;
     Character player;
-    int enemyCount = 5;
+    int enemyCount = 0;
 
     cout << "Enter 'new' to start a new game or 'load' to load the previous game: ";
     std::string command;
@@ -270,11 +282,35 @@ int main()
             enemy.y = rand() % 20;
             enemy.isPlayer = false;
             characters.push_back(enemy);
+            enemyCount++;
         }
+
+        cout << "New game started" << endl;
+        cout << "Characters created: " << characters.size() << "\n";
     }
     else if (command == "load")
     {
         loadGame(characters);
+
+        if (characters.size() == 0)
+        {
+            std::cout << "Closing the game..." << std::endl;
+            return 0;
+        }
+
+        cout << "Characters loaded: " << characters.size() << "\n";
+
+        for (int i = 0; i < characters.size(); i++)
+        {
+            if (characters[i].isPlayer)
+            {
+                continue;
+            }
+            if (characters[i].health > 0 && !characters[i].isPlayer)
+            {
+                enemyCount++;
+            }
+        }
     }
 
     while (true)
