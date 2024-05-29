@@ -57,6 +57,11 @@
         "xutility": "cpp",
         "sstream": "cpp",
         "fstream": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "ratio": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
