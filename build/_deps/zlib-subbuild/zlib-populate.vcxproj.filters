@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\239ff50251ded6fcd10cdc3790095fb0\zlib-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\a80832035fa609e81fcfa9d993fe8cda\zlib-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\25e6e8181ac82d6e485c9c3be0f305f9\zlib-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\C-All-Projects\build\_deps\zlib-subbuild\CMakeFiles\zlib-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5F539EDE-5161-3685-B98D-339B1FCD6CD2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

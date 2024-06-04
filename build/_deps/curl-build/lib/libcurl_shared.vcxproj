@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8A7B299B-A15C-392A-ACEB-AAAF5166EF81}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>libcurl_shared</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libcurl_shared.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libcurl-d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libcurl_shared.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libcurl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libcurl_shared.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libcurl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libcurl_shared.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libcurl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR="Debug";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;CURL_EMBED_MANIFEST;_DEBUG;_WINDOWS;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR=\"Debug\";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\C-All-Projects\build\_deps\curl-build\lib
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Debug/exports.def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Debug//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;crypt32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/C-All-Projects/build/_deps/curl-build/lib/Debug/libcurl-d_imp.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Debug/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/Debug/libcurl-d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR="Release";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;CURL_EMBED_MANIFEST;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR=\"Release\";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\C-All-Projects\build\_deps\curl-build\lib
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Release/exports.def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Release//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;crypt32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/C-All-Projects/build/_deps/curl-build/lib/Release/libcurl_imp.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/Release/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/Release/libcurl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR="MinSizeRel";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;CURL_EMBED_MANIFEST;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR=\"MinSizeRel\";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\C-All-Projects\build\_deps\curl-build\lib
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/MinSizeRel/exports.def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/MinSizeRel//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;crypt32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/C-All-Projects/build/_deps/curl-build/lib/MinSizeRel/libcurl_imp.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/MinSizeRel/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/MinSizeRel/libcurl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR="RelWithDebInfo";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;CURL_EMBED_MANIFEST;_WINDOWS;NDEBUG;CURL_HIDDEN_SYMBOLS;CPR_ENABLE_CURL_HTTP_ONLY;CPR_ENABLE_SSL;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;BUILDING_LIBCURL;CURL_STATICLIB;CMAKE_INTDIR=\"RelWithDebInfo\";libcurl_shared_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\C-All-Projects\build\_deps\curl-src\include;D:\C-All-Projects\build\_deps\curl-build\lib\..\include;D:\C-All-Projects\build\_deps\curl-src\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib\..\include;D:\C-All-Projects\build\_deps\curl-build\lib\..;D:\C-All-Projects\build\_deps\curl-src\lib;D:\C-All-Projects\build\_deps\curl-build\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\C-All-Projects\build\_deps\curl-build\lib
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/RelWithDebInfo/exports.def D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/RelWithDebInfo//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;advapi32.lib;crypt32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/C-All-Projects/build/_deps/curl-build/lib/RelWithDebInfo/libcurl_imp.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/curl-build/lib/libcurl_shared.dir/RelWithDebInfo/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/RelWithDebInfo/libcurl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\C-All-Projects\build\_deps\curl-src\lib\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/C-All-Projects/build/_deps/curl-src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects -BD:/C-All-Projects/build --check-stamp-file D:/C-All-Projects/build/_deps/curl-build/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.inc.cmake;D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.soname.cmake;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.inc;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.soname;D:\C-All-Projects\build\_deps\curl-src\lib\curl_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/C-All-Projects/build/_deps/curl-src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects -BD:/C-All-Projects/build --check-stamp-file D:/C-All-Projects/build/_deps/curl-build/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.inc.cmake;D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.soname.cmake;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.inc;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.soname;D:\C-All-Projects\build\_deps\curl-src\lib\curl_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/C-All-Projects/build/_deps/curl-src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects -BD:/C-All-Projects/build --check-stamp-file D:/C-All-Projects/build/_deps/curl-build/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.inc.cmake;D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.soname.cmake;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.inc;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.soname;D:\C-All-Projects\build\_deps\curl-src\lib\curl_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/C-All-Projects/build/_deps/curl-src/lib/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects -BD:/C-All-Projects/build --check-stamp-file D:/C-All-Projects/build/_deps/curl-build/lib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.inc.cmake;D:\C-All-Projects\build\_deps\curl-build\lib\Makefile.soname.cmake;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.inc;D:\C-All-Projects\build\_deps\curl-src\lib\Makefile.soname;D:\C-All-Projects\build\_deps\curl-src\lib\curl_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\_deps\curl-build\lib\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\altsvc.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\amigaos.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\asyn-ares.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\asyn-thread.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\base64.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\bufq.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\bufref.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\c-hyper.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cf-h1-proxy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cf-h2-proxy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cf-haproxy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cf-https-connect.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cf-socket.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cfilters.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\conncache.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\connect.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\content_encoding.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cookie.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_addrinfo.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_des.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_endian.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_fnmatch.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_get_line.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_gethostname.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_gssapi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_memrchr.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_multibyte.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_ntlm_core.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_ntlm_wb.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_path.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_range.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_rtmp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_sasl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_threads.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_trc.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\dict.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\doh.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\dynbuf.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\dynhds.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\easy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\easygetopt.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\easyoptions.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\escape.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\file.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\fileinfo.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\fopen.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\formdata.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ftp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ftplistparser.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\getenv.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\getinfo.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\gopher.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hash.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\headers.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hmac.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostasyn.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostip.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostip4.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostip6.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostsyn.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hsts.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http1.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http2.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_aws_sigv4.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_chunks.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_digest.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_negotiate.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_ntlm.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\http_proxy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\idn.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\if2ip.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\imap.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\inet_ntop.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\inet_pton.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\krb5.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ldap.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\llist.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\macos.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\md4.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\md5.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\memdebug.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\mime.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\mprintf.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\mqtt.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\multi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\netrc.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\nonblock.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\noproxy.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\openldap.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\parsedate.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\pingpong.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\pop3.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\progress.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\psl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\rand.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\rename.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\rtsp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\select.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\sendf.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\setopt.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\sha256.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\share.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\slist.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\smb.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\smtp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\socketpair.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\socks.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\socks_gssapi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\socks_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\speedcheck.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\splay.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\strcase.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\strdup.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\strerror.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\strtok.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\strtoofft.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\system_win32.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\telnet.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\tftp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\timediff.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\timeval.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\transfer.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\url.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\urlapi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\version.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\version_win32.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\warnless.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ws.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cleartext.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\cram.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\digest.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\digest_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\gsasl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\krb5_gssapi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\krb5_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ntlm.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\ntlm_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\oauth2.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\spnego_gssapi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\spnego_sspi.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\vauth.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\bearssl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\gtls.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\hostcheck.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\keylog.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\mbedtls.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\mbedtls_threadlock.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\openssl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\rustls.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\schannel.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\schannel_verify.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\sectransp.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\vtls.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\wolfssl.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\x509asn1.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_msh3.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_ngtcp2.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\curl_quiche.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\vquic.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\libssh.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\libssh2.obj" />
+    <Object Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.dir\$(Configuration)\wolfssh.obj" />
+    <ResourceCompile Include="D:\C-All-Projects\build\_deps\curl-src\lib\libcurl.rc" />
+    <None Include="D:\C-All-Projects\build\_deps\curl-src\libcurl.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\C-All-Projects\build\ZERO_CHECK.vcxproj">
+      <Project>{C22AC2E8-1AB0-3EB8-8710-67B7B06785D0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.vcxproj">
+      <Project>{25A52CBD-21A7-38C2-9271-2ED7CD61F31C}</Project>
+      <Name>libcurl_object</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

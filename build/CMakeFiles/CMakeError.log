@@ -1,0 +1,475 @@
+Performing Curl Test HAVE_FCNTL_O_NONBLOCK failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b51a1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:42.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_b51a1.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_b51a1.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_b51a1.dir\Debug\cmTC_b51a1.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_b51a1.dir\Debug\cmTC_b51a1.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_b51a1.dir\Debug\cmTC_b51a1.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_FCNTL_O_NONBLOCK /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b51a1.dir\Debug\\" /Fd"cmTC_b51a1.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_FCNTL_O_NONBLOCK /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b51a1.dir\Debug\\" /Fd"cmTC_b51a1.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(29,10): error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_b51a1.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_b51a1.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_b51a1.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(29,10): error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_b51a1.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.27
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_83d2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:43.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_83d2a.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_83d2a.dir\Debug\cmTC_83d2a.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_83d2a.dir\Debug\cmTC_83d2a.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_83d2a.dir\Debug\cmTC_83d2a.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d2a.dir\Debug\\" /Fd"cmTC_83d2a.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d2a.dir\Debug\\" /Fd"cmTC_83d2a.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(228,13): warning C4013: 'IoctlSocket' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+Link:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_83d2a.exe" /INCREMENTAL /ILK:"cmTC_83d2a.dir\Debug\cmTC_83d2a.ilk" /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_83d2a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_83d2a.lib" /MACHINE:X64  /machine:x64 cmTC_83d2a.dir\Debug\CurlTests.obj
+CurlTests.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_83d2a.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(228,13): warning C4013: 'IoctlSocket' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj" (default target) (1) ->
+(Link target) -> 
+  CurlTests.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+  D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_83d2a.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_83d2a.vcxproj]
+
+    1 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.41
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dd753.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:44.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_dd753.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_dd753.dir\Debug\cmTC_dd753.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_dd753.dir\Debug\cmTC_dd753.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_dd753.dir\Debug\cmTC_dd753.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dd753.dir\Debug\\" /Fd"cmTC_dd753.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dd753.dir\Debug\\" /Fd"cmTC_dd753.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(252,17): warning C4013: 'IoctlSocket' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+Link:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_dd753.exe" /INCREMENTAL /ILK:"cmTC_dd753.dir\Debug\cmTC_dd753.ilk" /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_dd753.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_dd753.lib" /MACHINE:X64  /machine:x64 cmTC_dd753.dir\Debug\CurlTests.obj
+CurlTests.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_dd753.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(252,17): warning C4013: 'IoctlSocket' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj" (default target) (1) ->
+(Link target) -> 
+  CurlTests.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+  D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_dd753.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_dd753.vcxproj]
+
+    1 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.42
+
+
+Performing Curl Test HAVE_IOCTL_FIONBIO failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_977e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:45.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_977e9.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_977e9.dir\Debug\cmTC_977e9.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_977e9.dir\Debug\cmTC_977e9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_977e9.dir\Debug\cmTC_977e9.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_977e9.dir\Debug\\" /Fd"cmTC_977e9.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_977e9.dir\Debug\\" /Fd"cmTC_977e9.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(306,17): warning C4013: 'ioctl' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(306,33): error C2065: 'FIONBIO': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(306,17): warning C4013: 'ioctl' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(306,33): error C2065: 'FIONBIO': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_977e9.vcxproj]
+
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.25
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_22412.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:46.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_22412.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_22412.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_22412.dir\Debug\cmTC_22412.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_22412.dir\Debug\cmTC_22412.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_22412.dir\Debug\cmTC_22412.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SETSOCKOPT_SO_NONBLOCK /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_22412.dir\Debug\\" /Fd"cmTC_22412.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_SETSOCKOPT_SO_NONBLOCK /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_22412.dir\Debug\\" /Fd"cmTC_22412.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(367,54): error C2065: 'SO_NONBLOCK': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_22412.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_22412.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_22412.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(367,54): error C2065: 'SO_NONBLOCK': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_22412.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.30
+
+
+Performing Curl Test HAVE_FILE_OFFSET_BITS failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8cfee.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:47.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_8cfee.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_8cfee.dir\Debug\cmTC_8cfee.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_8cfee.dir\Debug\cmTC_8cfee.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_8cfee.dir\Debug\cmTC_8cfee.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_FILE_OFFSET_BITS /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8cfee.dir\Debug\\" /Fd"cmTC_8cfee.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_FILE_OFFSET_BITS /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8cfee.dir\Debug\\" /Fd"cmTC_8cfee.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(181,23): warning C4293: '<<': shift count negative or too big, undefined behavior [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(182,27): warning C4293: '<<': shift count negative or too big, undefined behavior [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(181,7): error C2118: negative subscript [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(181,23): warning C4293: '<<': shift count negative or too big, undefined behavior [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(182,27): warning C4293: '<<': shift count negative or too big, undefined behavior [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(181,7): error C2118: negative subscript [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_8cfee.vcxproj]
+
+    2 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.25
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_GCC failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_44812.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:48.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_44812.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_44812.dir\Debug\cmTC_44812.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_44812.dir\Debug\cmTC_44812.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_44812.dir\Debug\cmTC_44812.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_VARIADIC_MACROS_GCC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_44812.dir\Debug\\" /Fd"cmTC_44812.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_VARIADIC_MACROS_GCC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_44812.dir\Debug\\" /Fd"cmTC_44812.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(458,1): error C2010: '.': unexpected in macro parameter list [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(459,1): error C2010: '.': unexpected in macro parameter list [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(458,1): error C2010: '.': unexpected in macro parameter list [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(459,1): error C2010: '.': unexpected in macro parameter list [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_44812.vcxproj]
+
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.24
+
+
+Performing Curl Test HAVE_ATOMIC failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_72f1b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:48.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_72f1b.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_72f1b.dir\Debug\cmTC_72f1b.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_72f1b.dir\Debug\cmTC_72f1b.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_72f1b.dir\Debug\cmTC_72f1b.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_ATOMIC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_72f1b.dir\Debug\\" /Fd"cmTC_72f1b.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_ATOMIC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_72f1b.dir\Debug\\" /Fd"cmTC_72f1b.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(495,15): error C2065: '_Atomic': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(495,11): error C2143: syntax error: missing ';' before 'type' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(495,15): error C2065: '_Atomic': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(495,11): error C2143: syntax error: missing ';' before 'type' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_72f1b.vcxproj]
+
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.27
+
+
+Performing Curl Test HAVE_POSIX_STRERROR_R failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_01a12.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:51.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_01a12.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_01a12.dir\Debug\cmTC_01a12.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_01a12.dir\Debug\cmTC_01a12.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_01a12.dir\Debug\cmTC_01a12.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_POSIX_STRERROR_R /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_01a12.dir\Debug\\" /Fd"cmTC_01a12.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_POSIX_STRERROR_R /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_01a12.dir\Debug\\" /Fd"cmTC_01a12.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(398,9): warning C4013: 'strerror_r' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(398,9): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+Link:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_01a12.exe" /INCREMENTAL /ILK:"cmTC_01a12.dir\Debug\cmTC_01a12.ilk" /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_01a12.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/C-All-Projects/build/CMakeFiles/CMakeTmp/Debug/cmTC_01a12.lib" /MACHINE:X64  /machine:x64 cmTC_01a12.dir\Debug\CurlTests.obj
+CurlTests.obj : error LNK2019: unresolved external symbol strerror_r referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_01a12.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(398,9): warning C4013: 'strerror_r' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(398,9): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj" (default target) (1) ->
+(Link target) -> 
+  CurlTests.obj : error LNK2019: unresolved external symbol strerror_r referenced in function main [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+  D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\cmTC_01a12.exe : fatal error LNK1120: 1 unresolved externals [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_01a12.vcxproj]
+
+    2 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.35
+
+
+Performing Curl Test HAVE_CLOCK_GETTIME_MONOTONIC failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_890d2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:51.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_890d2.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_890d2.dir\Debug\cmTC_890d2.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_890d2.dir\Debug\cmTC_890d2.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_890d2.dir\Debug\cmTC_890d2.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_CLOCK_GETTIME_MONOTONIC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_890d2.dir\Debug\\" /Fd"cmTC_890d2.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_CLOCK_GETTIME_MONOTONIC /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_890d2.dir\Debug\\" /Fd"cmTC_890d2.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(423,3): warning C4013: 'clock_gettime' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(423,32): error C2065: 'CLOCK_MONOTONIC': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(423,3): warning C4013: 'clock_gettime' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(423,32): error C2065: 'CLOCK_MONOTONIC': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_890d2.vcxproj]
+
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.25
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: 'D:/C-All-Projects/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e99fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+Build started 04.06.2024 19:46:52.
+
+Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_e99fc.dir\Debug\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_e99fc.dir\Debug\cmTC_e99fc.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_e99fc.dir\Debug\cmTC_e99fc.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmTC_e99fc.dir\Debug\cmTC_e99fc.tlog\unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_BUILTIN_AVAILABLE /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e99fc.dir\Debug\\" /Fd"cmTC_e99fc.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33130 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_BUILTIN_AVAILABLE /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_INTTYPES_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_STDBOOL_H /D HAVE_STDINT_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e99fc.dir\Debug\\" /Fd"cmTC_e99fc.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c"
+  CurlTests.c
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,6): warning C4013: '__builtin_available' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,32): error C2065: 'macOS': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,32): error C2143: syntax error: missing ')' before 'constant' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,40): error C2059: syntax error: ')' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,41): error C2059: syntax error: ')' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+Done Building Project "D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,6): warning C4013: '__builtin_available' undefined; assuming extern returning int [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+
+
+"D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,32): error C2065: 'macOS': undeclared identifier [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,32): error C2143: syntax error: missing ')' before 'constant' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,40): error C2059: syntax error: ')' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+  D:\C-All-Projects\build\_deps\curl-src\CMake\CurlTests.c(430,41): error C2059: syntax error: ')' [D:\C-All-Projects\build\CMakeFiles\CMakeTmp\cmTC_e99fc.vcxproj]
+
+    1 Warning(s)
+    4 Error(s)
+
+Time Elapsed 00:00:00.24
+
+

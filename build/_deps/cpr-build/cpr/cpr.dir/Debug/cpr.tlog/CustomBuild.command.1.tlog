@@ -1,0 +1,10 @@
+^D:\C-ALL-PROJECTS\BUILD\_DEPS\CPR-SRC\CPR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects -BD:/C-All-Projects/build --check-stamp-file D:/C-All-Projects/build/_deps/cpr-build/cpr/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

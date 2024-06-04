@@ -1,0 +1,43 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CMakePushCheckState.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckStructHasMember.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindCygwin.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindMsys.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindPerl.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/CurlSymbolHiding.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/CurlTests.c
+D:/C-All-Projects/build/_deps/curl-src/CMake/FindLibPSL.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/FindLibSSH2.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/Macros.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/OtherTests.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/PickyWarnings.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/Platforms/WindowsCache.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/Utilities.cmake
+D:/C-All-Projects/build/_deps/curl-src/CMake/cmake_uninstall.cmake.in
+D:/C-All-Projects/build/_deps/curl-src/CMake/curl-config.cmake.in
+D:/C-All-Projects/build/_deps/curl-src/CMakeLists.txt
+D:/C-All-Projects/build/_deps/curl-src/curl-config.in
+D:/C-All-Projects/build/_deps/curl-src/libcurl.pc.in

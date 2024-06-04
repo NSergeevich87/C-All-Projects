@@ -1,0 +1,14 @@
+# Target labels
+ curl-populate
+# Source files and their labels
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/curl-populate
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/adfb24cf25c21707df15f5995a09c1b6/curl-populate.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/f3782e341b768a74fd3750ea49ceee9c/curl-populate-complete.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-build.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-configure.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-download.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-install.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-mkdir.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-patch.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-test.rule
+D:/C-All-Projects/build/_deps/curl-subbuild/CMakeFiles/210a74f48fcc6c367b38c4cdcb58172c/curl-populate-update.rule

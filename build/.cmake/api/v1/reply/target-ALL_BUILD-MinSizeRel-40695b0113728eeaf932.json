@@ -1,0 +1,45 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"build/_deps/cpr-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "libcurl_shared::@7349aeacaff41deceb36"
+		},
+		{
+			"id" : "libcurl_object::@7349aeacaff41deceb36"
+		},
+		{
+			"id" : "cpr::@c4b08663df96993e8225"
+		},
+		{
+			"id" : "zlib::@c9556b0b6bf47963f9da"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@104d1163b04ab1ac7bef",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "_deps/cpr-build",
+		"source" : "build/_deps/cpr-src"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
