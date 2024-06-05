@@ -5,7 +5,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -18,8 +18,6 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
 # Shared between Makefile.am and CMakeLists.txt
 
@@ -30,7 +28,6 @@ DPAGES = \
   append.d \
   aws-sigv4.d \
   basic.d \
-  ca-native.d \
   cacert.d \
   capath.d \
   cert-status.d \
@@ -78,7 +75,6 @@ DPAGES = \
   fail-with-body.d \
   fail.d \
   false-start.d \
-  form-escape.d \
   form-string.d \
   form.d \
   ftp-account.d \
@@ -96,7 +92,6 @@ DPAGES = \
   globoff.d \
   happy-eyeballs-timeout-ms.d \
   haproxy-protocol.d \
-  haproxy-clientip.d \
   head.d \
   header.d \
   help.d \
@@ -109,15 +104,12 @@ DPAGES = \
   http2-prior-knowledge.d \
   http2.d \
   http3.d \
-  http3-only.d \
   ignore-content-length.d \
   include.d \
   insecure.d \
   interface.d \
-  ipfs-gateway.d \
   ipv4.d \
   ipv6.d \
-  json.d \
   junk-session-cookies.d \
   keepalive-time.d \
   key-type.d \
@@ -146,7 +138,6 @@ DPAGES = \
   next.d \
   no-alpn.d \
   no-buffer.d \
-  no-clobber.d \
   no-keepalive.d \
   no-npn.d \
   no-progress-meter.d \
@@ -173,7 +164,6 @@ DPAGES = \
   proto.d \
   proxy-anyauth.d \
   proxy-basic.d \
-  proxy-ca-native.d \
   proxy-cacert.d \
   proxy-capath.d \
   proxy-cert-type.d \
@@ -182,7 +172,6 @@ DPAGES = \
   proxy-crlfile.d \
   proxy-digest.d \
   proxy-header.d \
-  proxy-http2.d \
   proxy-insecure.d \
   proxy-key-type.d \
   proxy-key.d \
@@ -206,14 +195,12 @@ DPAGES = \
   quote.d \
   random-file.d \
   range.d \
-  rate.d \
   raw.d \
   referer.d \
   remote-header-name.d \
   remote-name-all.d \
   remote-name.d \
   remote-time.d \
-  remove-on-error.d \
   request-target.d \
   request.d \
   resolve.d \
@@ -266,18 +253,14 @@ DPAGES = \
   tlsv1.d \
   tr-encoding.d \
   trace-ascii.d \
-  trace-config.d \
-  trace-ids.d \
   trace-time.d \
   trace.d \
   unix-socket.d \
   upload-file.d \
   url.d \
-  url-query.d \
   use-ascii.d \
   user-agent.d \
   user.d \
-  variable.d \
   verbose.d \
   version.d \
   write-out.d \

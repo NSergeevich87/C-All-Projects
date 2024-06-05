@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "tool_setup.h"
@@ -71,13 +69,9 @@ const char *param2text(int res)
   case PARAM_NO_NOT_BOOLEAN:
     return "used '--no-' for option that isn't a boolean";
   case PARAM_CONTDISP_SHOW_HEADER:
-    return "showing headers and --remote-header-name cannot be combined";
+    return "--include and --remote-header-name cannot be combined";
   case PARAM_CONTDISP_RESUME_FROM:
     return "--continue-at and --remote-header-name cannot be combined";
-  case PARAM_READ_ERROR:
-    return "error encountered when reading a file";
-  case PARAM_EXPAND_ERROR:
-    return "variable expansion failure";
   default:
     return "unknown error";
   }
@@ -91,8 +85,7 @@ int SetHTTPrequest(struct OperationConfig *config, HttpReq req, HttpReq *store)
     "GET (-G, --get)",
     "HEAD (-I, --head)",
     "multipart formpost (-F, --form)",
-    "POST (-d, --data)",
-    "PUT (-T, --upload-file)"
+    "POST (-d, --data)"
   };
 
   if((*store == HTTPREQ_UNSPEC) ||
@@ -101,7 +94,7 @@ int SetHTTPrequest(struct OperationConfig *config, HttpReq req, HttpReq *store)
     return 0;
   }
   warnf(config->global, "You can only select one HTTP request method! "
-        "You asked for both %s and %s.",
+        "You asked for both %s and %s.\n",
         reqname[req], reqname[*store]);
 
   return 1;
@@ -116,19 +109,18 @@ void customrequest_helper(struct OperationConfig *config, HttpReq req,
     "GET",
     "HEAD",
     "POST",
-    "POST",
-    "PUT"
+    "POST"
   };
 
   if(!method)
     ;
   else if(curl_strequal(method, dflt[req])) {
     notef(config->global, "Unnecessary use of -X or --request, %s is already "
-          "inferred.", dflt[req]);
+          "inferred.\n", dflt[req]);
   }
   else if(curl_strequal(method, "head")) {
     warnf(config->global,
           "Setting custom HTTP method to HEAD with -X/--request may not work "
-          "the way you want. Consider using -I/--head instead.");
+          "the way you want. Consider using -I/--head instead.\n");
   }
 }

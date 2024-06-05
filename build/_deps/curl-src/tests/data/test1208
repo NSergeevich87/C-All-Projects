@@ -5,10 +5,7 @@ FTP
 PORT
 RETR
 NODATACONN150
-timeout
-FAILURE
 flaky
-timing-dependent
 </keywords>
 </info>
 # Server-side
@@ -26,10 +23,10 @@ NODATACONN150
 <server>
 ftp
 </server>
-<name>
+ <name>
 FTP PORT download, no data conn and no transient negative reply
-</name>
-<command>
+ </name>
+ <command>
 --max-time %FTPTIME2 ftp://%HOSTIP:%FTPPORT/%TESTNUMBER -P -
 </command>
 
@@ -54,7 +51,6 @@ TYPE I
 SIZE %TESTNUMBER
 RETR %TESTNUMBER
 </protocol>
-# 28 is CURLE_OPERATION_TIMEDOUT
 <errorcode>
 28
 </errorcode>

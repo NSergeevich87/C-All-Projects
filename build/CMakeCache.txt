@@ -14,17 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
-//Value Computed by CMake
-12_03_06_24_BINARY_DIR:STATIC=D:/C-All-Projects/build
-
-//Value Computed by CMake
-12_03_06_24_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-12_03_06_24_SOURCE_DIR:STATIC=D:/C-All-Projects
-
 //Installation directory for executables
-BIN_INSTALL_DIR:PATH=C:/Program Files/12_03_06_24/bin
+BIN_INSTALL_DIR:PATH=C:/Program Files/C-ALL-PROJECTS/bin
 
 //Build shared libraries
 BUILD_SHARED_LIBS:BOOL=ON
@@ -153,7 +144,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/12_03_06_24
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/C-ALL-PROJECTS
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -200,7 +191,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=C-ALL-PROJECTS
+CMAKE_PROJECT_NAME:STATIC=GB_C++
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.10.5
@@ -282,6 +273,34 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 // during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
+//Enable BearSSL for SSL/TLS
+CMAKE_USE_BEARSSL:BOOL=OFF
+
+//Use GSSAPI implementation (right now only Heimdal is supported
+// with CMake build)
+CMAKE_USE_GSSAPI:BOOL=OFF
+
+//Use libSSH
+CMAKE_USE_LIBSSH:BOOL=OFF
+
+//Use libSSH2
+CMAKE_USE_LIBSSH2:BOOL=ON
+
+//Enable mbedTLS for SSL/TLS
+CMAKE_USE_MBEDTLS:BOOL=OFF
+
+//Enable NSS for SSL/TLS
+CMAKE_USE_NSS:BOOL=OFF
+
+//Use OpenSSL code. Experimental
+CMAKE_USE_OPENSSL:BOOL=OFF
+
+//enable Windows native SSL/TLS
+CMAKE_USE_SCHANNEL:BOOL=ON
+
+//enable wolfSSL for SSL/TLS
+CMAKE_USE_WOLFSSL:BOOL=OFF
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
@@ -316,6 +335,9 @@ CPR_DEBUG_SANITIZER_FLAG_THREAD:BOOL=OFF
 
 //Enables the UndefinedBehaviorSanitizer for debug builds.
 CPR_DEBUG_SANITIZER_FLAG_UB:BOOL=OFF
+
+//The directory containing a CMake configuration file for CPR.
+CPR_DIR:PATH=CPR_DIR-NOTFOUND
 
 //Set to ON to enable Cppcheck static analysis. Requires CPR_BUILD_TESTS
 // and CPR_BUILD_TESTS_SSL to be OFF to prevent checking google
@@ -366,14 +388,18 @@ CPR_FORCE_WINSSL_BACKEND:BOOL=OFF
 //Set to ON to generate coverage reports.
 CPR_GENERATE_COVERAGE:BOOL=OFF
 
-//Skip searching for Certificate Authority certs. Turn ON for systems
+//Path to a file.
+CPR_INCLUDE_DIR:PATH=D:/C-All-Projects/build/_deps/cpr-src/include/cpr
+
+//Path to a library.
+CPR_LIBRARY:FILEPATH=CPR_LIBRARY-NOTFOUND
+
+//Skip searching for Certificate Authority certs. Turn ON systems
 // like iOS where file access is restricted and prevents https
 // from working.
 CPR_SKIP_CA_BUNDLE_SEARCH:BOOL=OFF
 
-//Set to ON to use the Boost.Filesystem library. This is useful,
-// on, e.g., Apple platforms, where std::filesystem may not always
-// be available when targeting older OS versions.
+//Set to ON to use the Boost.Filesystem library on OSX.
 CPR_USE_BOOST_FILESYSTEM:BOOL=OFF
 
 //If enabled we will use the curl lib already installed on this
@@ -407,6 +433,9 @@ CURL_DISABLE_BEARER_AUTH:BOOL=OFF
 
 //disables cookies support
 CURL_DISABLE_COOKIES:BOOL=OFF
+
+//disables cryptographic authentication
+CURL_DISABLE_CRYPTO_AUTH:BOOL=OFF
 
 //disables DICT
 CURL_DISABLE_DICT:BOOL=OFF
@@ -572,7 +601,7 @@ CURL_VERBOSE_LOGGING:BOOL=OFF
 //Turn compiler warnings into errors
 CURL_WERROR:BOOL=OFF
 
-//Use windows libraries to allow NTLM authentication without OpenSSL
+//Use windows libraries to allow NTLM authentication without openssl
 CURL_WINDOWS_SSPI:BOOL=ON
 
 //Build curl with ZLIB support (AUTO, ON or OFF)
@@ -592,6 +621,11 @@ ENABLE_CURLDEBUG:BOOL=OFF
 
 //Set to ON to enable curl debug features
 ENABLE_DEBUG:BOOL=OFF
+
+//Set to OFF to prevent usage of inet_pton when building against
+// modern SDKs while still requiring compatibility with older Windows
+// versions, such as Windows XP, Windows Server 2003 etc.
+ENABLE_INET_PTON:BOOL=ON
 
 //Define if you want to enable IPv6 support
 ENABLE_IPV6:BOOL=ON
@@ -642,11 +676,20 @@ FETCHCONTENT_UPDATES_DISCONNECTED_CURL:BOOL=OFF
 //Enables UPDATE_DISCONNECTED behavior just for population of zlib
 FETCHCONTENT_UPDATES_DISCONNECTED_ZLIB:BOOL=OFF
 
+//Value Computed by CMake
+GB_C++_BINARY_DIR:STATIC=D:/C-All-Projects/build
+
+//Value Computed by CMake
+GB_C++_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+GB_C++_SOURCE_DIR:STATIC=D:/C-All-Projects
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //Installation directory for headers
-INC_INSTALL_DIR:PATH=C:/Program Files/12_03_06_24/include
+INC_INSTALL_DIR:PATH=C:/Program Files/C-ALL-PROJECTS/include
 
 //Copy minigzip and minideflate during install
 INSTALL_UTILS:BOOL=OFF
@@ -667,7 +710,7 @@ LIBSSH2_INCLUDE_DIR:PATH=LIBSSH2_INCLUDE_DIR-NOTFOUND
 LIBSSH2_LIBRARY:FILEPATH=LIBSSH2_LIBRARY-NOTFOUND
 
 //Installation directory for libraries
-LIB_INSTALL_DIR:PATH=C:/Program Files/12_03_06_24/lib
+LIB_INSTALL_DIR:PATH=C:/Program Files/C-ALL-PROJECTS/lib
 
 //Path to a program.
 MSYS_CMD:FILEPATH=C:/msys64/msys2_shell.cmd
@@ -679,16 +722,7 @@ PERL_EXECUTABLE:FILEPATH=C:/msys64/usr/bin/perl.exe
 PICKY_COMPILER:BOOL=ON
 
 //Installation directory for pkgconfig (.pc) files
-PKGCONFIG_INSTALL_DIR:PATH=C:/Program Files/12_03_06_24/lib/pkgconfig
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=D:/C-All-Projects/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=D:/C-All-Projects
+PKGCONFIG_INSTALL_DIR:PATH=C:/Program Files/C-ALL-PROJECTS/lib/pkgconfig
 
 //Path to a file.
 RANDOM_FILE:FILEPATH=RANDOM_FILE-NOTFOUND
@@ -699,7 +733,7 @@ USE_LIBIDN2:BOOL=ON
 //Use msquic library for HTTP/3 support
 USE_MSH3:BOOL=OFF
 
-//Use nghttp2 library
+//Use Nghttp2 library
 USE_NGHTTP2:BOOL=OFF
 
 //Use ngtcp2 and nghttp3 libraries for HTTP/3 support
@@ -772,14 +806,41 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=ZLIB_LIBRARY_RELEASE-NOTFOUND
 
+//The directory containing a CMake configuration file for c.
+c_DIR:PATH=c_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for cp.
+cp_DIR:PATH=cp_DIR-NOTFOUND
+
 //Value Computed by CMake
 cpr_BINARY_DIR:STATIC=D:/C-All-Projects/build/_deps/cpr-build
+
+//The directory containing a CMake configuration file for cpr.
+cpr_DIR:PATH=cpr_DIR-NOTFOUND
 
 //Value Computed by CMake
 cpr_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 cpr_SOURCE_DIR:STATIC=D:/C-All-Projects/build/_deps/cpr-src
+
+//Value Computed by CMake
+testcpr_BINARY_DIR:STATIC=D:/C-All-Projects/build
+
+//Value Computed by CMake
+testcpr_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+testcpr_SOURCE_DIR:STATIC=D:/C-All-Projects
+
+//Value Computed by CMake
+your_target_name_BINARY_DIR:STATIC=D:/C-All-Projects/build
+
+//Value Computed by CMake
+your_target_name_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+your_target_name_SOURCE_DIR:STATIC=D:/C-All-Projects
 
 //Value Computed by CMake
 zlib_BINARY_DIR:STATIC=D:/C-All-Projects/build/_deps/zlib-build
@@ -971,6 +1032,12 @@ CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_USE_GSSAPI
+CMAKE_USE_GSSAPI-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_USE_LIBSSH
+CMAKE_USE_LIBSSH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_USE_LIBSSH2
+CMAKE_USE_LIBSSH2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CPR_LIBRARIES:INTERNAL=cpr
@@ -984,6 +1051,8 @@ CURL_DISABLE_BASIC_AUTH-ADVANCED:INTERNAL=1
 CURL_DISABLE_BEARER_AUTH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_DISABLE_COOKIES
 CURL_DISABLE_COOKIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_DISABLE_CRYPTO_AUTH
+CURL_DISABLE_CRYPTO_AUTH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_DISABLE_DICT
 CURL_DISABLE_DICT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_DISABLE_DIGEST_AUTH
@@ -1081,6 +1150,10 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have symbol alarm
 HAVE_ALARM:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;arpa/tftp.h
+HAVE_ARPA_TFTP_H:INTERNAL=
+//Have include windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h
+HAVE_ASSERT_H:INTERNAL=1
 //Curl test 
 HAVE_ATOMIC:INTERNAL=
 //Test HAVE_ATTRIBUTE_VISIBILITY_HIDDEN
@@ -1089,6 +1162,8 @@ HAVE_ATTRIBUTE_VISIBILITY_HIDDEN:INTERNAL=
 HAVE_ATTRIBUTE_VISIBILITY_INTERNAL:INTERNAL=
 //Test HAVE_AVX2_INTRIN
 HAVE_AVX2_INTRIN:INTERNAL=1
+//Have symbol basename
+HAVE_BASENAME:INTERNAL=
 //Curl test 
 HAVE_BOOL_T:INTERNAL=1
 //Curl test 
@@ -1099,6 +1174,8 @@ HAVE_BUILTIN_CTZ:INTERNAL=
 HAVE_BUILTIN_CTZLL:INTERNAL=
 //Curl test 
 HAVE_CLOCK_GETTIME_MONOTONIC:INTERNAL=
+//Have include windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h
+HAVE_ERRNO_H:INTERNAL=1
 //Have symbol fchmod
 HAVE_FCHMOD:INTERNAL=
 //Have symbol fcntl
@@ -1117,24 +1194,34 @@ HAVE_FSETXATTR:INTERNAL=
 HAVE_FTRUNCATE:INTERNAL=
 //Have symbol getaddrinfo
 HAVE_GETADDRINFO:INTERNAL=1
+//Have symbol gethostbyname
+HAVE_GETHOSTBYNAME:INTERNAL=1
 //Have symbol getpeername
 HAVE_GETPEERNAME:INTERNAL=1
 //Have symbol getppid
 HAVE_GETPPID:INTERNAL=
+//Have symbol getprotobyname
+HAVE_GETPROTOBYNAME:INTERNAL=1
 //Have symbol getpwuid_r
 HAVE_GETPWUID_R:INTERNAL=
 //Have symbol getrlimit
 HAVE_GETRLIMIT:INTERNAL=
 //Have symbol getsockname
 HAVE_GETSOCKNAME:INTERNAL=1
+//Curl test 
+HAVE_GLIBC_STRERROR_R:INTERNAL=
 //Have includes windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;fcntl.h;idn2.h
 HAVE_IDN2_H:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;ifaddrs.h
+HAVE_IFADDRS_H:INTERNAL=
 //Have symbol if_nametoindex
 HAVE_IF_NAMETOINDEX:INTERNAL=
 //Have symbol inet_ntop
 HAVE_INET_NTOP:INTERNAL=1
 //Have symbol inet_pton
 HAVE_INET_PTON:INTERNAL=1
+//Have symbol ioctl
+HAVE_IOCTL:INTERNAL=
 //Curl test 
 HAVE_IOCTLSOCKET:INTERNAL=1
 //Curl test 
@@ -1145,22 +1232,44 @@ HAVE_IOCTLSOCKET_CAMEL_FIONBIO:INTERNAL=
 HAVE_IOCTLSOCKET_FIONBIO:INTERNAL=1
 //Curl test 
 HAVE_IOCTL_FIONBIO:INTERNAL=
+//Curl test 
+HAVE_IOCTL_SIOCGIFADDR:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;krb.h
+HAVE_KRB_H:INTERNAL=
 //Have includes windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;fcntl.h;io.h;libgen.h
 HAVE_LIBGEN_H:INTERNAL=
 //Have library idn2;ws2_32
 HAVE_LIBIDN2:INTERNAL=
+//Have library winmm;ws2_32
+HAVE_LIBWINMM:INTERNAL=1
+//Have library ws2_32;
+HAVE_LIBWS2_32:INTERNAL=1
+//Have include linux/tcp.h
+HAVE_LINUX_TCP_H:INTERNAL=
 //Have include windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;fcntl.h;io.h;locale.h
 HAVE_LOCALE_H:INTERNAL=1
+//Have function mach_absolute_time
+HAVE_MACH_ABSOLUTE_TIME:INTERNAL=
 //Test HAVE_MSG_NOSIGNAL
 HAVE_MSG_NOSIGNAL:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;netinet/tcp.h
+HAVE_NETINET_TCP_H:INTERNAL=
 //Test HAVE_NO_INTERPOSITION
 HAVE_NO_INTERPOSITION:INTERNAL=
 //Result of TRY_COMPILE
 HAVE_OFF64_T:INTERNAL=FALSE
 //Test HAVE_PCLMULQDQ_INTRIN
 HAVE_PCLMULQDQ_INTRIN:INTERNAL=1
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;pem.h
+HAVE_PEM_H:INTERNAL=
 //Have symbol pipe
 HAVE_PIPE:INTERNAL=
+//Test HAVE_POLL_FINE
+HAVE_POLL_FINE:INTERNAL=
+//Result of TRY_COMPILE
+HAVE_POLL_FINE_COMPILED:INTERNAL=FALSE
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;poll.h
+HAVE_POLL_H:INTERNAL=
 //Have function posix_memalign
 HAVE_POSIX_MEMALIGN:INTERNAL=
 //Curl test 
@@ -1179,6 +1288,8 @@ HAVE_SETLOCALE:INTERNAL=1
 HAVE_SETMODE:INTERNAL=1
 //Have symbol setrlimit
 HAVE_SETRLIMIT:INTERNAL=
+//Have symbol setsockopt
+HAVE_SETSOCKOPT:INTERNAL=1
 //Curl test 
 HAVE_SETSOCKOPT_SO_NONBLOCK:INTERNAL=
 //Have symbol siginterrupt
@@ -1200,6 +1311,8 @@ HAVE_SIZEOF_OFF_T:INTERNAL=TRUE
 //Result of TRY_COMPILE
 HAVE_SIZEOF_SA_FAMILY_T:INTERNAL=FALSE
 //Result of TRY_COMPILE
+HAVE_SIZEOF_SHORT:INTERNAL=TRUE
+//Result of TRY_COMPILE
 HAVE_SIZEOF_SIZE_T:INTERNAL=TRUE
 //Result of TRY_COMPILE
 HAVE_SIZEOF_SSIZE_T:INTERNAL=FALSE
@@ -1211,6 +1324,8 @@ HAVE_SIZEOF_SUSECONDS_T:INTERNAL=FALSE
 HAVE_SIZEOF_TIME_T:INTERNAL=TRUE
 //Result of TRY_COMPILE
 HAVE_SIZEOF___INT64:INTERNAL=TRUE
+//Curl test 
+HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID:INTERNAL=
 //Have symbol socketpair
 HAVE_SOCKETPAIR:INTERNAL=
 //Test HAVE_SSE2_INTRIN
@@ -1221,6 +1336,8 @@ HAVE_SSE42CMPSTR_INTRIN:INTERNAL=1
 HAVE_SSE42CRC_INLINE_ASM:INTERNAL=
 //Test HAVE_SSE42CRC_INTRIN
 HAVE_SSE42CRC_INTRIN:INTERNAL=1
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;ssl.h
+HAVE_SSL_H:INTERNAL=
 //Test HAVE_SSSE3_INTRIN
 HAVE_SSSE3_INTRIN:INTERNAL=1
 //Have includes windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;fcntl.h;io.h;locale.h;stdatomic.h
@@ -1231,34 +1348,64 @@ HAVE_STDBOOL_H:INTERNAL=1
 HAVE_STDDEF_H:INTERNAL=1
 //Have include stdint.h
 HAVE_STDINT_H:INTERNAL=1
+//Have include windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h
+HAVE_STDIO_H:INTERNAL=1
 //Have symbol strcasecmp
 HAVE_STRCASECMP:INTERNAL=
 //Have function strerror
 HAVE_STRERROR:INTERNAL=1
 //Have symbol strerror_r
 HAVE_STRERROR_R:INTERNAL=
+//Have symbol strncmpi
+HAVE_STRNCMPI:INTERNAL=
 //Have includes windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;fcntl.h;io.h;locale.h;stdbool.h;stdint.h;stropts.h
 HAVE_STROPTS_H:INTERNAL=
 //Have symbol strtok_r
 HAVE_STRTOK_R:INTERNAL=
+//Have symbol strtoll
+HAVE_STRTOLL:INTERNAL=1
 //Test HAVE_STRUCT_TIMEVAL
 HAVE_STRUCT_TIMEVAL:INTERNAL=1
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/filio.h
+HAVE_SYS_FILIO_H:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/ioctl.h
+HAVE_SYS_IOCTL_H:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/resource.h
+HAVE_SYS_RESOURCE_H:INTERNAL=
 //Have include sys/sdt.h
 HAVE_SYS_SDT_H:INTERNAL=
 //Have include sys/types.h
 HAVE_SYS_TYPES_H:INTERNAL=1
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/uio.h
+HAVE_SYS_UIO_H:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/un.h
+HAVE_SYS_UN_H:INTERNAL=
+//Have includes windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdio.h;stdlib.h;string.h;time.h;process.h;stddef.h;malloc.h;memory.h;sys/utsname.h
+HAVE_SYS_UTSNAME_H:INTERNAL=
 //Have includes windows.h;ws2tcpip.h;winsock2.h;inttypes.h;sys/stat.h;sys/types.h;sys/utime.h;sys/xattr.h
 HAVE_SYS_XATTR_H:INTERNAL=
 //Have include unistd.h
 HAVE_UNISTD_H:INTERNAL=
+//Have symbol usleep
+HAVE_USLEEP:INTERNAL=
 //Have symbol utimes
 HAVE_UTIMES:INTERNAL=
 //Curl test 
 HAVE_VARIADIC_MACROS_C99:INTERNAL=1
 //Curl test 
 HAVE_VARIADIC_MACROS_GCC:INTERNAL=
+//Have include windows.h;ws2tcpip.h;winsock2.h;wincrypt.h
+HAVE_WINCRYPT_H:INTERNAL=1
+//Have include ;windows.h
+HAVE_WINDOWS_H:INTERNAL=1
+//Have include windows.h;ws2tcpip.h;winsock2.h
+HAVE_WINSOCK2_H:INTERNAL=1
+//Have include windows.h;ws2tcpip.h
+HAVE_WS2TCPIP_H:INTERNAL=1
 //Result of TRY_COMPILE
 HAVE__OFF64_T:INTERNAL=FALSE
+//Have symbol _strtoi64
+HAVE__STRTOI64:INTERNAL=1
 //Result of TRY_COMPILE
 HAVE___OFF64_T:INTERNAL=FALSE
 //ADVANCED property for variable: HTTP_ONLY
@@ -1302,6 +1449,8 @@ SIZEOF_LONG_LONG:INTERNAL=8
 SIZEOF_OFF_T:INTERNAL=4
 //CHECK_TYPE_SIZE: sa_family_t unknown
 SIZEOF_SA_FAMILY_T:INTERNAL=
+//CHECK_TYPE_SIZE: sizeof(short)
+SIZEOF_SHORT:INTERNAL=2
 //CHECK_TYPE_SIZE: sizeof(size_t)
 SIZEOF_SIZE_T:INTERNAL=8
 //CHECK_TYPE_SIZE: ssize_t unknown
@@ -1314,6 +1463,7 @@ SIZEOF_SUSECONDS_T:INTERNAL=
 SIZEOF_TIME_T:INTERNAL=8
 //CHECK_TYPE_SIZE: sizeof(__int64)
 SIZEOF___INT64:INTERNAL=8
+SSL_ENABLED:INTERNAL=ON
 //Test THREAD_SANITIZER_AVAILABLE
 THREAD_SANITIZER_AVAILABLE:INTERNAL=1
 //Result of TRY_COMPILE
@@ -1322,6 +1472,8 @@ THREAD_SANITIZER_AVAILABLE_COMPILED:INTERNAL=TRUE
 THREAD_SANITIZER_AVAILABLE_EXITCODE:INTERNAL=0
 //Test UNDEFINED_BEHAVIOUR_SANITIZER_AVAILABLE
 UNDEFINED_BEHAVIOUR_SANITIZER_AVAILABLE:INTERNAL=
+//Have symbol CryptAcquireContext
+USE_WINCRYPT:INTERNAL=1
 //ADVANCED property for variable: WITH_AVX2
 WITH_AVX2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: WITH_INFLATE_ALLOW_INVALID_DIST
@@ -1353,9 +1505,21 @@ ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files/12_03_06_24
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files/C-ALL-PROJECTS
 //CHECK_TYPE_SIZE: _off64_t unknown
 _OFF64_T:INTERNAL=
 //CHECK_TYPE_SIZE: __off64_t unknown
 __OFF64_T:INTERNAL=
+//Arguments for recv
+curl_cv_func_recv_args:INTERNAL=SOCKET,char *,int,int,int
+//Test curl_cv_func_recv_test
+curl_cv_func_recv_test:INTERNAL=1
+//Arguments for send
+curl_cv_func_send_args:INTERNAL=SOCKET,char *,int,int,int,const
+//Test curl_cv_func_send_test
+curl_cv_func_send_test:INTERNAL=1
+//Test curl_cv_recv
+curl_cv_recv:INTERNAL=1
+//Test curl_cv_send
+curl_cv_send:INTERNAL=1
 

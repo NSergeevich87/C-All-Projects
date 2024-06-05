@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\_deps\cpr-build\cpr\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cpr.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cpr</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\_deps\cpr-build\cpr\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cpr.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cpr</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\_deps\cpr-build\cpr\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">cpr.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">cpr</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\_deps\cpr-build\cpr\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">cpr.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">cpr</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -134,14 +134,14 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>..\..\curl-build\lib\Debug\libcurl-d_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\curl-build\lib\Debug\libcurl-d_imp.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/cpr-build/cpr/Debug/cpr.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/cpr.dir/Debug/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/Debug/cpr.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/Debug/cpr.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -197,14 +197,14 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>..\..\curl-build\lib\Release\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\curl-build\lib\Release\libcurl_imp.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/cpr-build/cpr/Release/cpr.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/cpr.dir/Release/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/Release/cpr.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/Release/cpr.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -260,14 +260,14 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>..\..\curl-build\lib\MinSizeRel\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\curl-build\lib\MinSizeRel\libcurl_imp.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/cpr-build/cpr/MinSizeRel/cpr.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/cpr.dir/MinSizeRel/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/MinSizeRel/cpr.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/MinSizeRel/cpr.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -322,14 +322,14 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>..\..\curl-build\lib\RelWithDebInfo\libcurl_imp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\curl-build\lib\RelWithDebInfo\libcurl_imp.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/cpr-build/cpr/RelWithDebInfo/cpr.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/cpr.dir/RelWithDebInfo/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/RelWithDebInfo/cpr.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/cpr-build/cpr/RelWithDebInfo/cpr.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -472,9 +472,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_shared.vcxproj">
-      <Project>{8A7B299B-A15C-392A-ACEB-AAAF5166EF81}</Project>
-      <Name>libcurl_shared</Name>
+    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl.vcxproj">
+      <Project>{4182D281-CF8C-3737-AEF3-558962D60D0C}</Project>
+      <Name>libcurl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

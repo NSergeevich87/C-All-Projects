@@ -54,18 +54,19 @@ http
 <tool>
 lib%TESTNUMBER
 </tool>
-<name>
+ <name>
 HTTP resume/range fail range-error content-range combinations
-</name>
-<command>
+ </name>
+ <command>
 http://%HOSTIP:%HTTPPORT/want/%TESTNUMBER
 </command>
 </client>
 
 # Verify data after the test has been "shot"
 <verify>
-<stdout>
+<stderr mode="text">
+URL: http://%HOSTIP:%HTTPPORT/want/%TESTNUMBER
 0
-</stdout>
+</stderr>
 </verify>
 </testcase>

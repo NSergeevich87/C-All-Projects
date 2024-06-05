@@ -6,7 +6,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -19,8 +19,6 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
 #
 #       tests compilation script for the OS/400.
@@ -32,114 +30,106 @@ SCRIPTDIR=`dirname "${0}"`
 cd "${TOPDIR}/tests"
 
 
-#       Build programs in a directory.
+#       tests directory not implemented yet.
 
-build_all_programs()
 
-{
-        #       Compile all programs.
-        #       The list is found in variable "noinst_PROGRAMS"
+#       Process the libtest subdirectory.
 
-        INCLUDES="'`pwd`' '${TOPDIR}/lib' '${TOPDIR}/src'"
-        MODS="${1}"
-        SRVPGMS="${2}"
+cd libtest
 
-        for PGM in ${noinst_PROGRAMS}
-        do      DB2PGM=`db2_name "${PGM}"`
-                PGMIFSNAME="${LIBIFSNAME}/${DB2PGM}.PGM"
+#       Get definitions from the Makefile.inc file.
+#       The `sed' statement works as follows:
+#       _ Join \nl-separated lines.
+#       _ Retain only lines that begins with "identifier =".
+#       _ Turn these lines into shell variable assignments.
 
-                #       Extract preprocessor symbol definitions from
-                #               compilation options for the program.
+eval "`sed -e ': begin'                                                 \
+        -e '/\\\\$/{'                                                   \
+        -e 'N'                                                          \
+        -e 's/\\\\\\n/ /'                                               \
+        -e 'b begin'                                                    \
+        -e '}'                                                          \
+        -e '/^[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[=]/b keep'             \
+        -e 'd'                                                          \
+        -e ': keep'                                                     \
+        -e 's/[[:space:]]*=[[:space:]]*/=/'                             \
+        -e 's/=\\(.*[^[:space:]]\\)[[:space:]]*$/=\\"\\1\\"/'           \
+        -e 's/\\$(\\([^)]*\\))/${\\1}/g'                                \
+        < Makefile.inc`"
 
-                PGMCFLAGS="`eval echo \"\\${${PGM}_CFLAGS}\"`"
-                PGMDFNS=
+#       Special case: redefine chkhostname compilation parameters.
 
-                for FLAG in ${PGMCFLAGS}
-                do      case "${FLAG}" in
-                        -D?*)   DEFINE="`echo \"${FLAG}\" | sed 's/^..//'`"
-                                PGMDFNS="${PGMDFNS} '${DEFINE}'"
-                                ;;
-                        esac
-                done
+chkhostname_SOURCES=chkhostname.c
+chkhostname_LDADD=curl_gethostname.o
 
-                #        Compile all C sources for the program into modules.
+#       Compile all programs.
+#       The list is found in variable "noinst_PROGRAMS"
 
-                PGMSOURCES="`eval echo \"\\${${PGM}_SOURCES}\"`"
-                LINK=
-                MODULES=
+INCLUDES="'${TOPDIR}/tests/libtest' '${TOPDIR}/lib'"
 
-                for SOURCE in ${PGMSOURCES}
-                do      case "${SOURCE}" in
-                        *.c)    #       Special processing for libxxx.c files:
-                                #               their module name is determined
-                                #               by the target PROGRAM name.
+for PGM in ${noinst_PROGRAMS}
+do      DB2PGM=`db2_name "${PGM}"`
+        PGMIFSNAME="${LIBIFSNAME}/${DB2PGM}.PGM"
 
-                                case "${SOURCE}" in
-                                lib*.c) MODULE="${DB2PGM}"
-                                        ;;
-                                *)      MODULE=`db2_name "${SOURCE}"`
-                                        ;;
-                                esac
+        #       Extract preprocessor symbol definitions from compilation
+        #               options for the program.
 
-                                #       If source is in a sibling directory,
-                                #               prefix module name with 'X'.
+        PGMCFLAGS="`eval echo \"\\${${PGM}_CFLAGS}\"`"
+        PGMDEFINES=
 
-                                case "${SOURCE}" in
-                                ../*)   MODULE=`db2_name "X${MODULE}"`
-                                            ;;
-                                esac
-
-                                make_module "${MODULE}" "${SOURCE}" "${PGMDFNS}"
-                                if action_needed "${PGMIFSNAME}" "${MODIFSNAME}"
-                                then    LINK=yes
-                                fi
-                                ;;
-                        esac
-                done
-
-                #       Link program if needed.
-
-                if [ "${LINK}" ]
-                then    PGMLDADD="`eval echo \"\\${${PGM}_LDADD}\"`"
-                        for ARG in ${PGMLDADD}
-                        do      case "${ARG}" in
-                                -*)     ;;              # Ignore non-module.
-                                *)      MODULES="${MODULES} "`db2_name "${ARG}"`
-                                        ;;
-                                esac
-                        done
-                        MODULES="`echo \"${MODULES}\" |
-                            sed \"s/[^ ][^ ]*/${TARGETLIB}\/&/g\"`"
-                        CMD="CRTPGM PGM(${TARGETLIB}/${DB2PGM})"
-                        CMD="${CMD} ENTMOD(${TARGETLIB}/CURLMAIN)"
-                        CMD="${CMD} MODULE(${MODULES} ${MODS})"
-                        CMD="${CMD} BNDSRVPGM(${SRVPGMS} QADRTTS)"
-                        CMD="${CMD} TGTRLS(${TGTRLS})"
-                        CLcommand "${CMD}"
-                fi
+        for FLAG in ${PGMCFLAGS}
+        do      case "${FLAG}" in
+                -D?*)   DEFINE="`echo \"${FLAG}\" | sed 's/^..//'`"
+                        PGMDEFINES="${PGMDEFINES} '${DEFINE}'"
+                        ;;
+                esac
         done
-}
 
+        #        Compile all C sources for the program into modules.
 
-#       Build programs in the server directory.
+        PGMSOURCES="`eval echo \"\\${${PGM}_SOURCES}\"`"
+        LINK=
+        MODULES=
 
-(
-        cd server
-        get_make_vars Makefile.inc
-        build_all_programs "${TARGETLIB}/OS400SYS"
-)
+        for SOURCE in ${PGMSOURCES}
+        do      case "${SOURCE}" in
+                *.c)    #       Special processing for libxxx.c files: their
+                        #               module name is determined by the target
+                        #               PROGRAM name.
 
+                        case "${SOURCE}" in
+                        lib*.c) MODULE="${DB2PGM}"
+                                ;;
+                        *)      MODULE=`db2_name "${SOURCE}"`
+                                ;;
+                        esac
 
-#       Build all programs in the libtest subdirectory.
+                        make_module "${MODULE}" "${SOURCE}" "${PGMDEFINES}"
+                        if action_needed "${PGMIFSNAME}" "${MODIFSNAME}"
+                        then    LINK=yes
+                        fi
+                        ;;
+                esac
+        done
 
-(
-        cd libtest
-        get_make_vars Makefile.inc
+        #       Link program if needed.
 
-        #       Special case: redefine chkhostname compilation parameters.
-
-        chkhostname_SOURCES=chkhostname.c
-        chkhostname_LDADD=curl_gethostname.o
-
-        build_all_programs "" "${TARGETLIB}/${SRVPGM}"
-)
+        if [ "${LINK}" ]
+        then    PGMLDADD="`eval echo \"\\${${PGM}_LDADD}\"`"
+                for LDARG in ${PGMLDADD}
+                do      case "${LDARG}" in
+                        -*)     ;;              # Ignore non-module.
+                        *)      MODULES="${MODULES} "`db2_name "${LDARG}"`
+                                ;;
+                        esac
+                done
+                MODULES="`echo \"${MODULES}\" |
+                    sed \"s/[^ ][^ ]*/${TARGETLIB}\/&/g\"`"
+                CMD="CRTPGM PGM(${TARGETLIB}/${DB2PGM})"
+                CMD="${CMD} ENTMOD(QADRT/QADRTMAIN2)"
+                CMD="${CMD} MODULE(${MODULES})"
+                CMD="${CMD} BNDSRVPGM(${TARGETLIB}/${SRVPGM} QADRTTS)"
+                CMD="${CMD} TGTRLS(${TGTRLS})"
+                system "${CMD}"
+        fi
+done

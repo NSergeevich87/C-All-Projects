@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "tool_setup.h"
@@ -61,7 +59,7 @@ static const char *const srchead[]={
   NULL
 };
 /* easysrc_decl declarations come here */
-/* easysrc_data initialization come here */
+/* easysrc_data initialisations come here */
 /* easysrc_code statements come here */
 static const char *const srchard[]={
   "/* Here is a list of options the curl code used that cannot get generated",
@@ -186,7 +184,7 @@ void dumpeasysrc(struct GlobalConfig *config)
   else
     out = stdout;
   if(!out)
-    warnf(config, "Failed to open %s to write libcurl code", o);
+    warnf(config, "Failed to open %s to write libcurl code!\n", o);
   else {
     int i;
     const char *c;

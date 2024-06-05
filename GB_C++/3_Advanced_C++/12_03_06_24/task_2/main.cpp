@@ -8,3 +8,16 @@
 Заголовок статьи размещается между HTML-тегами <h1></h1>.
 Для доступа к тексту ответа вам потребуется метод text класса cpr::Response. 
 Для поиска по тексту нужных HTML-тегов лучше использовать метод find.*/
+#include <iostream>
+#include <cpr/cpr.h>
+
+int main() 
+{
+    cpr::Response r = cpr::Get(cpr::Url("https://httpbin.org/html"), cpr::Header{{"accept", "text/html"}});
+    std::string text = r.text;
+    std::string title = text.substr(text.find("<h1>") + 4, text.find("</h1>") - text.find("<h1>") - 4);
+    std::cout << title << std::endl;
+
+    return 0;
+}
+

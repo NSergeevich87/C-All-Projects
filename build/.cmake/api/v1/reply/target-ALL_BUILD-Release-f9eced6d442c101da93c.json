@@ -1,0 +1,36 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"build/_deps/curl-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "libcurl::@7349aeacaff41deceb36"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@b95861b2ba384b5171eb",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "_deps/curl-build",
+		"source" : "build/_deps/curl-src"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

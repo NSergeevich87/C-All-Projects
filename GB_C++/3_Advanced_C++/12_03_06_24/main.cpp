@@ -1,8 +1,9 @@
 #include <iostream>
-#include "D:\C-All-Projects\build\_deps\cpr-src\include\cpr\cpr.h"
+#include <cpr/cpr.h>
 
 int main() 
 {
-    std::cout << "Hello, World!" << std::endl;
+    cpr::Response r = cpr::Get(cpr::Url("https://httpbin.org/get"));
+
     return 0;
 }

@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "test.h"
@@ -78,7 +76,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   test_setopt(curl, CURLOPT_RTSP_TRANSPORT, "Planes/Trains/Automobiles");
@@ -93,17 +91,17 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   /* PUT style GET_PARAMETERS */
-  params = open(libtest_arg2, O_RDONLY);
+  params = open("log/file572.txt", O_RDONLY);
   fstat(params, &file_info);
   close(params);
 
-  paramsf = fopen(libtest_arg2, "rb");
+  paramsf = fopen("log/file572.txt", "rb");
   if(!paramsf) {
-    fprintf(stderr, "can't open %s\n", libtest_arg2);
+    fprintf(stderr, "can't open log/file572.txt\n");
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -128,7 +126,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   res = curl_easy_perform(curl);
@@ -143,7 +141,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   test_setopt(curl, CURLOPT_RTSP_REQUEST, CURL_RTSPREQ_GET_PARAMETER);
@@ -162,7 +160,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   test_setopt(curl, CURLOPT_RTSP_REQUEST, CURL_RTSPREQ_OPTIONS);
@@ -173,7 +171,7 @@ test_cleanup:
   if(paramsf)
     fclose(paramsf);
 
-  curl_free(stream_uri);
+  free(stream_uri);
 
   if(custom_headers)
     curl_slist_free_all(custom_headers);

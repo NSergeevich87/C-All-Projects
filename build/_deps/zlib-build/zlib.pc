@@ -1,4 +1,4 @@
-prefix=C:/Program Files/12_03_06_24
+prefix=C:/Program Files/C-ALL-PROJECTS
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 sharedlibdir=${libdir}

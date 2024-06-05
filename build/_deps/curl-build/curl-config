@@ -6,7 +6,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 2001 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -19,11 +19,9 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
 
-prefix="C:/Program Files/12_03_06_24"
+prefix=C:/Program Files/C-ALL-PROJECTS
 exec_prefix=${prefix}
 includedir=${prefix}/include
 cppflag_curl_staticlib=
@@ -86,7 +84,7 @@ while test $# -gt 0; do
         ;;
 
     --feature|--features)
-        for feature in SSL IPv6 unixsockets AsynchDNS Largefile SSPI alt-svc HSTS SPNEGO Kerberos NTLM HTTPS-proxy threadsafe ""; do
+        for feature in SSL IPv6 unixsockets AsynchDNS Largefile SSPI alt-svc HSTS SPNEGO Kerberos NTLM ""; do
             test -n "$feature" && echo "$feature"
         done
         ;;
@@ -98,7 +96,7 @@ while test $# -gt 0; do
         ;;
 
     --version)
-        echo libcurl 8.4.0
+        echo libcurl 7.80.0
         exit 0
         ;;
 
@@ -110,11 +108,11 @@ while test $# -gt 0; do
         # dash as that's used for things like version 1.2.3-CVS
         cpatch=`echo $checkfor | cut -d. -f3 | cut -d- -f1`
 
-        vmajor=`echo 8.4.0 | cut -d. -f1`
-        vminor=`echo 8.4.0 | cut -d. -f2`
+        vmajor=`echo 7.80.0 | cut -d. -f1`
+        vminor=`echo 7.80.0 | cut -d. -f2`
         # when extracting the patch part we strip off everything after a
         # dash as that's used for things like version 1.2.3-CVS
-        vpatch=`echo 8.4.0 | cut -d. -f3 | cut -d- -f1`
+        vpatch=`echo 7.80.0 | cut -d. -f3 | cut -d- -f1`
 
         if test "$vmajor" -gt "$cmajor"; then
             exit 0;
@@ -130,12 +128,12 @@ while test $# -gt 0; do
             fi
         fi
 
-        echo "requested version $checkfor is newer than existing 8.4.0"
+        echo "requested version $checkfor is newer than existing 7.80.0"
         exit 1
         ;;
 
     --vernum)
-        echo 080400
+        echo 075000
         exit 0
         ;;
 
@@ -157,13 +155,13 @@ while test $# -gt 0; do
         ;;
 
     --libs)
-        if test "XC:/Program Files/12_03_06_24/lib" != "X/usr/lib" -a "XC:/Program Files/12_03_06_24/lib" != "X/usr/lib64"; then
-           CURLLIBDIR="-LC:/Program Files/12_03_06_24/lib "
+        if test "XC:/Program Files/C-ALL-PROJECTS/lib" != "X/usr/lib" -a "XC:/Program Files/C-ALL-PROJECTS/lib" != "X/usr/lib64"; then
+           CURLLIBDIR="-LC:/Program Files/C-ALL-PROJECTS/lib "
         else
            CURLLIBDIR=""
         fi
         if test "Xyes" = "Xno"; then
-          echo ${CURLLIBDIR}-lcurl  -lws2_32 -ladvapi32 -lcrypt32 -lbcrypt
+          echo ${CURLLIBDIR}-lcurl  -lwinmm -lws2_32 -ladvapi32 -lcrypt32
         else
           echo ${CURLLIBDIR}-lcurl
         fi
@@ -174,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xno" != "Xno" ; then
-          echo "C:/Program Files/12_03_06_24/lib/libcurl.lib" /machine:x64  -lws2_32 -ladvapi32 -lcrypt32 -lbcrypt
+          echo C:/Program Files/C-ALL-PROJECTS/lib/libcurl.lib /machine:x64  -lwinmm -lws2_32 -ladvapi32 -lcrypt32
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1

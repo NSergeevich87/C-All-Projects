@@ -31,3 +31,52 @@ for (it = arguments.begin(); it != arguments.end(); it++)
 it->first // даёт доступ к названию параметра
 it->second // даёт доступ к значению параметра
 }*/
+
+#include <iostream>
+#include <cpr/cpr.h>
+#include <map>
+
+int main() 
+{
+    std::string command;
+    std::map<std::string, std::string> arguments;
+    while (true)
+    {
+        std::cin >> command;
+        if (command == "exit")
+        {
+            break;
+        }
+        else if (command == "get")
+        {
+            std::string url = "https://httpbin.org/get";
+            if (!arguments.empty())
+            {
+                url += "?";
+                for (auto it = arguments.begin(); it != arguments.end(); it++)
+                {
+                    url += it->first + "=" + it->second + "&";
+                }
+                url.pop_back();
+            }
+            cpr::Response r = cpr::Get(cpr::Url(url));
+            std::cout << r.text << std::endl;
+        }
+        else if (command == "post")
+        {
+            cpr::Payload payload;
+            for (auto it = arguments.begin(); it != arguments.end(); it++)
+            {
+                payload.AddPair(cpr::Pair(it->first, it->second));
+            }
+            cpr::Response r = cpr::Post(cpr::Url("https://httpbin.org/post"), cpr::Body(payload));
+            std::cout << r.text << std::endl;
+        }
+        else
+        {
+            arguments[command] = "";
+            std::cin >> arguments[command];
+        }
+    }
+    return 0;
+}

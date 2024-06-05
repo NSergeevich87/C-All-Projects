@@ -41,12 +41,12 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "3b15fa82ea74739b574d705fea44959b58142eb8" --
+          checkout "0817715923c9705e68994eb52ef9df3f6845beba" --
   WORKING_DIRECTORY "D:/C-All-Projects/build/_deps/cpr-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: '3b15fa82ea74739b574d705fea44959b58142eb8'")
+  message(FATAL_ERROR "Failed to checkout tag: '0817715923c9705e68994eb52ef9df3f6845beba'")
 endif()
 
 set(init_submodules TRUE)

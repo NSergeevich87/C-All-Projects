@@ -3,7 +3,6 @@
 <keywords>
 HTTP
 HTTP POST
-FORM
 flaky
 </keywords>
 </info>
@@ -17,9 +16,6 @@ flaky
 
 # Client-side
 <client>
-<features>
-form-api
-</features>
 <server>
 http
 </server>
@@ -28,12 +24,10 @@ http
 lib%TESTNUMBER
 </tool>
 
-<name>
+ <name>
 HTTP multi-part formpost with aborted read callback
-</name>
-# Add a delay to give server time to write its output since we otherwise might
-# not even give it enough time to write its lock file.
- <command delay="1">
+ </name>
+ <command>
 http://%HOSTIP:%HTTPPORT/%TESTNUMBER
 </command>
 </client>
@@ -42,14 +36,14 @@ http://%HOSTIP:%HTTPPORT/%TESTNUMBER
 # Verify data after the test has been "shot"
 <verify>
 <strippart>
-s/^--------------------------[A-Za-z0-9]*/------------------------------/
-s/boundary=------------------------[A-Za-z0-9]*/boundary=----------------------------/
+s/^--------------------------[a-z0-9]*/------------------------------/
+s/boundary=------------------------[a-z0-9]*/boundary=----------------------------/
 </strippart>
 <protocol>
 POST /%TESTNUMBER HTTP/1.1
 Host: %HOSTIP:%HTTPPORT
 Accept: */*
-Content-Length: 780
+Content-Length: 744
 Content-Type: multipart/form-data; boundary=----------------------------
 
 ------------------------------

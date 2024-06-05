@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 
@@ -40,11 +38,11 @@
 #include <unistd.h>
 #endif
 
-#include "curl_printf.h"
-
-#ifdef WIN32
-#define sleep(sec) Sleep ((sec)*1000)
+#ifdef TPF
+#  include "select.h"
 #endif
+
+#include "curl_printf.h"
 
 #define test_setopt(A,B,C)                                      \
   if((res = curl_easy_setopt((A), (B), (C))) != CURLE_OK)       \
@@ -73,7 +71,9 @@ extern int test(char *URL); /* the actual test function provided by each
 
 extern char *hexdump(const unsigned char *buffer, size_t len);
 
+#ifdef UNITTESTS
 extern int unitfail;
+#endif
 
 /*
 ** TEST_ERR_* values must be greater than CURL_LAST CURLcode in order
@@ -440,14 +440,12 @@ extern int unitfail;
   tv_test_start = tutil_tvnow(); \
 } while(0)
 
-#define exe_test_timedout(Y,Z) do {                                       \
-  long timediff = tutil_tvdiff(tutil_tvnow(), tv_test_start);             \
-  if(timediff > (TEST_HANG_TIMEOUT)) {                                    \
-    fprintf(stderr, "%s:%d ABORTING TEST, since it seems "                \
-            "that it would have run forever (%ld ms > %ld ms)\n",         \
-            (Y), (Z), timediff, (long) (TEST_HANG_TIMEOUT));              \
-    res = TEST_ERR_RUNS_FOREVER;                                          \
-  }                                                                       \
+#define exe_test_timedout(Y,Z) do {                                    \
+  if(tutil_tvdiff(tutil_tvnow(), tv_test_start) > TEST_HANG_TIMEOUT) { \
+    fprintf(stderr, "%s:%d ABORTING TEST, since it seems "             \
+                    "that it would have run forever.\n", (Y), (Z));    \
+    res = TEST_ERR_RUNS_FOREVER;                                       \
+  }                                                                    \
 } while(0)
 
 #define res_test_timedout() \
@@ -488,13 +486,5 @@ extern int unitfail;
 
 #define global_init(A) \
   chk_global_init((A), (__FILE__), (__LINE__))
-
-#define NO_SUPPORT_BUILT_IN                     \
-  int test(char *URL)                           \
-  {                                             \
-    (void)URL;                                  \
-    fprintf(stderr, "Missing support\n");       \
-    return 1;                                   \
-  }
 
 /* ---------------------------------------------------------------- */

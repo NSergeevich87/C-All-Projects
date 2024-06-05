@@ -5,7 +5,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -18,15 +18,13 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
 if(NOT EXISTS "D:/C-All-Projects/build/_deps/curl-build/install_manifest.txt")
   message(FATAL_ERROR "Cannot find install manifest: D:/C-All-Projects/build/_deps/curl-build/install_manifest.txt")
 endif()
 
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/12_03_06_24")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/C-ALL-PROJECTS")
 endif()
 message(${CMAKE_INSTALL_PREFIX})
 

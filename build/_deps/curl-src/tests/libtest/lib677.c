@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "test.h"
@@ -39,22 +37,27 @@ int test(char *URL)
   time_t start = time(NULL);
   int state = 0;
   ssize_t pos = 0;
-  int res = 0;
 
-  global_init(CURL_GLOBAL_DEFAULT);
-  multi_init(mcurl);
-  easy_init(curl);
+  curl_global_init(CURL_GLOBAL_DEFAULT);
+  mcurl = curl_multi_init();
+  if(!mcurl)
+    goto fail;
+  curl = curl_easy_init();
+  if(!curl)
+    goto fail;
 
-  easy_setopt(curl, CURLOPT_VERBOSE, 1L);
-  easy_setopt(curl, CURLOPT_URL, URL);
-  easy_setopt(curl, CURLOPT_CONNECT_ONLY, 1L);
+  curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
+  if(curl_easy_setopt(curl, CURLOPT_URL, URL))
+    goto fail;
+  curl_easy_setopt(curl, CURLOPT_CONNECT_ONLY, 1L);
   if(curl_multi_add_handle(mcurl, curl))
-    goto test_cleanup;
+    goto fail;
 
   while(time(NULL) - start < 5) {
     struct curl_waitfd waitfd;
 
-    multi_perform(mcurl, &mrun);
+    if(curl_multi_perform(mcurl, &mrun))
+      goto fail;
     for(;;) {
       int i;
       struct CURLMsg *m = curl_multi_info_read(mcurl, &i);
@@ -64,7 +67,7 @@ int test(char *URL)
       if(m->msg == CURLMSG_DONE && m->easy_handle == curl) {
         curl_easy_getinfo(curl, CURLINFO_ACTIVESOCKET, &sock);
         if(sock == CURL_SOCKET_BAD)
-          goto test_cleanup;
+          goto fail;
         printf("Connected fine, extracted socket. Moving on\n");
       }
     }
@@ -81,14 +84,7 @@ int test(char *URL)
       size_t len = 0;
 
       if(!state) {
-        CURLcode ec;
-        ec = curl_easy_send(curl, cmd + pos, sizeof(cmd) - 1 - pos, &len);
-        if(ec != CURLE_OK) {
-          fprintf(stderr, "curl_easy_send() failed, with code %d (%s)\n",
-                  (int)ec, curl_easy_strerror(ec));
-          res = ec;
-          goto test_cleanup;
-        }
+        curl_easy_send(curl, cmd + pos, sizeof(cmd) - 1 - pos, &len);
         if(len > 0)
           pos += len;
         else
@@ -99,14 +95,7 @@ int test(char *URL)
         }
       }
       else if(pos < (ssize_t)sizeof(buf)) {
-        CURLcode ec;
-        ec = curl_easy_recv(curl, buf + pos, sizeof(buf) - pos, &len);
-        if(ec != CURLE_OK) {
-          fprintf(stderr, "curl_easy_recv() failed, with code %d (%s)\n",
-                  (int)ec, curl_easy_strerror(ec));
-          res = ec;
-          goto test_cleanup;
-        }
+        curl_easy_recv(curl, buf + pos, sizeof(buf) - pos, &len);
         if(len > 0)
           pos += len;
       }
@@ -121,10 +110,11 @@ int test(char *URL)
   }
 
   curl_multi_remove_handle(mcurl, curl);
-test_cleanup:
+  fail:
   curl_easy_cleanup(curl);
   curl_multi_cleanup(mcurl);
 
   curl_global_cleanup();
-  return res;
+  return 0;
 }
+

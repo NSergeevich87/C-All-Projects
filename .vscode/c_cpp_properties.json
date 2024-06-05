@@ -3,9 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
+                "${default}",
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/GB/Seminar1",
-                "${workspaceFolder}/GB_C++/3_Advanced_C++/12_03_06_24"
+                "C:/msys64/mingw64/include/**",
+                "D:/C-All-Projects/build/_deps/cpr-src/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,10 +14,9 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.22621.0",
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
-            "cStandard": "gnu17",
+            "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64"
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe"
         }
     ],
     "version": 4

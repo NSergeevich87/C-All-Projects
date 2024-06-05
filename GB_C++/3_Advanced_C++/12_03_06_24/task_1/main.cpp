@@ -8,3 +8,44 @@
 
 Рекомендации
 Для каждого HTTP-запроса в CPR есть отдельный метод, например cpr::Get.*/
+#include <iostream>
+#include <cpr/cpr.h>
+
+int main() 
+{
+    std::string command;
+    while (true)
+    {
+        std::cin >> command;
+        if (command == "exit")
+        {
+            break;
+        }
+        else if (command == "get")
+        {
+            cpr::Response r = cpr::Get(cpr::Url("https://httpbin.org/get"));
+            std::cout << r.text << std::endl;
+        }
+        else if (command == "post")
+        {
+            cpr::Response r = cpr::Post(cpr::Url("https://httpbin.org/post"));
+            std::cout << r.text << std::endl;
+        }
+        else if (command == "put")
+        {
+            cpr::Response r = cpr::Put(cpr::Url("https://httpbin.org/put"));
+            std::cout << r.text << std::endl;
+        }
+        else if (command == "delete")
+        {
+            cpr::Response r = cpr::Delete(cpr::Url("https://httpbin.org/delete"));
+            std::cout << r.text << std::endl;
+        }
+        else if (command == "patch")
+        {
+            cpr::Response r = cpr::Patch(cpr::Url("https://httpbin.org/patch"));
+            std::cout << r.text << std::endl;
+        }
+    }
+    return 0;
+}

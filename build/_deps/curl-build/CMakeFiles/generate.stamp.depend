@@ -28,12 +28,9 @@ C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cma
 C:/Program Files/CMake/share/cmake-3.29/Modules/SelectLibraryConfigurations.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/CurlSymbolHiding.cmake
-D:/C-All-Projects/build/_deps/curl-src/CMake/CurlTests.c
-D:/C-All-Projects/build/_deps/curl-src/CMake/FindLibPSL.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/FindLibSSH2.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/Macros.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/OtherTests.cmake
-D:/C-All-Projects/build/_deps/curl-src/CMake/PickyWarnings.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/Platforms/WindowsCache.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/Utilities.cmake
 D:/C-All-Projects/build/_deps/curl-src/CMake/cmake_uninstall.cmake.in

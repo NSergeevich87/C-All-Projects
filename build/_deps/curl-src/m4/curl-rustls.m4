@@ -5,7 +5,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
 #
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
-#
-# SPDX-License-Identifier: curl
 #
 #***************************************************************************
 
@@ -38,28 +36,25 @@ if test "x$OPT_RUSTLS" != xno; then
       OPT_RUSTLS=""
     fi
 
-    case $host_os in
-      darwin*)
-        LDFLAGS="$LDFLAGS -framework Security"
-        ;;
-      *)
-        ;;
-    esac
-
     if test -z "$OPT_RUSTLS" ; then
       dnl check for lib first without setting any new path
 
-      AC_CHECK_LIB(rustls, rustls_client_session_read,
-      dnl librustls found, set the variable
+      AC_CHECK_LIB(crustls, rustls_client_session_read,
+      dnl libcrustls found, set the variable
        [
          AC_DEFINE(USE_RUSTLS, 1, [if rustls is enabled])
          AC_SUBST(USE_RUSTLS, [1])
          RUSTLS_ENABLED=1
          USE_RUSTLS="yes"
          ssl_msg="rustls"
-         test rustls != "$DEFAULT_SSL_BACKEND" || VALID_DEFAULT_SSL_BACKEND=yes
-        ], [], -lpthread -ldl -lm)
+	 test rustls != "$DEFAULT_SSL_BACKEND" || VALID_DEFAULT_SSL_BACKEND=yes
+        ], [], -lpthread -ldl)
     fi
+
+    addld=""
+    addlib="-lpthread"
+    addcflags=""
+    bearssllib=""
 
     if test "x$USE_RUSTLS" != "xyes"; then
       dnl add the path and test again
@@ -72,7 +67,7 @@ if test "x$OPT_RUSTLS" != xno; then
          CPPFLAGS="$CPPFLAGS $addcflags"
       fi
 
-      AC_CHECK_LIB(rustls, rustls_connection_read,
+      AC_CHECK_LIB(crustls, rustls_connection_read,
        [
        AC_DEFINE(USE_RUSTLS, 1, [if rustls is enabled])
        AC_SUBST(USE_RUSTLS, [1])
@@ -82,14 +77,14 @@ if test "x$OPT_RUSTLS" != xno; then
        test rustls != "$DEFAULT_SSL_BACKEND" || VALID_DEFAULT_SSL_BACKEND=yes
        ],
        AC_MSG_ERROR([--with-rustls was specified but could not find rustls.]),
-       -lpthread -ldl -lm)
+       -lpthread -ldl)
     fi
 
     if test "x$USE_RUSTLS" = "xyes"; then
       AC_MSG_NOTICE([detected rustls])
       check_for_ca_bundle=1
 
-      LIBS="-lrustls -lpthread -ldl -lm $LIBS"
+      LIBS="-lcrustls -lpthread -ldl $LIBS"
 
       if test -n "$rustlslib"; then
         dnl when shared libs were found in a path that the run-time

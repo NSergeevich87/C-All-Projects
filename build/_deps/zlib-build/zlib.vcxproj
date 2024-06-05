@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\C-All-Projects\build\_deps\zlib-build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zlib.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\C-All-Projects\build\_deps\zlib-build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zlib.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\C-All-Projects\build\_deps\zlib-build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">zlib.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\C-All-Projects\build\_deps\zlib-build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">zlib.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -140,7 +140,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/zlib-build/Debug/zlib.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/zlib-build/zlib.dir/Debug/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/Debug/zlib.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/zlib-build/Debug/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -202,7 +202,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/zlib-build/Release/zlib.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/zlib-build/zlib.dir/Release/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/Release/zlib.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/zlib-build/Release/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -264,7 +264,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/zlib-build/MinSizeRel/zlib.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/zlib-build/zlib.dir/MinSizeRel/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/MinSizeRel/zlib.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/zlib-build/MinSizeRel/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -325,7 +325,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/C-All-Projects/build/_deps/zlib-build/RelWithDebInfo/zlib.lib</ImportLibrary>
       <ModuleDefinitionFile>D:/C-All-Projects/build/_deps/zlib-build/zlib.dir/RelWithDebInfo/exports.def</ModuleDefinitionFile>
-      <ProgramDataBaseFile>D:/C-All-Projects/build/RelWithDebInfo/zlib.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>D:/C-All-Projects/build/_deps/zlib-build/RelWithDebInfo/zlib.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

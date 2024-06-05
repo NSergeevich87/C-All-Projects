@@ -6,7 +6,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 2010 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -19,8 +19,6 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
 #
 #
@@ -28,41 +26,15 @@
 use strict;
 use warnings;
 
-my $sort = 0;
-
 # we may get the dir root pointed out
-my $root = shift @ARGV;
-while(defined $root) {
+my $root=$ARGV[0] || ".";
 
-    if($root =~ /--heading=(.*)/) {
-        print "$1\n";
-        $root = shift @ARGV;
-        next;
-    }
-    elsif($root =~ /--sort/) {
-        $sort = 1;
-        $root = shift @ARGV;
-        next;
-    }
-
-    last;
-}
-
-if(!defined $root) {
-    $root = ".";
-}
-
-$root = "$root/include/curl";
-opendir(D, "$root") || die "Cannot open directory $root: $!\n";
-my @dir = readdir(D);
-closedir(D);
-
-my @incs;
-foreach (sort(@dir)) {
-    if($_ =~ /\.h$/) {
-        push(@incs, "$root/$_");
-    }
-}
+my @incs = (
+    "$root/include/curl/curl.h",
+    "$root/include/curl/easy.h",
+    "$root/include/curl/mprintf.h",
+    "$root/include/curl/multi.h",
+    );
 
 my $verbose=0;
 my $summary=0;
@@ -72,43 +44,19 @@ my @syms;
 my %doc;
 my %rem;
 
-my @out;
-foreach my $f (@incs) {
+sub scanheader {
+    my ($f)=@_;
     open H, "<$f" || die;
-    my $first = "";
     while(<H>) {
-        s/CURL_DEPRECATED\(.*"\)//;
-        s/  */ /g;
-        if (/^(^CURL_EXTERN .*?)\(/) {
+        if (/^(CURL_EXTERN.*)/) {
             my $decl = $1;
             $decl =~ s/\r$//;
-            $decl =~ /([a-z_]+)$/;
-            push(@out, "$1");
-        }
-        elsif (/^(^CURL_EXTERN .*)/) {
-            # handle two-line declarations
-            my $decl = $1;
-            $decl =~ s/\r$//;
-            $first = $decl;
-        }
-        elsif($first) {
-            if (/^ *(.*)\(/) {
-                my $decl = $1;
-                $decl =~ s/\r$//;
-                $first .= $decl;
-                $first =~ /([a-z_]+)$/;
-                push(@out, "$1");
-            }
-            $first = "";
+            print "$decl\n";
         }
     }
     close H;
 }
 
-if($sort) {
-    @out = sort(@out);
-}
-
-foreach (@out) {
-    print("$_\n");
+foreach my $i (@incs) {
+    scanheader($i);
 }

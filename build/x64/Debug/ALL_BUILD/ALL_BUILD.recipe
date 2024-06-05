@@ -5,16 +5,16 @@
       <FullPath>D:\C-All-Projects\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\C-All-Projects\build\Debug\libcurl-d.dll</FullPath>
+      <FullPath>D:\C-All-Projects\build\_deps\curl-build\lib\Debug\libcurl-d.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\C-All-Projects\build\Debug\cpr.dll</FullPath>
+      <FullPath>D:\C-All-Projects\build\_deps\cpr-build\cpr\Debug\cpr.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\C-All-Projects\build\Debug\C-ALL-PROJECTS.exe</FullPath>
+      <FullPath>D:\C-All-Projects\build\Debug\GB_C++.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\C-All-Projects\build\Debug\zlib.dll</FullPath>
+      <FullPath>D:\C-All-Projects\build\_deps\zlib-build\Debug\zlib.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>D:\C-All-Projects\build\x64\Debug\ALL_BUILD</FullPath>

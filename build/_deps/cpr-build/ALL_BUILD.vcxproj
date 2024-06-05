@@ -177,15 +177,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{0CAFDF43-2450-3501-891A-A291D5EF6381}</Project>
       <Name>cpr</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_object.vcxproj">
-      <Project>{25A52CBD-21A7-38C2-9271-2ED7CD61F31C}</Project>
-      <Name>libcurl_object</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
-    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl_shared.vcxproj">
-      <Project>{8A7B299B-A15C-392A-ACEB-AAAF5166EF81}</Project>
-      <Name>libcurl_shared</Name>
+    <ProjectReference Include="D:\C-All-Projects\build\_deps\curl-build\lib\libcurl.vcxproj">
+      <Project>{4182D281-CF8C-3737-AEF3-558962D60D0C}</Project>
+      <Name>libcurl</Name>
     </ProjectReference>
     <ProjectReference Include="D:\C-All-Projects\build\_deps\zlib-build\zlib.vcxproj">
       <Project>{38C1AB4A-B70F-30D9-A78E-4800BE4D4B4C}</Project>

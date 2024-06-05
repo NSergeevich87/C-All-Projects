@@ -3,11 +3,11 @@
 if("${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}" LESS 2.8)
    message(FATAL_ERROR "CMake >= 2.8.0 required")
 endif()
-if(CMAKE_VERSION VERSION_LESS "2.8.3")
-   message(FATAL_ERROR "CMake >= 2.8.3 required")
+if(CMAKE_VERSION VERSION_LESS "2.8.12")
+   message(FATAL_ERROR "CMake >= 2.8.12 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.27)
+cmake_policy(VERSION 2.8.12...3.27)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS CURL::libcurl_shared)
+foreach(_cmake_expected_target IN ITEMS CURL::libcurl)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -55,11 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target CURL::libcurl_shared
-add_library(CURL::libcurl_shared SHARED IMPORTED)
+# Create imported target CURL::libcurl
+add_library(CURL::libcurl SHARED IMPORTED)
 
-set_target_properties(CURL::libcurl_shared PROPERTIES
+set_target_properties(CURL::libcurl PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "winmm;ws2_32;advapi32;crypt32"
 )
 
 # Load information for each installed configuration.

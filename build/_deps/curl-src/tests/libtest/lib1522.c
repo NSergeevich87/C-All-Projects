@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "test.h"
@@ -40,7 +38,7 @@ static int sockopt_callback(void *clientp, curl_socket_t curlfd,
   (void) clientp;
   (void) purpose;
   setsockopt(curlfd, SOL_SOCKET, SO_SNDBUF,
-             (char *)&sndbufsize, sizeof(sndbufsize));
+             (const char *)&sndbufsize, sizeof(sndbufsize));
 #else
   (void)clientp;
   (void)curlfd;
@@ -51,7 +49,7 @@ static int sockopt_callback(void *clientp, curl_socket_t curlfd,
 
 int test(char *URL)
 {
-  CURLcode code = TEST_ERR_MAJOR_BAD;
+  CURLcode code;
   CURLcode res;
   struct curl_slist *pHeaderList = NULL;
   CURL *curl = curl_easy_init();
@@ -92,10 +90,10 @@ int test(char *URL)
   else {
     printf("curl_easy_perform() failed. e = %d\n", code);
   }
-test_cleanup:
+  test_cleanup:
   curl_slist_free_all(pHeaderList);
   curl_easy_cleanup(curl);
   curl_global_cleanup();
 
-  return (int)code;
+  return 0;
 }

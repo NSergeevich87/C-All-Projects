@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -18,8 +18,6 @@
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
  *
- * SPDX-License-Identifier: curl
- *
  ***************************************************************************/
 #include "test.h"
 
@@ -29,7 +27,7 @@
 #include "warnless.h"
 #include "memdebug.h"
 
-#define TEST_HANG_TIMEOUT 60 * 1000
+#define TEST_HANG_TIMEOUT 5 * 1000
 
 /*
  * Test case for below scenario:
@@ -96,17 +94,12 @@ int test(char *URL)
        -1. */
 
     if(timeout != -1L) {
-      int itimeout;
-#if LONG_MAX > INT_MAX
-      itimeout = (timeout > (long)INT_MAX) ? INT_MAX : (int)timeout;
-#else
-      itimeout = (int)timeout;
-#endif
+      int itimeout = (timeout > (long)INT_MAX) ? INT_MAX : (int)timeout;
       interval.tv_sec = itimeout/1000;
       interval.tv_usec = (itimeout%1000)*1000;
     }
     else {
-      interval.tv_sec = TEST_HANG_TIMEOUT/1000 - 1;
+      interval.tv_sec = TEST_HANG_TIMEOUT/1000 + 1;
       interval.tv_usec = 0;
     }
 

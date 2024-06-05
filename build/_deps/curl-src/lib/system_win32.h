@@ -7,7 +7,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Steve Holme, <steve_holme@hotmail.com>.
+ * Copyright (C) 2016 - 2020, Steve Holme, <steve_holme@hotmail.com>.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -19,8 +19,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 
@@ -42,8 +40,7 @@ extern IF_NAMETOINDEX_FN Curl_if_nametoindex;
 
 /* This is used to dynamically load DLLs */
 HMODULE Curl_load_library(LPCTSTR filename);
-#else  /* WIN32 */
-#define Curl_win32_init(x) CURLE_OK
-#endif /* !WIN32 */
+
+#endif /* WIN32 */
 
 #endif /* HEADER_CURL_SYSTEM_WIN32_H */

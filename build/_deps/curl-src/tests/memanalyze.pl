@@ -6,7 +6,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -18,8 +18,6 @@
 #
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
-#
-# SPDX-License-Identifier: curl
 #
 ###########################################################################
 #
@@ -58,8 +56,7 @@ while(1) {
     }
 }
 
-my $memsum; # the total number of memory allocated over the lifetime
-my $maxmem; # the high water mark
+my $maxmem;
 
 sub newtotal {
     my ($newtot)=@_;
@@ -81,22 +78,22 @@ if(! -f $file) {
     exit;
 }
 
-open(my $fileh, "<", "$file");
+open(FILE, "<$file");
 
 if($showlimit) {
-    while(<$fileh>) {
+    while(<FILE>) {
         if(/^LIMIT.*memlimit$/) {
             print $_;
             last;
         }
     }
-    close($fileh);
+    close(FILE);
     exit;
 }
 
 
 my $lnum=0;
-while(<$fileh>) {
+while(<FILE>) {
     chomp $_;
     $line = $_;
     $lnum++;
@@ -153,7 +150,6 @@ while(<$fileh>) {
 
             $sizeataddr{$addr}=$size;
             $totalmem += $size;
-            $memsum += $size;
 
             if($trace) {
                 print "MALLOC: malloc($size) at $source:$linenum",
@@ -179,7 +175,6 @@ while(<$fileh>) {
 
             $sizeataddr{$addr}=$size;
             $totalmem += $size;
-            $memsum += $size;
 
             if($trace) {
                 print "CALLOC: calloc($arg1,$arg2) at $source:$linenum",
@@ -201,7 +196,6 @@ while(<$fileh>) {
             $sizeataddr{$oldaddr}=0;
 
             $totalmem += $newsize;
-            $memsum += $size;
             $sizeataddr{$newaddr}=$newsize;
 
             if($trace) {
@@ -224,7 +218,6 @@ while(<$fileh>) {
             $sizeataddr{$addr}=$size;
 
             $totalmem += $size;
-            $memsum += $size;
 
             if($trace) {
                 printf("STRDUP: $size bytes at %s, makes totally: %d bytes\n",
@@ -244,7 +237,6 @@ while(<$fileh>) {
             $sizeataddr{$addr}=$size;
 
             $totalmem += $size;
-            $memsum += $size;
 
             if($trace) {
                 printf("WCSDUP: $size bytes at %s, makes totally: %d bytes\n",
@@ -375,7 +367,7 @@ while(<$fileh>) {
         print "Not recognized prefix line: $line\n";
     }
 }
-close($fileh);
+close(FILE);
 
 if($totalmem) {
     print "Leak detected: memory still allocated: $totalmem bytes\n";
@@ -430,5 +422,4 @@ if($verbose) {
         "Operations: ".($mallocs + $callocs + $reallocs + $strdups + $wcsdups + $sends + $recvs + $sockets)."\n";
 
     print "Maximum allocated: $maxmem\n";
-    print "Total allocated: $memsum\n";
 }

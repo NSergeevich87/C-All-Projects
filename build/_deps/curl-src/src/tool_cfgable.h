@@ -7,7 +7,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -20,13 +20,17 @@
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
  *
- * SPDX-License-Identifier: curl
- *
  ***************************************************************************/
 #include "tool_setup.h"
 #include "tool_sdecls.h"
 #include "tool_urlglob.h"
-#include "var.h"
+#include "tool_formparse.h"
+
+typedef enum {
+  ERR_NONE,
+  ERR_BINARY_TERMINAL = 1, /* binary to terminal detected */
+  ERR_LAST
+} curl_error;
 
 struct GlobalConfig;
 
@@ -37,15 +41,17 @@ struct State {
   char *outfiles;
   char *httpgetfields;
   char *uploadfile;
-  curl_off_t infilenum; /* number of files to upload */
-  curl_off_t up;        /* upload file counter within a single upload glob */
-  curl_off_t urlnum;    /* how many iterations this single URL has with ranges
+  unsigned long infilenum; /* number of files to upload */
+  unsigned long up;  /* upload file counter within a single upload glob */
+  unsigned long urlnum; /* how many iterations this single URL has with ranges
                            etc */
-  curl_off_t li;
+  unsigned long li;
 };
 
 struct OperationConfig {
   bool remote_time;
+  char *random_file;
+  char *egd_file;
   char *useragent;
   struct curl_slist *cookies;  /* cookies to serialize into a single line */
   char *cookiejar;          /* write to this file */
@@ -61,18 +67,17 @@ struct OperationConfig {
   bool disable_epsv;
   bool disable_eprt;
   bool ftp_pret;
-  char *proto_str;
+  long proto;
   bool proto_present;
-  char *proto_redir_str;
+  long proto_redir;
   bool proto_redir_present;
   char *proto_default;
   curl_off_t resume_from;
   char *postfields;
   curl_off_t postfieldsize;
   char *referer;
-  char *query;
-  long timeout_ms;
-  long connecttimeout_ms;
+  double timeout;
+  double connecttimeout;
   long maxredirs;
   curl_off_t max_filesize;
   char *output_dir;
@@ -105,7 +110,7 @@ struct OperationConfig {
   struct curl_slist *mail_rcpt;
   char *mail_auth;
   bool mail_rcpt_allowfails; /* --mail-rcpt-allowfails */
-  char *sasl_authzid;       /* Authorization identity (identity to use) */
+  char *sasl_authzid;       /* Authorisation identity (identity to use) */
   bool sasl_ir;             /* Enable/disable SASL initial response */
   bool proxytunnel;
   bool ftp_append;          /* APPE on ftp */
@@ -118,7 +123,7 @@ struct OperationConfig {
   bool dirlistonly;         /* only get the FTP dir list */
   bool followlocation;      /* follow http redirects */
   bool unrestricted_auth;   /* Continue to send authentication (user+password)
-                               when following redirects, even when hostname
+                               when following ocations, even when hostname
                                changed */
   bool netrc_opt;
   bool netrc;
@@ -128,7 +133,6 @@ struct OperationConfig {
   struct getout *url_get;   /* point to the node to fill in URL */
   struct getout *url_out;   /* point to the node to fill in outfile */
   struct getout *url_ul;    /* point to the node to fill in upload */
-  char *ipfs_gateway;
   char *doh_url;
   char *cipher_list;
   char *proxy_cipher_list;
@@ -185,7 +189,6 @@ struct OperationConfig {
   bool proxydigest;
   bool proxybasic;
   bool proxyanyauth;
-  bool jsoned; /* added json content-type */
   char *writeout;           /* %-styled format string to output */
   struct curl_slist *quote;
   struct curl_slist *postquote;
@@ -217,7 +220,7 @@ struct OperationConfig {
   bool ftp_ssl_ccc;
   int ftp_ssl_ccc_mode;
   char *preproxy;
-  bool socks5_gssapi_nec;   /* The NEC reference server does not protect the
+  int socks5_gssapi_nec;    /* The NEC reference server does not protect the
                                encryption type exchange */
   unsigned long socks5_auth;/* auth bitmask for socks5 proxies */
   char *proxy_service_name; /* set authentication service name for HTTP and
@@ -236,7 +239,6 @@ struct OperationConfig {
   char *ftp_account;        /* for ACCT */
   char *ftp_alternative_to_user;  /* send command if USER/PASS fails */
   int ftp_filemethod;
-  long mime_options;        /* Mime option flags. */
   long tftp_blksize;        /* TFTP BLKSIZE option */
   bool tftp_no_options;     /* do not send TFTP options requests */
   bool ignorecl;            /* --ignore-content-length */
@@ -256,75 +258,67 @@ struct OperationConfig {
   bool xattr;               /* store metadata in extended attributes */
   long gssapi_delegation;
   bool ssl_allow_beast;     /* allow this SSL vulnerability */
-  bool proxy_ssl_allow_beast; /* allow this SSL vulnerability for proxy */
+  bool proxy_ssl_allow_beast; /* allow this SSL vulnerability for proxy*/
+
   bool ssl_no_revoke;       /* disable SSL certificate revocation checks */
+  /*bool proxy_ssl_no_revoke; */
+
   bool ssl_revoke_best_effort; /* ignore SSL revocation offline/missing
                                   revocation list errors */
 
-  bool native_ca_store;        /* use the native OS CA store */
-  bool proxy_native_ca_store;  /* use the native OS CA store for proxy */
+  bool native_ca_store;        /* use the native os ca store */
   bool ssl_auto_client_cert;   /* automatically locate and use a client
                                   certificate for authentication (Schannel) */
   bool proxy_ssl_auto_client_cert; /* proxy version of ssl_auto_client_cert */
   char *oauth_bearer;             /* OAuth 2.0 bearer token */
+  bool nonpn;                     /* enable/disable TLS NPN extension */
   bool noalpn;                    /* enable/disable TLS ALPN extension */
   char *unix_socket_path;         /* path to Unix domain socket */
   bool abstract_unix_socket;      /* path to an abstract Unix domain socket */
   bool falsestart;
   bool path_as_is;
-  long expect100timeout_ms;
+  double expect100timeout;
   bool suppress_connect_headers;  /* suppress proxy CONNECT response headers
                                      from user callbacks */
-  bool synthetic_error;           /* if TRUE, this is tool-internal error */
+  curl_error synthetic_error;     /* if non-zero, it overrides any libcurl
+                                     error */
   bool ssh_compression;           /* enable/disable SSH compression */
   long happy_eyeballs_timeout_ms; /* happy eyeballs timeout in milliseconds.
                                      0 is valid. default: CURL_HET_DEFAULT. */
   bool haproxy_protocol;          /* whether to send HAProxy protocol v1 */
-  char *haproxy_clientip;         /* client IP for HAProxy protocol */
   bool disallow_username_in_url;  /* disallow usernames in URLs */
   char *aws_sigv4;
-  enum {
-    CLOBBER_DEFAULT, /* Provides compatibility with previous versions of curl,
-                        by using the default behavior for -o, -O, and -J.
-                        If those options would have overwritten files, like
-                        -o and -O would, then overwrite them. In the case of
-                        -J, this will not overwrite any files. */
-    CLOBBER_NEVER, /* If the file exists, always fail */
-    CLOBBER_ALWAYS /* If the file exists, always overwrite it */
-  } file_clobber_mode;
   struct GlobalConfig *global;
   struct OperationConfig *prev;
   struct OperationConfig *next;   /* Always last in the struct */
   struct State state;             /* for create_transfer() */
-  bool rm_partial;                /* on error, remove partially written output
-                                     files */
 };
 
 struct GlobalConfig {
-  bool showerror;                 /* show errors when silent */
-  bool silent;                    /* don't show messages, --silent given */
-  bool noprogress;                /* don't show progress bar */
+  int showerror;                  /* -1 == unset, default => show errors
+                                      0 => -s is used to NOT show errors
+                                      1 => -S has been used to show errors */
+  bool mute;                      /* don't show messages, --silent given */
+  bool noprogress;                /* don't show progress bar --silent given */
   bool isatty;                    /* Updated internally if output is a tty */
+  FILE *errors;                   /* Error stream, defaults to stderr */
+  bool errors_fopened;            /* Whether error stream isn't stderr */
   char *trace_dump;               /* file to dump the network trace to */
   FILE *trace_stream;
   bool trace_fopened;
   trace tracetype;
   bool tracetime;                 /* include timestamp? */
-  bool traceids;                  /* include xfer-/conn-id? */
   int progressmode;               /* CURL_PROGRESS_BAR / CURL_PROGRESS_STATS */
   char *libcurl;                  /* Output libcurl code to this file name */
   bool fail_early;                /* exit on first transfer error */
   bool styled_output;             /* enable fancy output style detection */
-  long ms_per_transfer;           /* start next transfer after (at least) this
-                                     many milliseconds */
 #ifdef CURLDEBUG
   bool test_event_based;
 #endif
   bool parallel;
-  unsigned short parallel_max; /* MAX_PARALLEL is the maximum */
+  long parallel_max;
   bool parallel_connect;
   char *help_category;            /* The help category, if set */
-  struct var *variables;
   struct OperationConfig *first;
   struct OperationConfig *current;
   struct OperationConfig *last;   /* Always last in the struct */

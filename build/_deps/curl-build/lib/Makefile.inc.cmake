@@ -5,7 +5,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
 #
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
-#
-# SPDX-License-Identifier: curl
 #
 ###########################################################################
 
@@ -44,49 +42,46 @@ SET(LIB_VAUTH_HFILES
 
 SET(LIB_VTLS_CFILES 
   vtls/bearssl.c            
+  vtls/gskit.c              
   vtls/gtls.c               
-  vtls/hostcheck.c          
   vtls/keylog.c             
   vtls/mbedtls.c            
   vtls/mbedtls_threadlock.c 
+  vtls/mesalink.c           
+  vtls/nss.c                
   vtls/openssl.c            
   vtls/rustls.c             
   vtls/schannel.c           
   vtls/schannel_verify.c    
   vtls/sectransp.c          
   vtls/vtls.c               
-  vtls/wolfssl.c            
-  vtls/x509asn1.c)
+  vtls/wolfssl.c)
 
 SET(LIB_VTLS_HFILES 
   vtls/bearssl.h            
+  vtls/gskit.h              
   vtls/gtls.h               
-  vtls/hostcheck.h          
   vtls/keylog.h             
   vtls/mbedtls.h            
   vtls/mbedtls_threadlock.h 
+  vtls/mesalink.h           
+  vtls/nssg.h               
   vtls/openssl.h            
   vtls/rustls.h             
   vtls/schannel.h           
-  vtls/schannel_int.h       
   vtls/sectransp.h          
   vtls/vtls.h               
-  vtls/vtls_int.h           
-  vtls/wolfssl.h            
-  vtls/x509asn1.h)
+  vtls/wolfssl.h)
 
 SET(LIB_VQUIC_CFILES 
-  vquic/curl_msh3.c   
-  vquic/curl_ngtcp2.c   
-  vquic/curl_quiche.c   
+  vquic/ngtcp2.c   
+  vquic/quiche.c   
   vquic/vquic.c)
 
 SET(LIB_VQUIC_HFILES 
-  vquic/curl_msh3.h   
-  vquic/curl_ngtcp2.h   
-  vquic/curl_quiche.h   
-  vquic/vquic.h    
-  vquic/vquic_int.h)
+  vquic/ngtcp2.h   
+  vquic/quiche.h   
+  vquic/vquic.h)
 
 SET(LIB_VSSH_CFILES 
   vssh/libssh.c    
@@ -102,20 +97,14 @@ SET(LIB_CFILES
   asyn-ares.c        
   asyn-thread.c      
   base64.c           
-  bufq.c             
   bufref.c           
   c-hyper.c          
-  cf-h1-proxy.c      
-  cf-h2-proxy.c      
-  cf-haproxy.c       
-  cf-https-connect.c 
-  cf-socket.c        
-  cfilters.c         
   conncache.c        
   connect.c          
   content_encoding.c 
   cookie.c           
   curl_addrinfo.c    
+  curl_ctype.c       
   curl_des.c         
   curl_endian.c      
   curl_fnmatch.c     
@@ -132,18 +121,16 @@ SET(LIB_CFILES
   curl_sasl.c        
   curl_sspi.c        
   curl_threads.c     
-  curl_trc.c         
   dict.c             
   doh.c              
+  dotdot.c           
   dynbuf.c           
-  dynhds.c           
   easy.c             
   easygetopt.c       
   easyoptions.c      
   escape.c           
   file.c             
   fileinfo.c         
-  fopen.c            
   formdata.c         
   ftp.c              
   ftplistparser.c    
@@ -151,24 +138,23 @@ SET(LIB_CFILES
   getinfo.c          
   gopher.c           
   hash.c             
-  headers.c          
   hmac.c             
   hostasyn.c         
+  hostcheck.c        
   hostip.c           
   hostip4.c          
   hostip6.c          
   hostsyn.c          
   hsts.c             
   http.c             
-  http1.c            
   http2.c            
-  http_aws_sigv4.c   
   http_chunks.c      
   http_digest.c      
   http_negotiate.c   
   http_ntlm.c        
   http_proxy.c       
-  idn.c              
+  http_aws_sigv4.c   
+  idn_win32.c        
   if2ip.c            
   imap.c             
   inet_ntop.c        
@@ -176,7 +162,6 @@ SET(LIB_CFILES
   krb5.c             
   ldap.c             
   llist.c            
-  macos.c            
   md4.c              
   md5.c              
   memdebug.c         
@@ -185,8 +170,8 @@ SET(LIB_CFILES
   mqtt.c             
   multi.c            
   netrc.c            
+  non-ascii.c        
   nonblock.c         
-  noproxy.c          
   openldap.c         
   parsedate.c        
   pingpong.c         
@@ -218,7 +203,6 @@ SET(LIB_CFILES
   system_win32.c     
   telnet.c           
   tftp.c             
-  timediff.c         
   timeval.c          
   transfer.c         
   url.c              
@@ -226,22 +210,16 @@ SET(LIB_CFILES
   version.c          
   version_win32.c    
   warnless.c         
-  ws.c)
+  wildcard.c         
+  x509asn1.c)
 
 SET(LIB_HFILES 
   altsvc.h           
   amigaos.h          
   arpa_telnet.h      
   asyn.h             
-  bufq.h             
   bufref.h           
   c-hyper.h          
-  cf-h1-proxy.h      
-  cf-h2-proxy.h      
-  cf-haproxy.h       
-  cf-https-connect.h 
-  cf-socket.h        
-  cfilters.h         
   conncache.h        
   connect.h          
   content_encoding.h 
@@ -275,58 +253,52 @@ SET(LIB_HFILES
   curl_sha256.h      
   curl_sspi.h        
   curl_threads.h     
-  curl_trc.h         
   curlx.h            
   dict.h             
   doh.h              
+  dotdot.h           
   dynbuf.h           
-  dynhds.h           
-  easy_lock.h        
   easyif.h           
   easyoptions.h      
   escape.h           
   file.h             
   fileinfo.h         
-  fopen.h            
   formdata.h         
   ftp.h              
   ftplistparser.h    
-  functypes.h        
   getinfo.h          
   gopher.h           
   hash.h             
-  headers.h          
+  hostcheck.h        
   hostip.h           
   hsts.h             
   http.h             
-  http1.h            
   http2.h            
-  http_aws_sigv4.h   
   http_chunks.h      
   http_digest.h      
   http_negotiate.h   
   http_ntlm.h        
   http_proxy.h       
-  idn.h              
+  http_aws_sigv4.h   
   if2ip.h            
   imap.h             
   inet_ntop.h        
   inet_pton.h        
   llist.h            
-  macos.h            
   memdebug.h         
   mime.h             
   mqtt.h             
   multihandle.h      
   multiif.h          
   netrc.h            
+  non-ascii.h        
   nonblock.h         
-  noproxy.h          
   parsedate.h        
   pingpong.h         
   pop3.h             
   progress.h         
   psl.h              
+  quic.h             
   rand.h             
   rename.h           
   rtsp.h             
@@ -352,7 +324,6 @@ SET(LIB_HFILES
   system_win32.h     
   telnet.h           
   tftp.h             
-  timediff.h         
   timeval.h          
   transfer.h         
   url.h              
@@ -360,7 +331,8 @@ SET(LIB_HFILES
   urldata.h          
   version_win32.h    
   warnless.h         
-  ws.h)
+  wildcard.h         
+  x509asn1.h)
 
 SET(LIB_RCFILES libcurl.rc)
 

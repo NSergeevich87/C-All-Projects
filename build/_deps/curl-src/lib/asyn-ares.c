@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 
@@ -47,6 +45,15 @@
 #include <inet.h>
 #endif
 
+#ifdef HAVE_PROCESS_H
+#include <process.h>
+#endif
+
+#if (defined(NETWARE) && defined(__NOVELL_LIBC__))
+#undef in_addr_t
+#define in_addr_t unsigned long
+#endif
+
 #include "urldata.h"
 #include "sendf.h"
 #include "hostip.h"
@@ -58,7 +65,6 @@
 #include "connect.h"
 #include "select.h"
 #include "progress.h"
-#include "timediff.h"
 
 #  if defined(CURL_STATICLIB) && !defined(CARES_STATICLIB) &&   \
   defined(WIN32)
@@ -103,14 +109,11 @@ struct thread_data {
   struct Curl_addrinfo *temp_ai; /* intermediary result while fetching c-ares
                                     parts */
   int last_status;
-#ifndef HAVE_CARES_GETADDRINFO
   struct curltime happy_eyeballs_dns_time; /* when this timer started, or 0 */
-#endif
-  char hostname[1];
 };
 
 /* How long we are willing to wait for additional parallel responses after
-   obtaining a "definitive" one. For old c-ares without getaddrinfo.
+   obtaining a "definitive" one.
 
    This is intended to equal the c-ares default timeout.  cURL always uses that
    default value.  Unfortunately, c-ares doesn't expose its default timeout in
@@ -119,8 +122,6 @@ struct thread_data {
    See query_completed_cb() for an explanation of how this is used.
  */
 #define HAPPY_EYEBALLS_DNS_TIMEOUT 5000
-
-#define CARES_TIMEOUT_PER_ATTEMPT 2000
 
 /*
  * Curl_resolver_global_init() - the generic low-level asynchronous name
@@ -175,9 +176,6 @@ CURLcode Curl_resolver_init(struct Curl_easy *easy, void **resolver)
   int optmask = ARES_OPT_SOCK_STATE_CB;
   options.sock_state_cb = sock_state_cb;
   options.sock_state_cb_data = easy;
-  options.timeout = CARES_TIMEOUT_PER_ATTEMPT;
-  optmask |= ARES_OPT_TIMEOUTMS;
-
   status = ares_init_options((ares_channel*)resolver, &options, optmask);
   if(status != ARES_SUCCESS) {
     if(status == ARES_ENOMEM)
@@ -249,6 +247,8 @@ void Curl_resolver_kill(struct Curl_easy *data)
  */
 static void destroy_async_data(struct Curl_async *async)
 {
+  free(async->hostname);
+
   if(async->tdata) {
     struct thread_data *res = async->tdata;
     if(res) {
@@ -260,6 +260,8 @@ static void destroy_async_data(struct Curl_async *async)
     }
     async->tdata = NULL;
   }
+
+  async->hostname = NULL;
 }
 
 /*
@@ -286,7 +288,7 @@ int Curl_resolver_getsock(struct Curl_easy *data,
 
   timeout = ares_timeout((ares_channel)data->state.async.resolver, &maxtime,
                          &timebuf);
-  milli = (long)curlx_tvtoms(timeout);
+  milli = (timeout->tv_sec * 1000) + (timeout->tv_usec/1000);
   if(milli == 0)
     milli += 10;
   Curl_expire(data, milli, EXPIRE_ASYNC_NAME);
@@ -301,7 +303,7 @@ int Curl_resolver_getsock(struct Curl_easy *data,
  * 2) wait for the timeout period to check for action on ares' sockets.
  * 3) tell ares to act on all the sockets marked as "with action"
  *
- * return number of sockets it worked on, or -1 on error
+ * return number of sockets it worked on
  */
 
 static int waitperform(struct Curl_easy *data, timediff_t timeout_ms)
@@ -333,11 +335,8 @@ static int waitperform(struct Curl_easy *data, timediff_t timeout_ms)
       break;
   }
 
-  if(num) {
+  if(num)
     nfds = Curl_poll(pfd, num, timeout_ms);
-    if(nfds < 0)
-      return -1;
-  }
   else
     nfds = 0;
 
@@ -374,10 +373,8 @@ CURLcode Curl_resolver_is_resolved(struct Curl_easy *data,
   DEBUGASSERT(dns);
   *dns = NULL;
 
-  if(waitperform(data, 0) < 0)
-    return CURLE_UNRECOVERABLE_POLL;
+  waitperform(data, 0);
 
-#ifndef HAVE_CARES_GETADDRINFO
   /* Now that we've checked for any last minute results above, see if there are
      any responses still pending when the EXPIRE_HAPPY_EYEBALLS_DNS timer
      expires. */
@@ -400,7 +397,6 @@ CURLcode Curl_resolver_is_resolved(struct Curl_easy *data,
     ares_cancel((ares_channel)data->state.async.resolver);
     DEBUGASSERT(res->num_pending == 0);
   }
-#endif
 
   if(res && !res->num_pending) {
     (void)Curl_addrinfo_callback(data, res->last_status, res->temp_ai);
@@ -474,8 +470,7 @@ CURLcode Curl_resolver_wait_resolv(struct Curl_easy *data,
     else
       timeout_ms = 1000;
 
-    if(waitperform(data, timeout_ms) < 0)
-      return CURLE_UNRECOVERABLE_POLL;
+    waitperform(data, timeout_ms);
     result = Curl_resolver_is_resolved(data, entry);
 
     if(result || data->state.async.done)
@@ -742,7 +737,7 @@ static void addrinfo_cb(void *arg, int status, int timeouts,
  * Curl_resolver_getaddrinfo() - when using ares
  *
  * Returns name information about the given hostname and port number. If
- * successful, the 'hostent' is returned and the fourth argument will point to
+ * successful, the 'hostent' is returned and the forth argument will point to
  * memory we need to free after use. That memory *MUST* be freed with
  * Curl_freeaddrinfo(), nothing else.
  */
@@ -751,18 +746,25 @@ struct Curl_addrinfo *Curl_resolver_getaddrinfo(struct Curl_easy *data,
                                                 int port,
                                                 int *waitp)
 {
-  struct thread_data *res = NULL;
-  size_t namelen = strlen(hostname);
+  char *bufp;
+
   *waitp = 0; /* default to synchronous response */
 
-  res = calloc(sizeof(struct thread_data) + namelen, 1);
-  if(res) {
-    strcpy(res->hostname, hostname);
-    data->state.async.hostname = res->hostname;
+  bufp = strdup(hostname);
+  if(bufp) {
+    struct thread_data *res = NULL;
+    free(data->state.async.hostname);
+    data->state.async.hostname = bufp;
     data->state.async.port = port;
     data->state.async.done = FALSE;   /* not done */
     data->state.async.status = 0;     /* clear */
     data->state.async.dns = NULL;     /* clear */
+    res = calloc(sizeof(struct thread_data), 1);
+    if(!res) {
+      free(data->state.async.hostname);
+      data->state.async.hostname = NULL;
+      return NULL;
+    }
     data->state.async.tdata = res;
 
     /* initial status - failed */
@@ -775,22 +777,13 @@ struct Curl_addrinfo *Curl_resolver_getaddrinfo(struct Curl_easy *data,
       int pf = PF_INET;
       memset(&hints, 0, sizeof(hints));
 #ifdef CURLRES_IPV6
-      if((data->conn->ip_version != CURL_IPRESOLVE_V4) &&
-         Curl_ipv6works(data)) {
+      if(Curl_ipv6works(data))
         /* The stack seems to be IPv6-enabled */
-        if(data->conn->ip_version == CURL_IPRESOLVE_V6)
-          pf = PF_INET6;
-        else
-          pf = PF_UNSPEC;
-      }
+        pf = PF_UNSPEC;
 #endif /* CURLRES_IPV6 */
       hints.ai_family = pf;
       hints.ai_socktype = (data->conn->transport == TRNSPRT_TCP)?
         SOCK_STREAM : SOCK_DGRAM;
-      /* Since the service is a numerical one, set the hint flags
-       * accordingly to save a call to getservbyname in inside C-Ares
-       */
-      hints.ai_flags = ARES_AI_NUMERICSERV;
       msnprintf(service, sizeof(service), "%d", port);
       res->num_pending = 1;
       ares_getaddrinfo((ares_channel)data->state.async.resolver, hostname,
@@ -799,7 +792,7 @@ struct Curl_addrinfo *Curl_resolver_getaddrinfo(struct Curl_easy *data,
 #else
 
 #ifdef HAVE_CARES_IPV6
-    if((data->conn->ip_version != CURL_IPRESOLVE_V4) && Curl_ipv6works(data)) {
+    if(Curl_ipv6works(data)) {
       /* The stack seems to be IPv6-enabled */
       res->num_pending = 2;
 

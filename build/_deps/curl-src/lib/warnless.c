@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 
@@ -35,14 +33,9 @@
 
 #endif /* __INTEL_COMPILER && __unix__ */
 
+#define BUILDING_WARNLESS_C 1
+
 #include "warnless.h"
-
-#ifdef WIN32
-#undef read
-#undef write
-#endif
-
-#include <limits.h>
 
 #define CURL_MASK_UCHAR   ((unsigned char)~0)
 #define CURL_MASK_SCHAR   (CURL_MASK_UCHAR >> 1)
@@ -367,7 +360,7 @@ curl_socket_t curlx_sitosk(int i)
 
 #endif /* USE_WINSOCK */
 
-#if defined(WIN32)
+#if defined(WIN32) || defined(_WIN32)
 
 ssize_t curlx_read(int fd, void *buf, size_t count)
 {
@@ -379,8 +372,56 @@ ssize_t curlx_write(int fd, const void *buf, size_t count)
   return (ssize_t)write(fd, buf, curlx_uztoui(count));
 }
 
-/* Ensure that warnless.h continues to have an effect in "unity" builds. */
-#undef HEADER_CURL_WARNLESS_H
+#endif /* WIN32 || _WIN32 */
 
-#endif /* WIN32 */
+#if defined(__INTEL_COMPILER) && defined(__unix__)
 
+int curlx_FD_ISSET(int fd, fd_set *fdset)
+{
+  #pragma warning(push)
+  #pragma warning(disable:1469) /* clobber ignored */
+  return FD_ISSET(fd, fdset);
+  #pragma warning(pop)
+}
+
+void curlx_FD_SET(int fd, fd_set *fdset)
+{
+  #pragma warning(push)
+  #pragma warning(disable:1469) /* clobber ignored */
+  FD_SET(fd, fdset);
+  #pragma warning(pop)
+}
+
+void curlx_FD_ZERO(fd_set *fdset)
+{
+  #pragma warning(push)
+  #pragma warning(disable:593) /* variable was set but never used */
+  FD_ZERO(fdset);
+  #pragma warning(pop)
+}
+
+unsigned short curlx_htons(unsigned short usnum)
+{
+#if (__INTEL_COMPILER == 910) && defined(__i386__)
+  return (unsigned short)(((usnum << 8) & 0xFF00) | ((usnum >> 8) & 0x00FF));
+#else
+  #pragma warning(push)
+  #pragma warning(disable:810) /* conversion may lose significant bits */
+  return htons(usnum);
+  #pragma warning(pop)
+#endif
+}
+
+unsigned short curlx_ntohs(unsigned short usnum)
+{
+#if (__INTEL_COMPILER == 910) && defined(__i386__)
+  return (unsigned short)(((usnum << 8) & 0xFF00) | ((usnum >> 8) & 0x00FF));
+#else
+  #pragma warning(push)
+  #pragma warning(disable:810) /* conversion may lose significant bits */
+  return ntohs(usnum);
+  #pragma warning(pop)
+#endif
+}
+
+#endif /* __INTEL_COMPILER && __unix__ */

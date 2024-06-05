@@ -5,7 +5,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2021, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -17,8 +17,6 @@
  *
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
- *
- * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
 #include "test.h"
@@ -75,16 +73,16 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
-  sdp = open(libtest_arg2, O_RDONLY);
+  sdp = open("log/file568.txt", O_RDONLY);
   fstat(sdp, &file_info);
   close(sdp);
 
-  sdpf = fopen(libtest_arg2, "rb");
+  sdpf = fopen("log/file568.txt", "rb");
   if(!sdpf) {
-    fprintf(stderr, "can't open %s\n", libtest_arg2);
+    fprintf(stderr, "can't open log/file568.txt\n");
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -110,7 +108,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   test_setopt(curl, CURLOPT_RTSP_REQUEST, CURL_RTSPREQ_DESCRIBE);
@@ -126,7 +124,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   custom_headers = curl_slist_append(custom_headers,
@@ -156,7 +154,7 @@ int test(char *URL)
     goto test_cleanup;
   }
   test_setopt(curl, CURLOPT_RTSP_STREAM_URI, stream_uri);
-  curl_free(stream_uri);
+  free(stream_uri);
   stream_uri = NULL;
 
   test_setopt(curl, CURLOPT_RTSP_REQUEST, CURL_RTSPREQ_OPTIONS);
@@ -167,7 +165,7 @@ test_cleanup:
   if(sdpf)
     fclose(sdpf);
 
-  curl_free(stream_uri);
+  free(stream_uri);
 
   if(custom_headers)
     curl_slist_free_all(custom_headers);
