@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/cpr-build/cpr/RelWithDebInfo/cpr.dll"
+			"path" : "_deps/cpr-build/cpr/Debug/cpr.dll"
 		},
 		{
-			"path" : "_deps/cpr-build/cpr/RelWithDebInfo/cpr.lib"
+			"path" : "_deps/cpr-build/cpr/Debug/cpr.lib"
 		},
 		{
-			"path" : "_deps/cpr-build/cpr/RelWithDebInfo/cpr.pdb"
+			"path" : "_deps/cpr-build/cpr/Debug/cpr.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -113,7 +113,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
 				}
 			],
 			"defines" : 
@@ -190,11 +190,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
-			"id" : "libcurl::@7349aeacaff41deceb36"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 3,
+			"id" : "libcurl::@7349aeacaff41deceb36"
 		}
 	],
 	"id" : "cpr::@c4b08663df96993e8225",
@@ -225,12 +225,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/DEF:cpr.dir\\RelWithDebInfo\\exports.def",
+				"fragment" : "/DEF:cpr.dir\\Debug\\exports.def",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\..\\curl-build\\lib\\RelWithDebInfo\\libcurl_imp.lib",
+				"fragment" : "..\\..\\curl-build\\lib\\Debug\\libcurl-d_imp.lib",
 				"role" : "libraries"
 			},
 			{

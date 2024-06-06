@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"build/_deps/cpr-src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,28 +17,25 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "GB_C++::@6890427a1f51a3e7e1df"
-		},
-		{
 			"id" : "zlib::@c9556b0b6bf47963f9da"
-		},
-		{
-			"id" : "libcurl::@7349aeacaff41deceb36"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
+			"id" : "libcurl::@7349aeacaff41deceb36"
+		},
+		{
 			"id" : "cpr::@c4b08663df96993e8225"
 		}
 	],
-	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"id" : "ALL_BUILD::@104d1163b04ab1ac7bef",
 	"isGeneratorProvided" : true,
 	"name" : "ALL_BUILD",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "_deps/cpr-build",
+		"source" : "build/_deps/cpr-src"
 	},
 	"sources" : [],
 	"type" : "UTILITY"

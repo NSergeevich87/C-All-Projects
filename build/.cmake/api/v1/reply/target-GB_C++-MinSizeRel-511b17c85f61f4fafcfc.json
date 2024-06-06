@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/GB_C++.exe"
+			"path" : "MinSizeRel/GB_C++.exe"
 		},
 		{
-			"path" : "Release/GB_C++.pdb"
+			"path" : "MinSizeRel/GB_C++.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -65,7 +65,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++17"
 				}
 			],
 			"includes" : 
@@ -101,11 +101,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "libcurl::@7349aeacaff41deceb36"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "libcurl::@7349aeacaff41deceb36"
 		},
 		{
 			"backtrace" : 2,
@@ -118,7 +118,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -127,12 +127,12 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "_deps\\cpr-build\\cpr\\Release\\cpr.lib",
+				"fragment" : "_deps\\cpr-build\\cpr\\MinSizeRel\\cpr.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "_deps\\curl-build\\lib\\Release\\libcurl_imp.lib",
+				"fragment" : "_deps\\curl-build\\lib\\MinSizeRel\\libcurl_imp.lib",
 				"role" : "libraries"
 			},
 			{
