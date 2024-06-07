@@ -31,3 +31,4 @@
 *.out
 *.app
 FinalSpecTask/
+nlohmann_json/
