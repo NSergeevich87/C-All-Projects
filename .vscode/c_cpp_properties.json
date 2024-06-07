@@ -6,7 +6,8 @@
                 "${default}",
                 "${workspaceFolder}/**",
                 "C:/msys64/mingw64/include/**",
-                "D:/C-All-Projects/build/_deps/cpr-src/**"
+                "D:/C-All-Projects/build/_deps/cpr-src/**",
+                "D:/C-All-Projects/nlohmann_json/include"
             ],
             "defines": [
                 "_DEBUG",

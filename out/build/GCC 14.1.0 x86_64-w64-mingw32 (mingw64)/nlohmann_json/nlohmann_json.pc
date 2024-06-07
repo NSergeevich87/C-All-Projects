@@ -1,0 +1,4 @@
+Name: nlohmann_json
+Description: JSON for Modern C++
+Version: 3.11.3
+Cflags: -ID:/C-All-Projects/out/install/GCC 14.1.0 x86_64-w64-mingw32 (mingw64)/include

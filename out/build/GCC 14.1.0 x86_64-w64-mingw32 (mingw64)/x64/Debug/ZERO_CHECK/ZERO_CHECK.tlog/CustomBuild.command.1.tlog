@@ -1,0 +1,10 @@
+^D:\C-ALL-PROJECTS\OUT\BUILD\GCC 14.1.0 X86_64-W64-MINGW32 (MINGW64)\CMAKEFILES\2C9EB14A15C45881DC9AF7D5062AFB7C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/C-All-Projects "-BD:/C-All-Projects/out/build/GCC 14.1.0 x86_64-w64-mingw32 (mingw64)" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/C-All-Projects/out/build/GCC 14.1.0 x86_64-w64-mingw32 (mingw64)/GB_C++.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

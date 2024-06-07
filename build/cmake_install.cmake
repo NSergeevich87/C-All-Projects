@@ -33,9 +33,8 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("D:/C-All-Projects/build/_deps/cpr-build/cmake_install.cmake")
-
+  # Include the install script for the subdirectory.
+  include("D:/C-All-Projects/build/nlohmann_json/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
