@@ -41,6 +41,8 @@ void input(T array[8])
 
 int main()
 {
+    
+
     int array[8];
     input(array);
     std::cout << "Average: " << average(array) << std::endl;
