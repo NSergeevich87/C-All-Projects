@@ -297,10 +297,8 @@ void OrderBook::insertOrder(OrderBookEntry& order)
 }
 
 /** implement matching algorithm of bids and asks */
-std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, std::string product)
-{
 
-    /**
+/**
      * PSEUDOCODE
      * 
      * 1. Get all asks and bids for the product at the timestamp
@@ -322,8 +320,10 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, st
      *                bid.amount == ask.amount
      *                bid.amount >= ask.amount
      *                bid.amount < ask.amount
-    */
+*/
 
+std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string timestamp, std::string product)
+{
     std::vector<OrderBookEntry> asks = getOrders(timestamp, product, OrderBookType::ask);
     std::vector<OrderBookEntry> bids = getOrders(timestamp, product, OrderBookType::bid);
     std::vector<OrderBookEntry> sales;
